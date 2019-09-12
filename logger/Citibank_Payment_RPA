@@ -1,0 +1,63 @@
+INFO: 09/12/2019 09:15:23 AM <property object at 0x0000022859D9F1D8> -> Loaded skel from : citibank
+INFO: 09/12/2019 09:16:02 AM <property object at 0x0000027A50FF1188> -> Loaded skel from : citibank
+INFO: 09/12/2019 09:17:21 AM <property object at 0x00000203EB6F11D8> -> Loaded skel from : citibank
+INFO: 09/12/2019 10:12:35 AM <property object at 0x0000023D6B3A22C8> -> Loaded skel from : citibank
+INFO: 09/12/2019 10:13:30 AM <property object at 0x000002770FC62228> -> Loaded skel from : citibank
+INFO: 09/12/2019 10:16:25 AM <property object at 0x00000215140A2228> -> Loaded skel from : citibank
+INFO: 09/12/2019 10:20:32 AM <property object at 0x000001754B3A2278> -> Loaded skel from : citibank
+INFO: 09/12/2019 10:22:02 AM <property object at 0x00000269E361C2C8> -> Loaded skel from : citibank
+INFO: 09/12/2019 10:27:08 AM <property object at 0x0000023DC6221138> -> Loaded skel from : citibank
+ERROR: 09/12/2019 10:29:15 AM Exception iniciando el drive de IExplorer:->  Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from http://selenium-release.storage.googleapis.com/index.html and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+
+ERROR: 09/12/2019 10:29:20 AM Excepcion en do_the_process -> 'NoneType' object has no attribute 'get'
+INFO: 09/12/2019 10:30:26 AM <property object at 0x000001564DE0E0E8> -> Loaded skel from : citibank
+ERROR: 09/12/2019 10:30:37 AM Exception iniciando el drive de IExplorer:->  Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from http://selenium-release.storage.googleapis.com/index.html and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+
+ERROR: 09/12/2019 10:30:37 AM Excepcion en do_the_process -> 'NoneType' object has no attribute 'get'
+INFO: 09/12/2019 11:28:27 AM <property object at 0x000001BBCDCE00E8> -> Loaded skel from : citibank
+INFO: 09/12/2019 11:30:30 AM <property object at 0x000002208F2910E8> -> Loaded skel from : citibank
+INFO: 09/12/2019 11:46:55 AM <property object at 0x000001DB9989F138> -> Loaded skel from : citibank
+INFO: 09/12/2019 11:49:33 AM Evaluando acciones pre login
+INFO: 09/12/2019 11:49:35 AM Seleccionar localizacion -> tipo busqueda: xpath , expresion: //*[@id="loginmethodselect"] , mode: click
+INFO: 09/12/2019 11:49:36 AM matched condition Seleccionar localizacion !! 
+INFO: 09/12/2019 11:49:41 AM Escribe localizacion -> tipo busqueda: xpath , expresion: //*[@id="loginmethodselect"] , mode: fill
+INFO: 09/12/2019 11:49:41 AM matched condition Escribe localizacion !! 
+INFO: 09/12/2019 11:49:42 AM seteado  //*[@id="loginmethodselect"] ->  Argentina!! 
+INFO: 09/12/2019 11:49:46 AM Escribe localizacion -> tipo busqueda: xpath , expresion: //*[@id="ulCountry"]/li/a , mode: click
+INFO: 09/12/2019 11:49:46 AM matched condition Escribe localizacion !! 
+INFO: 09/12/2019 11:49:52 AM Go button -> tipo busqueda: xpath , expresion: //*[@id="btnGo"] , mode: click
+INFO: 09/12/2019 11:49:52 AM matched condition Go button !! 
+INFO: 09/12/2019 01:00:05 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, []
+INFO: 09/12/2019 01:00:56 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 01:03:34 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 01:03:34 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 01:03:48 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 01:03:48 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 01:06:53 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 01:06:53 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 01:08:03 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 01:08:03 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 01:20:20 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 01:20:20 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 01:21:31 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 01:21:31 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 01:56:55 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 01:56:55 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:13:41 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:13:41 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:18:26 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:18:26 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:22:27 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:22:27 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:22:56 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:22:56 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:23:35 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:23:35 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:30:22 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:30:22 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:34:57 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:34:57 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:35:20 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:35:20 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/12/2019 02:36:03 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/12/2019 02:36:03 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']

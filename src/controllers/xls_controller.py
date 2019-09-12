@@ -1,0 +1,167 @@
+# -*- coding: utf-8 -*-
+import os
+import sys
+from src.models.boleto_item import Boleto_Item
+import pandas as pd
+
+from common_config import XLS_FOLDER, COLS_NAMES, COLS_DICT_TO_ENTITY
+from logger.app_logger import AppLogger
+
+
+class XlsController(object):
+    _doc_list = []
+    _xls_df = pd.DataFrame
+    _mapping = None
+    _logger = None
+    _instance_collection = [] #coleccion (lista) de instancias Boleto_Item
+
+    def __init__(self, **kw):
+
+        self._logger = AppLogger.create_rotating_log() if not kw.get('logger') else kw.get('logger')
+        if os.path.exists(XLS_FOLDER):
+            if self.read_document_folder():
+                self.read_xls()
+
+        else:
+            self._logger.error(
+                "{} ->  No se halla la carpeta que contiene los XLS: ->  {}".format(__class__.__name__, XLS_FOLDER))
+
+    def read_document_folder(self):
+        '''
+        Itera la carpeta xls_dicument en busca de documentos xls
+        :return:
+        '''
+        if len(os.listdir(XLS_FOLDER)):
+            for doc in os.listdir(XLS_FOLDER):
+                if doc.endswith(".xls") or doc.endswith(".xlsx"):
+                    self._logger.info("Leyendo documento XLS :-> {}".format(doc))
+                    self.doc_list.append(os.path.join(XLS_FOLDER, doc))
+
+            self._logger.info("Lectura de la carpeta {} completada, hallados {} documentos, {}".format(XLS_FOLDER, len(
+                os.listdir(XLS_FOLDER)), self.doc_list))
+
+            return True
+
+        else:
+            self._logger.error("No se hallaron documentos con extension xls en la carpeta {}".format(XLS_FOLDER))
+
+        return False
+
+    def read_xls(self):
+
+        instance_collection= []
+        for doc in self.doc_list:
+            xls_df = pd.read_excel(doc, encoding=sys.getfilesystemencoding())
+            xls_df = xls_df[COLS_NAMES].astype('str')
+
+            for _, row in xls_df.iterrows():
+
+                raw_data = []
+                item_dict={}
+
+                for col_name in row.keys():
+                    # row.keys() son los nombres de los indices de la serie de panda
+                    if col_name in COLS_DICT_TO_ENTITY.keys():
+                        item_dict.update({ COLS_DICT_TO_ENTITY[col_name]: row[col_name]})
+                    else:
+                        self._logger.error("hsj")
+                if len(item_dict.keys()) == row.shape[0]:
+                    instance= Boleto_Item(**item_dict)
+                    instance_collection.append(instance)
+
+        print("")
+                    #Boleto_Item
+
+    #
+    # def dict_from_df_columns_for_bi(self):
+    #     dict_constructor= {}
+    #     for index, data in enumerate(COLS_NAMES):
+
+
+    def read_document_remap_columns(self, args):
+
+        ''' brief:
+            carga el documento y remapea las columnas por sus coordenadas de posicion
+
+            halla la correspondencia nombre de la columna -> elemento de ref en la app
+            y resetea los nombres de las columnas por sus coordnadas cartesianas
+        '''
+        try:
+            # self.df = self._reader(self.doc)
+            self._df = pd.read_excel(self.doc, encoding=sys.getfilesystemencoding())
+            new_index = []
+            aditional_data = []
+            for c in self._df.columns:
+                if c and len(c):
+                    if c in args.keys():
+                        new_index.append(args[c])
+                    else:
+                        new_index.append(c)
+
+            # esta comprobacion deberia ir arriba y evitar reindex si no hay correspondencia numerica de elementos
+            if self._df.shape[1] == len(new_index):
+                self._df.columns = new_index
+
+        except Exception as e:
+            print("{}".format(e))
+
+    def get_type(self):
+        return self._doc.split('.')[-1]
+
+    def get_wf_parsed_data(self):
+
+        extracted_data = []
+        try:
+            if not self.df is None:
+                for index, row in self.df.iterrows():
+                    data_list = []
+                    for i in range(row.shape[0]):  # ''' num of columns'''
+                        # print("{} -> {}".format(df.columns[i], row[i]))
+                        if ',' in self.df.columns[i]:
+                            data_list.append({'x': self.df.columns[i].split(',')[0],
+                                              'y': self.df.columns[i].split(',')[1],
+                                              'payload': row[i]})
+                        else:
+                            data_list.append({self.df.columns[i]: row[i]})
+                    extracted_data.append(data_list)
+
+            return extracted_data
+
+        except Exception as e:
+            pass
+
+        return None
+
+    # <editor-fold desc="Getter / Setter">
+
+    @property
+    def doc_list(self):
+        return self._doc_list
+
+    @doc_list.setter
+    def doc_list(self, value):
+        if value and isinstance(value, list):
+            self._doc = value
+
+    @property
+    def xls_df(self):
+        return self._xls_df
+
+    @xls_df.setter
+    def xls_df(self, value):
+        if isinstance(value, pd.DataFrame) and not value.empty:
+            self._xls_df = value
+
+
+    @property
+    def instance_collection(self):
+        return self._instance_collection
+
+
+
+    # </editor-fold>
+
+
+if __name__ == '__main__':
+    doc = XlsController()
+    doc.read_document_folder()
