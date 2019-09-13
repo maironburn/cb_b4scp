@@ -30,7 +30,7 @@ citibank = {
 
     # acciones a realizar antes de poder hacer login (deshacerse de popups, clicks sobre botones...)
     'pre_login_actions': [
-        # select location
+        # seleccion
         {'tipo': 'xpath', 'target': '//*[@id="loginmethodselect"]',
          'mode': 'click', 'description': 'Seleccionar localizacion'},
         # escribe localizacion

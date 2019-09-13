@@ -1,6 +1,7 @@
 from src.models.citibank import CitiBank
 from src.models.bank_basis import Bank
 from src.controllers.selenium_controller import SeleniumController
+from src.controllers.xls_controller import XlsController
 from logger.app_logger import AppLogger
 
 
@@ -65,6 +66,11 @@ class BankController(object):
         if value:
             self._sc = value
 
+    @property
+    def logger(self):
+        return self._logger
+
+
     # </editor-fold>
 
 
@@ -72,5 +78,7 @@ if __name__ == '__main__':
 
     bancos = ['citibank']
     bc = BankController({'banknames': bancos})
-    for b in bancos:
-        bc.extract_movements(b)
+    xls_controller= XlsController (**{'logger': bc.logger})
+    if xls_controller.get_boletos_items():
+        for b in bancos:
+            bc.extract_movements(b)

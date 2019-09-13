@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-from src.models.boleto_item import Boleto_Item
+
 import pandas as pd
 
 from common_config import XLS_FOLDER, COLS_NAMES, COLS_DICT_TO_ENTITY
 from logger.app_logger import AppLogger
+from src.models.boleto_item import Boleto_Item
 
 
 class XlsController(object):
@@ -13,18 +14,28 @@ class XlsController(object):
     _xls_df = pd.DataFrame
     _mapping = None
     _logger = None
-    _instance_collection = [] #coleccion (lista) de instancias Boleto_Item
+    _valid_instances_collection = []  # coleccion (lista) de instancias Boleto_Item
+    _instance_collection_errors = []
 
     def __init__(self, **kw):
 
         self._logger = AppLogger.create_rotating_log() if not kw.get('logger') else kw.get('logger')
-        if os.path.exists(XLS_FOLDER):
+
+
+    def get_boletos_items(self):
+
+        if os.path.exists(XLS_FOLDER) and os.path.isdir(XLS_FOLDER):
             if self.read_document_folder():
-                self.read_xls()
+                if self.read_xls_docs():
+                    return self.valid_instances_collection
+                else:
+                    self.error_info()
 
         else:
+            self.error_info()
             self._logger.error(
                 "{} ->  No se halla la carpeta que contiene los XLS: ->  {}".format(__class__.__name__, XLS_FOLDER))
+
 
     def read_document_folder(self):
         '''
@@ -47,9 +58,11 @@ class XlsController(object):
 
         return False
 
-    def read_xls(self):
+    def read_xls_docs(self):
 
-        instance_collection= []
+        self.valid_instances_collection = []
+        self.instance_collection_errors = []
+
         for doc in self.doc_list:
             xls_df = pd.read_excel(doc, encoding=sys.getfilesystemencoding())
             xls_df = xls_df[COLS_NAMES].astype('str')
@@ -60,25 +73,44 @@ class XlsController(object):
                     # row.keys() son los nombres de los indices de la serie de panda
                     if col_name in COLS_DICT_TO_ENTITY.keys():
                         # mapeo, key: propiedades de la entidad Boleto_item / value: valor porcedente del excel
-                        self._logger.info("Actualizando boleto obj:  {} -> {} ".format(COLS_DICT_TO_ENTITY[col_name], row[col_name]))
-                        item_dict.update({ COLS_DICT_TO_ENTITY[col_name]: row[col_name]})
+                        self._logger.info(
+                            "Actualizando boleto obj:  {} -> {} ".format(COLS_DICT_TO_ENTITY[col_name], row[col_name]))
+                        item_dict.update({COLS_DICT_TO_ENTITY[col_name]: row[col_name]})
                     else:
                         # @todo, tratamiento de errores
                         self._logger.error("errorrrrr")
 
                 if len(item_dict.keys()) == row.shape[0]:
                     item_dict.update({'logger': self._logger})
-                    instance= Boleto_Item(**item_dict)
-                    instance_collection.append(instance)
+                    instance = Boleto_Item(**item_dict)
+                    if instance.is_valid:
+                        self.valid_instances_collection.append(instance)
+                    else:
+                        self.instance_collection_errors.append(instance)
 
-        print("")
-                    #Boleto_Item
+
+            if len(self.instance_collection_errors):
+                self._logger.error(
+                    "Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad")
+
+                return False
+
+        return True
+        # Boleto_Item
+
+    def error_info(self):
+
+        for bie in self.instance_collection_errors:
+            # print("boleto: {} -> {}".format(bie.boleto_number, bie.error_description))
+            # "boleto: {} -> {}".format(bie.boleto_number, bie.error_description)
+            print("{} -> {}".format(bie, bie.error_description))
+            self._logger.error(
+                "boleto: {} -> {}".format(bie.boleto_number, bie.error_description))
 
     #
     # def dict_from_df_columns_for_bi(self):
     #     dict_constructor= {}
     #     for index, data in enumerate(COLS_NAMES):
-
 
     def read_document_remap_columns(self, args):
 
@@ -154,12 +186,23 @@ class XlsController(object):
         if isinstance(value, pd.DataFrame) and not value.empty:
             self._xls_df = value
 
+    @property
+    def valid_instances_collection(self):
+        return self._valid_instances_collection
+
+    @valid_instances_collection.setter
+    def valid_instances_collection(self, value):
+        if value:
+            self._valid_instances_collection=value
 
     @property
-    def instance_collection(self):
-        return self._instance_collection
+    def instance_collection_errors(self):
+        return self._instance_collection_errors
 
-
+    @instance_collection_errors.setter
+    def instance_collection_errors(self, value):
+        if value:
+            self._instance_collection_errors= value
 
     # </editor-fold>
 

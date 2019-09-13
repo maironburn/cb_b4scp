@@ -96,6 +96,7 @@ class SeleniumController(object):
 
             # self.save_cookie()
             # Comprobamos si son necesarias llevar a cabo acciones antes de iniciar el proceso de logado
+            # en caso afirmativo , se ejecutan las acciones pre_login
             if self.bank.get('pre_login_actions'):
                 self._logger.debug("Se requieren acciones previas al logado")
                 self.pre_post_login_actions(self.bank.get('pre_login_actions'), stage="pre")
