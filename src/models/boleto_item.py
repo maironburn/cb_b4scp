@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from datetime import datetime
-
+import re
 
 class Boleto_Item(object):
+
+    _boleto_number = None
     _enteprise_id = None
     _cpf = None
     _pid = None
@@ -12,23 +14,23 @@ class Boleto_Item(object):
     _due_date = None
     _amount = None
 
-    _location_data = None
     # los datos de localizacion se dividen en calle, cep (cod postal), ciudad y abreviatura de la ciudad
-
     _address = None
     _cep = None
     _city = None
+    _acrom_city = None
+
 
     def __init__(self, **kw):
         self.load_entity_data(kw)
         self.emision_date = datetime.now().strftime("%m/%d/%y")
 
     def load_entity_data(self, kw):
-
+        self.boleto_number = kw.get ('boleto_number')
         self.enteprise_id = kw.get('enteprise_id')
         self.cpf = kw.get('cpf')
         self.pid = kw.get('pid')
-        self.location_data = self.get_data_from_location(kw.get('location_data'))
+        self.get_data_from_location(kw.get('location_data'))
         self.due_date = kw.get('due_date')
         self.amount = kw.get('amount')
 
@@ -38,8 +40,22 @@ class Boleto_Item(object):
             self.address = location.split('.')[0]
             self.cep = location.split('.')[1]
             self.city = location.split('.')[2]
+            self.acrom_city = self.city.split('-').strip()
+
+            return self.address, self.cep, self.city, self.acrom_city
+
+        return False
 
     # <editor-fold desc="Getter / setters">
+
+    @property
+    def boleto_number(self):
+        return self._boleto_number
+
+    @boleto_number.setter
+    def boleto_number(self, value):
+        if value:
+            self._boleto_number = value
 
     @property
     def address(self):
@@ -68,8 +84,14 @@ class Boleto_Item(object):
         if value:
             self._city = value
 
-    _cep_ = None
-    _city = None
+    @property
+    def acrom_city(self):
+        return self._acrom_city
+
+    @acrom_city.setter
+    def acrom_city(self, value):
+        if value:
+            self._acrom_city = value
 
     @property
     def enteprise_id(self):

@@ -55,16 +55,15 @@ class XlsController(object):
             xls_df = xls_df[COLS_NAMES].astype('str')
 
             for _, row in xls_df.iterrows():
-
-                raw_data = []
                 item_dict={}
-
                 for col_name in row.keys():
                     # row.keys() son los nombres de los indices de la serie de panda
                     if col_name in COLS_DICT_TO_ENTITY.keys():
+                        # mapeo, key: propiedades de la entidad Boleto_item / value: valor porcedente del excel
                         item_dict.update({ COLS_DICT_TO_ENTITY[col_name]: row[col_name]})
                     else:
-                        self._logger.error("hsj")
+                        # @todo, tratamiento de errores
+                        self._logger.error("errorrrrr")
                 if len(item_dict.keys()) == row.shape[0]:
                     instance= Boleto_Item(**item_dict)
                     instance_collection.append(instance)

@@ -17,6 +17,7 @@ IE_DRIVER = os.path.join(IE_DRIVER_FOLDER, 'IEDriverServer.exe')
 # XLS folder
 XLS_FOLDER = os.path.join(ROOT_DIR, 'xls_folder')
 COLS_NAMES = [
+    'Boleto (para algunos casos nueve digitos)',
     'Enterprise id/ Racao social',
     'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)',
     'PID',
@@ -26,7 +27,10 @@ COLS_NAMES = [
     'Total'
 ]
 
+
+
 COLS_DICT_TO_ENTITY = {
+    'Boleto (para algunos casos nueve digitos)': 'boleto_number',
     'Enterprise id/ Racao social': 'enteprise_id',
     'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)': 'cpf',
     'PID': 'pid',
@@ -36,11 +40,21 @@ COLS_DICT_TO_ENTITY = {
     'Total': 'amount'
 }
 
+DICT_REGEX_BOLETO_ITEM = {'boleto_number': '^\d{5,9}$',
+                          'enteprise_id': '\w+',
+                          'cpf':  '^\d{9,15}$',
+                          'pid': '^\d+$',
+                          'cep': '^\d{7,9}$',
+                          'due_date': '(\d{1,2}\/)*\d{4}$'
+                          }
+
+
 # keep_foregorund
 APP_NAME = ""
 TIME_SLEEP = 10
 
 '''
+login bello de reconocimiento de imagenes
 
 # imagenes
 IMG_DIRS = os.path.join(ROOT_DIR, 'img')
