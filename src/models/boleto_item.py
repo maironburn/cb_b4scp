@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from datetime import datetime
-import re
+
 
 class Boleto_Item(object):
 
+    _logger = None
     _boleto_number = None
     _enteprise_id = None
     _cpf = None
@@ -20,13 +21,13 @@ class Boleto_Item(object):
     _city = None
     _acrom_city = None
 
-
     def __init__(self, **kw):
+        self._logger = kw.get('logger')
         self.load_entity_data(kw)
         self.emision_date = datetime.now().strftime("%m/%d/%y")
 
     def load_entity_data(self, kw):
-        self.boleto_number = kw.get ('boleto_number')
+        self.boleto_number = kw.get('boleto_number')
         self.enteprise_id = kw.get('enteprise_id')
         self.cpf = kw.get('cpf')
         self.pid = kw.get('pid')
@@ -36,15 +37,26 @@ class Boleto_Item(object):
 
     def get_data_from_location(self, location):
 
-        if location and location.split('.') == 3:
-            self.address = location.split('.')[0]
-            self.cep = location.split('.')[1]
-            self.city = location.split('.')[2]
-            self.acrom_city = self.city.split('-').strip()
+        if location and len(location.split('.')) == 3:
+            try:
+                self.address = location.split('.')[0]
+                self.cep = location.split('.')[1].split(':')[1]
+                self.city = location.split('.')[2].split('-')[0].strip()
+                ac = location.split('.')[2].split('-')[1].strip()
+                self.acrom_city = ''.join([i[0].upper() for i in ac.split()])
 
-            return self.address, self.cep, self.city, self.acrom_city
+                return self.address, self.cep, self.city, self.acrom_city
+
+            except Exception as e:
+                self._logger.error("Except {} -> get_data_from_location -> {}".format(__class__.__name__, e))
+        else:
+            self._logger.error("Except {} -> boleto: {}, la cadena {} no tiene un formato correcto".format(__class__.__name__, self.boleto_number, location))
 
         return False
+
+    # @todo
+    def validate(self):
+        pass
 
     # <editor-fold desc="Getter / setters">
 
@@ -56,51 +68,6 @@ class Boleto_Item(object):
     def boleto_number(self, value):
         if value:
             self._boleto_number = value
-
-    @property
-    def address(self):
-        return self._address
-
-    @address.setter
-    def address(self, value):
-        if value:
-            self._address = value
-
-    @property
-    def cep(self):
-        return self._cep
-
-    @cep.setter
-    def cep_(self, value):
-        if value:
-            self._cep = value
-
-    @property
-    def city(self):
-        return self._city
-
-    @city.setter
-    def city(self, value):
-        if value:
-            self._city = value
-
-    @property
-    def acrom_city(self):
-        return self._acrom_city
-
-    @acrom_city.setter
-    def acrom_city(self, value):
-        if value:
-            self._acrom_city = value
-
-    @property
-    def enteprise_id(self):
-        return self._enteprise_id
-
-    @enteprise_id.setter
-    def enteprise_id(self, value):
-        if value:
-            self._enteprise_id = value
 
     @property
     def enteprise_id(self):
@@ -130,15 +97,6 @@ class Boleto_Item(object):
             self._pid = value
 
     @property
-    def location_data(self):
-        return self._location_data
-
-    @location_data.setter
-    def location_data(self, value):
-        if value:
-            self._location_data = value
-
-    @property
     def emision_date(self):
         return self._emision_date
 
@@ -164,6 +122,42 @@ class Boleto_Item(object):
     def amount(self, value):
         if value:
             self._amount = value
+
+    @property
+    def address(self):
+        return self._address
+
+    @address.setter
+    def address(self, value):
+        if value:
+            self._address = value
+
+    @property
+    def cep(self):
+        return self._cep
+
+    @cep.setter
+    def cep(self, value):
+        if value:
+            self._cep = value
+
+    @property
+    def city(self):
+        return self._city
+
+    @city.setter
+    def city(self, value):
+        if value:
+            self._city = value
+
+    @property
+    def acrom_city(self):
+        return self._acrom_city
+
+    @acrom_city.setter
+    def acrom_city(self, value):
+        if value:
+            self._acrom_city = value
 
     # </editor-fold>
 

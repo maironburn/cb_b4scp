@@ -1,63 +1,369 @@
-INFO: 09/12/2019 09:15:23 AM <property object at 0x0000022859D9F1D8> -> Loaded skel from : citibank
-INFO: 09/12/2019 09:16:02 AM <property object at 0x0000027A50FF1188> -> Loaded skel from : citibank
-INFO: 09/12/2019 09:17:21 AM <property object at 0x00000203EB6F11D8> -> Loaded skel from : citibank
-INFO: 09/12/2019 10:12:35 AM <property object at 0x0000023D6B3A22C8> -> Loaded skel from : citibank
-INFO: 09/12/2019 10:13:30 AM <property object at 0x000002770FC62228> -> Loaded skel from : citibank
-INFO: 09/12/2019 10:16:25 AM <property object at 0x00000215140A2228> -> Loaded skel from : citibank
-INFO: 09/12/2019 10:20:32 AM <property object at 0x000001754B3A2278> -> Loaded skel from : citibank
-INFO: 09/12/2019 10:22:02 AM <property object at 0x00000269E361C2C8> -> Loaded skel from : citibank
-INFO: 09/12/2019 10:27:08 AM <property object at 0x0000023DC6221138> -> Loaded skel from : citibank
-ERROR: 09/12/2019 10:29:15 AM Exception iniciando el drive de IExplorer:->  Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from http://selenium-release.storage.googleapis.com/index.html and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
-
-ERROR: 09/12/2019 10:29:20 AM Excepcion en do_the_process -> 'NoneType' object has no attribute 'get'
-INFO: 09/12/2019 10:30:26 AM <property object at 0x000001564DE0E0E8> -> Loaded skel from : citibank
-ERROR: 09/12/2019 10:30:37 AM Exception iniciando el drive de IExplorer:->  Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from http://selenium-release.storage.googleapis.com/index.html and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
-
-ERROR: 09/12/2019 10:30:37 AM Excepcion en do_the_process -> 'NoneType' object has no attribute 'get'
-INFO: 09/12/2019 11:28:27 AM <property object at 0x000001BBCDCE00E8> -> Loaded skel from : citibank
-INFO: 09/12/2019 11:30:30 AM <property object at 0x000002208F2910E8> -> Loaded skel from : citibank
-INFO: 09/12/2019 11:46:55 AM <property object at 0x000001DB9989F138> -> Loaded skel from : citibank
-INFO: 09/12/2019 11:49:33 AM Evaluando acciones pre login
-INFO: 09/12/2019 11:49:35 AM Seleccionar localizacion -> tipo busqueda: xpath , expresion: //*[@id="loginmethodselect"] , mode: click
-INFO: 09/12/2019 11:49:36 AM matched condition Seleccionar localizacion !! 
-INFO: 09/12/2019 11:49:41 AM Escribe localizacion -> tipo busqueda: xpath , expresion: //*[@id="loginmethodselect"] , mode: fill
-INFO: 09/12/2019 11:49:41 AM matched condition Escribe localizacion !! 
-INFO: 09/12/2019 11:49:42 AM seteado  //*[@id="loginmethodselect"] ->  Argentina!! 
-INFO: 09/12/2019 11:49:46 AM Escribe localizacion -> tipo busqueda: xpath , expresion: //*[@id="ulCountry"]/li/a , mode: click
-INFO: 09/12/2019 11:49:46 AM matched condition Escribe localizacion !! 
-INFO: 09/12/2019 11:49:52 AM Go button -> tipo busqueda: xpath , expresion: //*[@id="btnGo"] , mode: click
-INFO: 09/12/2019 11:49:52 AM matched condition Go button !! 
-INFO: 09/12/2019 01:00:05 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, []
-INFO: 09/12/2019 01:00:56 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 01:03:34 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 01:03:34 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 01:03:48 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 01:03:48 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 01:06:53 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 01:06:53 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 01:08:03 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 01:08:03 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 01:20:20 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 01:20:20 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 01:21:31 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 01:21:31 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 01:56:55 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 01:56:55 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:13:41 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:13:41 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:18:26 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:18:26 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:22:27 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:22:27 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:22:56 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:22:56 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:23:35 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:23:35 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:30:22 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:30:22 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:34:57 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:34:57 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:35:20 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:35:20 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/12/2019 02:36:03 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/12/2019 02:36:03 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/13/2019 10:39:02 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/13/2019 10:39:02 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  boleto_number -> 40579 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  enteprise_id -> amanda.grimberg 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  cpf -> 26112018896 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  pid -> 10916833 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  location_data -> Rua Padre Frei Jorge Walter Nunes, 630. CEP: 8246066. Sao Paulo - São Paulo 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  boleto_number -> 40580 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  enteprise_id -> lucas.samuel.d.silva 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  cpf -> 46173197863 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  pid -> 11336265 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  location_data -> RUA SOL, 31 - JARDIM TUPANCI. CEP: 6414070. BARUERI - SÃO PAULO 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  boleto_number -> 40581 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  enteprise_id -> hugo.cezario 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  cpf -> 32643185803 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  pid -> 10916561 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  location_data -> Avenida Yara, 215, 122. CEP: 6028110. Osasco - SP 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  boleto_number -> 40582 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  enteprise_id -> luiz.fsouza 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  cpf -> 39400561890 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  pid -> 10958447 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  location_data -> Rua Americo Falcao, 486. CEP: 5786010. Sao Paulo - SP 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  boleto_number -> 40583 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  enteprise_id -> marcello.ozzetti 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  cpf -> 35346643885 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  pid -> 10625917 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  location_data -> AVENIDA CIDADE JARDIM, 1817. CEP: 12231675. SAO JOSE DOS CAMPOS - São Paulo 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  boleto_number -> 40584 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  enteprise_id -> daniel.pereira.paulo 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  cpf -> 33228839818 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  pid -> 10915248 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  location_data -> Travessa Leonardo Gandara,127 AP 23A. CEP: 2815070. São Paulo - Sao Paulo 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  boleto_number -> 40585 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  enteprise_id -> g.a.macedo.carignato 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  cpf -> 23788731826 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  pid -> 11372639 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  location_data -> Rua Antonio Amirabile. CEP: 4678060. Sao Paulo - SP - São Paulo 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  boleto_number -> 40586 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  enteprise_id -> ronivaldo.rodrigues 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  cpf -> 1675234140 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  pid -> 10680845 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  location_data -> CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:39:02 AM Actualizando boleto obj:  amount -> 620 
+ERROR: 09/13/2019 10:40:50 AM Except Boleto_Item -> la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  boleto_number -> 40587 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  enteprise_id -> ivan.marques.de.lima 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  cpf -> 21557259810 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  pid -> 11451276 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  location_data -> Estrada Sao Francisco 2701 apto 14 torre 1. CEP: 6764290. Taboao da Serra - SP 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  boleto_number -> 40588 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  enteprise_id -> nilson.tomoo.sassaki 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  cpf -> 37684295802 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  pid -> 10512196 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  location_data -> Rua Xavier Pinheiro, 158 - Vila Mathias. CEP: 11015090. Santos - São Paulo 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  boleto_number -> 40589 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  enteprise_id -> karla.oliveira 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  cpf -> 44262785890 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  pid -> 10916819 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  location_data -> Rua Azaleia, 37. CEP: 2990338. Sao Paulo - SP 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  boleto_number -> 40685 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  enteprise_id -> diego.t.nascimento 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  cpf -> 34453359829 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  pid -> 10763168 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  location_data -> Rua Flaminio Levi, 191 - Saboo, Santos. CEP: 11085080. Santos - Sao Paulo 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  boleto_number -> 40591 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  enteprise_id -> guilherme.q.xavier 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  cpf -> 44193301800 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  pid -> 11345312 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  location_data -> Rua suica 259. CEP: 9210000. Santo Andre - São Paulo 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  boleto_number -> 40592 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  enteprise_id -> j.mello.martins 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  cpf -> 40008581819 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  pid -> 11518495 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  location_data -> Rua Jurubatuba, 4. CEP: 11035100. Santos - São Paulo 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  boleto_number -> 40593 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  enteprise_id -> thiago.campos 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  cpf -> 33064998897 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  pid -> 10267513 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  location_data -> Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:40:50 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:08 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/13/2019 10:42:08 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  boleto_number -> 40579 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  enteprise_id -> amanda.grimberg 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  cpf -> 26112018896 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  pid -> 10916833 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  location_data -> Rua Padre Frei Jorge Walter Nunes, 630. CEP: 8246066. Sao Paulo - São Paulo 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  boleto_number -> 40580 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  enteprise_id -> lucas.samuel.d.silva 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  cpf -> 46173197863 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  pid -> 11336265 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  location_data -> RUA SOL, 31 - JARDIM TUPANCI. CEP: 6414070. BARUERI - SÃO PAULO 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  boleto_number -> 40581 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  enteprise_id -> hugo.cezario 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  cpf -> 32643185803 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  pid -> 10916561 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  location_data -> Avenida Yara, 215, 122. CEP: 6028110. Osasco - SP 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  boleto_number -> 40582 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  enteprise_id -> luiz.fsouza 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  cpf -> 39400561890 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  pid -> 10958447 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  location_data -> Rua Americo Falcao, 486. CEP: 5786010. Sao Paulo - SP 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  boleto_number -> 40583 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  enteprise_id -> marcello.ozzetti 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  cpf -> 35346643885 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  pid -> 10625917 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  location_data -> AVENIDA CIDADE JARDIM, 1817. CEP: 12231675. SAO JOSE DOS CAMPOS - São Paulo 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  boleto_number -> 40584 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  enteprise_id -> daniel.pereira.paulo 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  cpf -> 33228839818 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  pid -> 10915248 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  location_data -> Travessa Leonardo Gandara,127 AP 23A. CEP: 2815070. São Paulo - Sao Paulo 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  boleto_number -> 40585 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  enteprise_id -> g.a.macedo.carignato 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  cpf -> 23788731826 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  pid -> 11372639 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  location_data -> Rua Antonio Amirabile. CEP: 4678060. Sao Paulo - SP - São Paulo 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  boleto_number -> 40586 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  enteprise_id -> ronivaldo.rodrigues 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  cpf -> 1675234140 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  pid -> 10680845 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  location_data -> CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:08 AM Actualizando boleto obj:  amount -> 620 
+ERROR: 09/13/2019 10:42:12 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  boleto_number -> 40587 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  enteprise_id -> ivan.marques.de.lima 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  cpf -> 21557259810 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  pid -> 11451276 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  location_data -> Estrada Sao Francisco 2701 apto 14 torre 1. CEP: 6764290. Taboao da Serra - SP 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  boleto_number -> 40588 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  enteprise_id -> nilson.tomoo.sassaki 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  cpf -> 37684295802 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  pid -> 10512196 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  location_data -> Rua Xavier Pinheiro, 158 - Vila Mathias. CEP: 11015090. Santos - São Paulo 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  boleto_number -> 40589 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  enteprise_id -> karla.oliveira 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  cpf -> 44262785890 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  pid -> 10916819 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  location_data -> Rua Azaleia, 37. CEP: 2990338. Sao Paulo - SP 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  boleto_number -> 40685 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  enteprise_id -> diego.t.nascimento 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  cpf -> 34453359829 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  pid -> 10763168 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  location_data -> Rua Flaminio Levi, 191 - Saboo, Santos. CEP: 11085080. Santos - Sao Paulo 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  boleto_number -> 40591 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  enteprise_id -> guilherme.q.xavier 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  cpf -> 44193301800 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  pid -> 11345312 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  location_data -> Rua suica 259. CEP: 9210000. Santo Andre - São Paulo 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  boleto_number -> 40592 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  enteprise_id -> j.mello.martins 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  cpf -> 40008581819 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  pid -> 11518495 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  location_data -> Rua Jurubatuba, 4. CEP: 11035100. Santos - São Paulo 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  boleto_number -> 40593 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  enteprise_id -> thiago.campos 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  cpf -> 33064998897 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  pid -> 10267513 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  location_data -> Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:12 AM Actualizando boleto obj:  amount -> 620 
+ERROR: 09/13/2019 10:42:13 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  boleto_number -> 40686 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  enteprise_id -> ana.paula.s.macedo 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  cpf -> 34943306896 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  pid -> 11303199 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  location_data -> Rua Bela Vista,18 . CEP: 2326220. Sao Paulo  - Sao Paulo 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  amount -> 620 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  boleto_number -> 40687 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  enteprise_id -> larissa.neves.viana 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  cpf -> 8776724662 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  pid -> 11627013 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  location_data -> Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:13 AM Actualizando boleto obj:  amount -> 1200 
+ERROR: 09/13/2019 10:42:14 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40688 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> lucas.andrade.mello 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 9736124606 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11082464 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Sebastiao Fabiano Dias, 233, apt 1704B. CEP: 30320690. Belo Horizonte - Minas Gerais 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40689 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> jefferson.a.venancio 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 10157901602 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11163629 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Sebastiao Fabiano Dias, 233 AP 1304 BL A. CEP: 30320690. Belo Horizonte - Minas Gerais 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40690 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> luiz.arruda 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 8245091618 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11082459 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Cardeal Vasconcelos Motta, 95, apto 203. CEP: 30535420. Belo Horizonte - Minas Gerais 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40691 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> marcio.mine 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 6957673642 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11082455 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Araripe, 10 - apto 902 - Bairro Floresta. CEP: 31015260. Belo Horizonte - Minas Gerais 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40692 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> marcos.v.o.freitas 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 8291682658 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11152936 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Sebastiao Fabiano Dias, 233, AP 404A, Belvedere. CEP: 30320690. Belo Horizonte - MG 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40693 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> adson.gregorio 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 11539465640 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11554697 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua dos timbiras, 2163. CEP: 30140061. Belo Horizonte - Minas Gerais 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40694 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> m.mayrink 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 4203684692 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11504340 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Chicago 429/401 Sion . CEP: 30315520. Belo Horizonte - MG 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40695 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> g.ferreira.oliveira 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 9974017610 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11211125 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Sao Mateus, 215. CEP: 31035330. Belo Horizonte - MG 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40696 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> marcelo.fiuza 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 7191063629 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11427028 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua carlos peixoto 782/104. CEP: 30240460. Belo Horizonte - minas gerais 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40697 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> vinicius.p.rodrigues 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 7392924630 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11083554 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Amapa, 702, Bairro Amazonas. CEP: 32240010. Contagem - MG 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40698 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> victor.pimenta 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 8783665633 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11082481 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Martiniano de Carvalho, 611 apto 101. CEP: 1321001. Sao Paulo - SP 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40699 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> artur.galdino 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 9071669629 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 11502001 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua lavras, 616, Sao Pedro. CEP: 30330000. Belo Horizonte - Minas gerais 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  boleto_number -> 40700 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  enteprise_id -> adson.muniz 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  cpf -> 7188586624 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  pid -> 10804973 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  location_data -> Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  emision_date -> Fecha del dia de creación  
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  due_date -> 2019-04-30 
+INFO: 09/13/2019 10:42:14 AM Actualizando boleto obj:  amount -> 1200 
+ERROR: 09/13/2019 10:42:15 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
