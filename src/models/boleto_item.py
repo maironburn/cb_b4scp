@@ -47,7 +47,7 @@ class Boleto_Item(object):
                 self.cep = location.split('.')[1].split(':')[1]
                 self.city = location.split('.')[2].split('-')[0].strip()
                 ac = location.split('.')[2].split('-')[1].strip()
-                self.country_code = ''.join([i[0].upper() for i in ac.split()])
+                self.country_code = ac if len(ac.split())==1 else ''.join([i[0].upper() for i in ac.split()])
 
                 return self.address, self.cep, self.city, self.country_code
 
@@ -192,7 +192,7 @@ class Boleto_Item(object):
     def __repr__(self):
 
         if not self.error_description:
-            return "boleto: %s\n\tenterprise_id: %s\n\tcpf: %s\n\tpid: %s\n\temision_date: %s\n\tdue_date: %s\n\tamount: %s\n\taddress: %s\n\tcep: %s\n\tcity: %s\n\tcountry_code: %s" % (
+            return "boleto: %s\n\t\tenterprise_id: %s\n\t\tcpf: %s\n\t\tpid: %s\n\t\temision_date: %s\n\t\tdue_date: %s\n\t\tamount: %s\n\t\taddress: %s\n\t\tcep: %s\n\t\tcity: %s\n\t\tcountry_code: %s" % (
                 self.boleto_number,
                 self.enteprise_id,
                 self.cpf,

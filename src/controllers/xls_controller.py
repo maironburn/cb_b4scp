@@ -73,8 +73,8 @@ class XlsController(object):
                     # row.keys() son los nombres de los indices de la serie de panda
                     if col_name in COLS_DICT_TO_ENTITY.keys():
                         # mapeo, key: propiedades de la entidad Boleto_item / value: valor porcedente del excel
-                        self._logger.info(
-                            "Actualizando boleto obj:  {} -> {} ".format(COLS_DICT_TO_ENTITY[col_name], row[col_name]))
+                        # self._logger.info(
+                        #     "Actualizando boleto obj:  {} -> {} ".format(COLS_DICT_TO_ENTITY[col_name], row[col_name]))
                         item_dict.update({COLS_DICT_TO_ENTITY[col_name]: row[col_name]})
                     else:
                         # @todo, tratamiento de errores
@@ -84,6 +84,7 @@ class XlsController(object):
                     item_dict.update({'logger': self._logger})
                     instance = Boleto_Item(**item_dict)
                     if instance.is_valid:
+                        self._logger.info("Boleto correcto\n{}".format(instance))
                         self.valid_instances_collection.append(instance)
                     else:
                         self.instance_collection_errors.append(instance)
