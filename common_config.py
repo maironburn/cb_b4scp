@@ -2,7 +2,7 @@
 import os.path
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-
+COOKIE_FILE = os.path.join(ROOT_DIR, "cookie.pkl")
 # logger stuff
 LOGGER_NAME = "Citibank_Payment_RPA"
 LOG_FILE = os.path.join(ROOT_DIR, "logger{}{}".format(os.path.sep, LOGGER_NAME))
