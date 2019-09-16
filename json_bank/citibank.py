@@ -21,6 +21,7 @@ citibank = {
     # @todo ,  to think about (key adicional para invocar un callback o metodo ?... )
 
     'boleto_workflow': [
+        # los campos data seran leidos las instacias boleto_item (procedente de la lectura del excel)
         {'tipo': 'xpath', 'target': "//input[@name='seuNumero']",
          'mode': 'fill', 'data': '', 'description': 'Seu numero', 'id': 'boleto_number'},
 

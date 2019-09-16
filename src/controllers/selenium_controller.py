@@ -36,7 +36,7 @@ class SeleniumController(object):
     find_method = None
     finds_method = None
     ec_ref = None
-    login_dict_methods = None
+
 
     def __init__(self, kw):
 
@@ -61,11 +61,12 @@ class SeleniumController(object):
 
             if self.driver:
                 self.driver.get(self.bank.get('boleto_url'))
+
                 self._logger.debug("create_boleto, creacion del boleto")
                 # @todo, eliminar los sleeps...sustituir por ec
                 sleep(2)
-                self.pre_post_login_actions(lista_acciones=self.bank.get('boleto_workflow'), boleto_obj=boleto,
-                                            stage="generacion del boleto")
+                self.do_workflow(lista_acciones=self.bank.get('boleto_workflow'), boleto_obj=boleto,
+                                 stage="generacion del boleto")
             # self.driver_close()
 
         except Exception as ex:
@@ -159,19 +160,24 @@ class SeleniumController(object):
             else:
                 self.driver.find_element_by_xpath(target)
 
-    def pre_post_login_actions(self, lista_acciones=None, boleto_obj=None, stage=""):
+    def do_workflow(self, lista_acciones=None, boleto_obj=None, stage=""):
         '''
             acciones post login o post login, la mecanica es igual
             @:param, lista de acciones (pre o post acciones)
         '''
         if self.driver and len(lista_acciones):
 
-            self._logger.info("Evaluando acciones {} login".format(stage))
             dict_data = {
                 'boleto_number': boleto_obj.boleto_number,
                 'pagador': boleto_obj.cpf,
                 'beneficiario': '96534094000158',
             }
+
+            self._logger.info(
+                "generando boleto_id: {} -> pagador: {} , beneficiario: {}".format(boleto_obj.boleto_number,
+                                                                                   boleto_obj.cpf,
+                                                                                   dict_data['beneficiario']))
+
             for actions in lista_acciones:
 
                 tipo = actions.get('tipo')
@@ -184,10 +190,7 @@ class SeleniumController(object):
                 try:
                     self._logger.info(
                         "{} -> tipo busqueda: {} , expresion: {} , mode: {}".format(desc, tipo, target, mode))
-                    self._logger.info(
-                        "generando boleto_id: {} -> pagador: {} , beneficiario: {}".format(boleto_obj.boleto_number,
-                                                                                           boleto_obj.cpf,
-                                                                                           dict_data['beneficiario']))
+
 
                     if mode == 'frame_switch':
                         self.switch_to_frame(actions)
@@ -222,6 +225,7 @@ class SeleniumController(object):
 
                 except Exception as e:
                     pass
+
 
     def start(self):
 
