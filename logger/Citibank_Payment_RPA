@@ -1,324 +1,324 @@
-INFO: 09/13/2019 01:31:59 PM <property object at 0x000001E7C9B60048> -> Loaded skel from : citibank
-INFO: 09/13/2019 01:31:59 PM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/13/2019 01:31:59 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM <property object at 0x00000171476AA7C8> -> Loaded skel from : citibank
+INFO: 09/16/2019 08:53:15 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/16/2019 08:53:15 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40579
 		enterprise_id: amanda.grimberg
 		cpf: 26112018896
 		pid: 10916833
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua Padre Frei Jorge Walter Nunes, 630
 		cep:  8246066
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40580
 		enterprise_id: lucas.samuel.d.silva
 		cpf: 46173197863
 		pid: 11336265
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: RUA SOL, 31 - JARDIM TUPANCI
 		cep:  6414070
 		city: BARUERI
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40581
 		enterprise_id: hugo.cezario
 		cpf: 32643185803
 		pid: 10916561
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Avenida Yara, 215, 122
 		cep:  6028110
 		city: Osasco
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40582
 		enterprise_id: luiz.fsouza
 		cpf: 39400561890
 		pid: 10958447
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua Americo Falcao, 486
 		cep:  5786010
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40583
 		enterprise_id: marcello.ozzetti
 		cpf: 35346643885
 		pid: 10625917
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: AVENIDA CIDADE JARDIM, 1817
 		cep:  12231675
 		city: SAO JOSE DOS CAMPOS
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40584
 		enterprise_id: daniel.pereira.paulo
 		cpf: 33228839818
 		pid: 10915248
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Travessa Leonardo Gandara,127 AP 23A
 		cep:  2815070
 		city: São Paulo
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40585
 		enterprise_id: g.a.macedo.carignato
 		cpf: 23788731826
 		pid: 11372639
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua Antonio Amirabile
 		cep:  4678060
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/13/2019 01:31:59 PM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+ERROR: 09/16/2019 08:53:15 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40587
 		enterprise_id: ivan.marques.de.lima
 		cpf: 21557259810
 		pid: 11451276
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Estrada Sao Francisco 2701 apto 14 torre 1
 		cep:  6764290
 		city: Taboao da Serra
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40588
 		enterprise_id: nilson.tomoo.sassaki
 		cpf: 37684295802
 		pid: 10512196
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua Xavier Pinheiro, 158 - Vila Mathias
 		cep:  11015090
 		city: Santos
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40589
 		enterprise_id: karla.oliveira
 		cpf: 44262785890
 		pid: 10916819
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua Azaleia, 37
 		cep:  2990338
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40685
 		enterprise_id: diego.t.nascimento
 		cpf: 34453359829
 		pid: 10763168
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua Flaminio Levi, 191 - Saboo, Santos
 		cep:  11085080
 		city: Santos
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40591
 		enterprise_id: guilherme.q.xavier
 		cpf: 44193301800
 		pid: 11345312
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua suica 259
 		cep:  9210000
 		city: Santo Andre
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40592
 		enterprise_id: j.mello.martins
 		cpf: 40008581819
 		pid: 11518495
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua Jurubatuba, 4
 		cep:  11035100
 		city: Santos
 		country_code: SP
-ERROR: 09/13/2019 01:31:59 PM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+ERROR: 09/16/2019 08:53:15 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40686
 		enterprise_id: ana.paula.s.macedo
 		cpf: 34943306896
 		pid: 11303199
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 620
 		address: Rua Bela Vista,18 
 		cep:  2326220
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/13/2019 01:31:59 PM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+ERROR: 09/16/2019 08:53:15 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40688
 		enterprise_id: lucas.andrade.mello
 		cpf: 9736124606
 		pid: 11082464
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Sebastiao Fabiano Dias, 233, apt 1704B
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40689
 		enterprise_id: jefferson.a.venancio
 		cpf: 10157901602
 		pid: 11163629
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Sebastiao Fabiano Dias, 233 AP 1304 BL A
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40690
 		enterprise_id: luiz.arruda
 		cpf: 8245091618
 		pid: 11082459
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Cardeal Vasconcelos Motta, 95, apto 203
 		cep:  30535420
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40691
 		enterprise_id: marcio.mine
 		cpf: 6957673642
 		pid: 11082455
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Araripe, 10 - apto 902 - Bairro Floresta
 		cep:  31015260
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40692
 		enterprise_id: marcos.v.o.freitas
 		cpf: 8291682658
 		pid: 11152936
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Sebastiao Fabiano Dias, 233, AP 404A, Belvedere
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40693
 		enterprise_id: adson.gregorio
 		cpf: 11539465640
 		pid: 11554697
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua dos timbiras, 2163
 		cep:  30140061
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40694
 		enterprise_id: m.mayrink
 		cpf: 4203684692
 		pid: 11504340
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Chicago 429/401 Sion 
 		cep:  30315520
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40695
 		enterprise_id: g.ferreira.oliveira
 		cpf: 9974017610
 		pid: 11211125
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Sao Mateus, 215
 		cep:  31035330
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40696
 		enterprise_id: marcelo.fiuza
 		cpf: 7191063629
 		pid: 11427028
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua carlos peixoto 782/104
 		cep:  30240460
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40697
 		enterprise_id: vinicius.p.rodrigues
 		cpf: 7392924630
 		pid: 11083554
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Amapa, 702, Bairro Amazonas
 		cep:  32240010
 		city: Contagem
 		country_code: MG
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40698
 		enterprise_id: victor.pimenta
 		cpf: 8783665633
 		pid: 11082481
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua Martiniano de Carvalho, 611 apto 101
 		cep:  1321001
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/13/2019 01:31:59 PM Boleto correcto
+INFO: 09/16/2019 08:53:15 AM Boleto correcto
 boleto: 40699
 		enterprise_id: artur.galdino
 		cpf: 9071669629
 		pid: 11502001
-		emision_date: 09/13/19
+		emision_date: 09/16/19
 		due_date: 2019-04-30
 		amount: 1200
 		address: Rua lavras, 616, Sao Pedro
 		cep:  30330000
 		city: Belo Horizonte
 		country_code: MG
-ERROR: 09/13/2019 01:31:59 PM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
-ERROR: 09/13/2019 01:31:59 PM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
-ERROR: 09/13/2019 01:31:59 PM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
-ERROR: 09/13/2019 01:31:59 PM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
-ERROR: 09/13/2019 01:31:59 PM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
-ERROR: 09/13/2019 01:31:59 PM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
+ERROR: 09/16/2019 08:53:15 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
+ERROR: 09/16/2019 08:53:15 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
+ERROR: 09/16/2019 08:53:15 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
+ERROR: 09/16/2019 08:53:15 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
+ERROR: 09/16/2019 08:53:15 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
+ERROR: 09/16/2019 08:53:15 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais

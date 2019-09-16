@@ -3,8 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 .idea
-logger/B4nk_Sr4py
-
+logger/*
+logger/Citibank_Payment_RPA
 #local bank
 src/localBanks.py
 selenium/

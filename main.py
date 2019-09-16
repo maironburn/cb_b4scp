@@ -3,20 +3,30 @@ import os
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-LOGGER_NAME = "B4nk_Sr4py"
+# logger stuff
+LOGGER_NAME = "Citibank_Payment_RPA"
 LOG_FILE = os.path.join(ROOT_DIR, "logger{}{}".format(os.path.sep, LOGGER_NAME))
-# SETTINGS = os.path.join(ROOT_DIR, 'settings')
-# JSONES = os.path.join(SETTINGS, 'json_banks')
-#
-# SRC = os.path.join(ROOT_DIR, 'src')
-# CONTROLLERS = os.path.join(SRC, 'controllers')
 
-# selenium stuff
-SELENIUM_DRIVER_PATH = os.path.join(ROOT_DIR, '{}{}{}'.format('chromedriver_win32', os.path.sep, 'chromedriver.exe'))
+# json bancos
+JSON_BANK = os.path.join(ROOT_DIR, 'json_bank')
+# Paquetes de terceros
+EXT_BUNDLES = os.path.join(ROOT_DIR, '3rd_parties')
+# selenium IE Driver
+IE_DRIVER_FOLDER = os.path.join(EXT_BUNDLES, 'IEDriver')
+IE_DRIVER = os.path.join(IE_DRIVER_FOLDER, 'IEDriverServer.exe')
+# XLS folder
+XLS_FOLDER = os.path.join(ROOT_DIR, 'xls_folder')
+
 
 bancos = ['citibank']
 from  src.controllers.bank_controller import BankController
+from  src.controllers.xls_controller import XlsController
 
-bc = BankController({'banknames': bancos})
-for b in bancos:
-    bc.extract_movements(b)
+if __name__ == '__main__':
+
+    bancos = ['citibank']
+    bc = BankController({'banknames': bancos})
+    xls_controller= XlsController (**{'logger': bc.logger})
+    if xls_controller.get_boletos_items():
+        for b in bancos:
+            bc.extract_movements(b)

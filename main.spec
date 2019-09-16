@@ -4,14 +4,15 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\Bank_RPA'],
-             binaries=[ ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\Bank_RPA\\chromedriver_win32\\chromedriver.exe', '.\\3rd_parties\\chromedriver_win32' ),
-					('C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\Bank_RPA\\python3.6.6', '.\\3rd_parties\\python3.6.6'),
-					('C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\Bank_RPA\\IEDriver', '.\\3rd_parties\\IEDriver')
+             pathex=['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos'],
+             binaries=[ ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\3rd_parties', '.\\3rd_parties' ),
+              ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\documentacion_usuario', '.\\documentacion_usuario' )
 			 ],
              datas=[ ( 'src', 'src' ),
 			 ( 'logger', 'logger' ),
-			 ( 'settings', 'settings' )
+			  ( '.\\common_config.py', '.\\common_config.py' ),
+			 ( 'json_bank', 'json_bank' ),
+			  ( 'xls_folder', 'xls_folder' )
 			 ],
              hiddenimports=[],
              hookspath=[],
