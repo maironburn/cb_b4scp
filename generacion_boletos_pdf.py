@@ -27,5 +27,6 @@ if __name__ == '__main__':
     bancos = ['citibank']
     bc = BankController({'banknames': bancos})
     xls_controller= XlsController (**{'logger': bc.logger})
+    # @todo, definir q hacer con los boletos q no pasen la validacion
     xls_controller.get_boletos_items()
     bc.generate_boleto(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
