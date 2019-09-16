@@ -27,6 +27,5 @@ if __name__ == '__main__':
     bancos = ['citibank']
     bc = BankController({'banknames': bancos})
     xls_controller= XlsController (**{'logger': bc.logger})
-    if xls_controller.get_boletos_items():
-        for b in bancos:
-            bc.extract_movements(b)
+    xls_controller.get_boletos_items()
+    bc.generate_boleto(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)

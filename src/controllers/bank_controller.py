@@ -18,6 +18,18 @@ class BankController(object):
         if self._banknames:
             self.load_banks()
 
+
+
+    def generate_boleto(self, bankname=None, lst_instances_bi= None):
+
+        kw = {'logger': self._logger, 'bank': self._dict_bank.get(bankname).json_data}
+        self.sc = SeleniumController(kw)
+
+        for bi in lst_instances_bi:
+          self.sc.create_boleto(bi)
+
+
+
     def extract_movements(self, bankname=None):
 
         if bankname and bankname in self._dict_bank.keys():

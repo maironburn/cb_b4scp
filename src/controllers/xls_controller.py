@@ -36,7 +36,7 @@ class XlsController(object):
             self._logger.error(
                 "{} ->  No se halla la carpeta que contiene los XLS: ->  {}".format(__class__.__name__, XLS_FOLDER))
 
-        return False
+        return True
 
     def read_document_folder(self):
         '''

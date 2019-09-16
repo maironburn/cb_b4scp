@@ -1,7 +1,7 @@
-INFO: 09/16/2019 08:53:15 AM <property object at 0x00000171476AA7C8> -> Loaded skel from : citibank
-INFO: 09/16/2019 08:53:15 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/16/2019 08:53:15 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:39 AM <property object at 0x000001F29CE81958> -> Loaded skel from : citibank
+INFO: 09/16/2019 11:22:39 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/16/2019 11:22:39 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40579
 		enterprise_id: amanda.grimberg
 		cpf: 26112018896
@@ -13,7 +13,7 @@ boleto: 40579
 		cep:  8246066
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40580
 		enterprise_id: lucas.samuel.d.silva
 		cpf: 46173197863
@@ -25,7 +25,7 @@ boleto: 40580
 		cep:  6414070
 		city: BARUERI
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40581
 		enterprise_id: hugo.cezario
 		cpf: 32643185803
@@ -37,7 +37,7 @@ boleto: 40581
 		cep:  6028110
 		city: Osasco
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40582
 		enterprise_id: luiz.fsouza
 		cpf: 39400561890
@@ -49,7 +49,7 @@ boleto: 40582
 		cep:  5786010
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40583
 		enterprise_id: marcello.ozzetti
 		cpf: 35346643885
@@ -61,7 +61,7 @@ boleto: 40583
 		cep:  12231675
 		city: SAO JOSE DOS CAMPOS
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40584
 		enterprise_id: daniel.pereira.paulo
 		cpf: 33228839818
@@ -73,7 +73,7 @@ boleto: 40584
 		cep:  2815070
 		city: São Paulo
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40585
 		enterprise_id: g.a.macedo.carignato
 		cpf: 23788731826
@@ -85,8 +85,8 @@ boleto: 40585
 		cep:  4678060
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/16/2019 08:53:15 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+ERROR: 09/16/2019 11:22:40 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40587
 		enterprise_id: ivan.marques.de.lima
 		cpf: 21557259810
@@ -98,7 +98,7 @@ boleto: 40587
 		cep:  6764290
 		city: Taboao da Serra
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40588
 		enterprise_id: nilson.tomoo.sassaki
 		cpf: 37684295802
@@ -110,7 +110,7 @@ boleto: 40588
 		cep:  11015090
 		city: Santos
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40589
 		enterprise_id: karla.oliveira
 		cpf: 44262785890
@@ -122,7 +122,7 @@ boleto: 40589
 		cep:  2990338
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40685
 		enterprise_id: diego.t.nascimento
 		cpf: 34453359829
@@ -134,7 +134,7 @@ boleto: 40685
 		cep:  11085080
 		city: Santos
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40591
 		enterprise_id: guilherme.q.xavier
 		cpf: 44193301800
@@ -146,7 +146,7 @@ boleto: 40591
 		cep:  9210000
 		city: Santo Andre
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40592
 		enterprise_id: j.mello.martins
 		cpf: 40008581819
@@ -158,8 +158,8 @@ boleto: 40592
 		cep:  11035100
 		city: Santos
 		country_code: SP
-ERROR: 09/16/2019 08:53:15 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+ERROR: 09/16/2019 11:22:40 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40686
 		enterprise_id: ana.paula.s.macedo
 		cpf: 34943306896
@@ -171,8 +171,8 @@ boleto: 40686
 		cep:  2326220
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/16/2019 08:53:15 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+ERROR: 09/16/2019 11:22:40 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40688
 		enterprise_id: lucas.andrade.mello
 		cpf: 9736124606
@@ -184,7 +184,7 @@ boleto: 40688
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40689
 		enterprise_id: jefferson.a.venancio
 		cpf: 10157901602
@@ -196,7 +196,7 @@ boleto: 40689
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40690
 		enterprise_id: luiz.arruda
 		cpf: 8245091618
@@ -208,7 +208,7 @@ boleto: 40690
 		cep:  30535420
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40691
 		enterprise_id: marcio.mine
 		cpf: 6957673642
@@ -220,7 +220,7 @@ boleto: 40691
 		cep:  31015260
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40692
 		enterprise_id: marcos.v.o.freitas
 		cpf: 8291682658
@@ -232,7 +232,7 @@ boleto: 40692
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40693
 		enterprise_id: adson.gregorio
 		cpf: 11539465640
@@ -244,7 +244,7 @@ boleto: 40693
 		cep:  30140061
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40694
 		enterprise_id: m.mayrink
 		cpf: 4203684692
@@ -256,7 +256,7 @@ boleto: 40694
 		cep:  30315520
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40695
 		enterprise_id: g.ferreira.oliveira
 		cpf: 9974017610
@@ -268,7 +268,7 @@ boleto: 40695
 		cep:  31035330
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40696
 		enterprise_id: marcelo.fiuza
 		cpf: 7191063629
@@ -280,7 +280,7 @@ boleto: 40696
 		cep:  30240460
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40697
 		enterprise_id: vinicius.p.rodrigues
 		cpf: 7392924630
@@ -292,7 +292,7 @@ boleto: 40697
 		cep:  32240010
 		city: Contagem
 		country_code: MG
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40698
 		enterprise_id: victor.pimenta
 		cpf: 8783665633
@@ -304,7 +304,7 @@ boleto: 40698
 		cep:  1321001
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 08:53:15 AM Boleto correcto
+INFO: 09/16/2019 11:22:40 AM Boleto correcto
 boleto: 40699
 		enterprise_id: artur.galdino
 		cpf: 9071669629
@@ -316,16 +316,101 @@ boleto: 40699
 		cep:  30330000
 		city: Belo Horizonte
 		country_code: MG
-ERROR: 09/16/2019 08:53:15 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
-ERROR: 09/16/2019 08:53:15 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
-ERROR: 09/16/2019 08:53:15 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
-ERROR: 09/16/2019 08:53:15 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
-ERROR: 09/16/2019 08:53:15 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
-ERROR: 09/16/2019 08:53:15 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
-INFO: 09/16/2019 09:50:03 AM <property object at 0x00000207EFE02818> -> Loaded skel from : citibank
-INFO: 09/16/2019 09:50:06 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/16/2019 09:50:06 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+ERROR: 09/16/2019 11:22:40 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
+ERROR: 09/16/2019 11:22:40 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
+ERROR: 09/16/2019 11:22:40 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
+ERROR: 09/16/2019 11:22:40 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
+ERROR: 09/16/2019 11:22:40 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
+ERROR: 09/16/2019 11:22:40 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
+INFO: 09/16/2019 11:23:11 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:23:13 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:23:13 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:23:13 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:23:14 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:23:18 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:23:18 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:23:18 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:23:20 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:23:24 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:23:24 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:23:24 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:23:25 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:23:29 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:23:29 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:23:30 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:23:37 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:23:39 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:23:39 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:23:39 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:23:40 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:23:44 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:23:44 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:23:44 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:23:46 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:23:50 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:23:50 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:23:50 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:23:51 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:23:55 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:23:55 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:23:55 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:24:03 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:24:05 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:24:05 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:05 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:24:05 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:24:09 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:24:09 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:09 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:24:11 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:24:15 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:24:15 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:15 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:24:17 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:24:21 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:24:21 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:21 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:24:29 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:24:31 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:24:31 AM generando boleto_id: 40582 -> pagador: 39400561890 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:31 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:24:32 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:24:36 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:24:36 AM generando boleto_id: 40582 -> pagador: 39400561890 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:36 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:24:37 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:24:41 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:24:41 AM generando boleto_id: 40582 -> pagador: 39400561890 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:42 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:24:43 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:24:47 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:24:47 AM generando boleto_id: 40582 -> pagador: 39400561890 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:47 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:24:55 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:24:57 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:24:57 AM generando boleto_id: 40583 -> pagador: 35346643885 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:24:57 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:24:57 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:25:01 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:25:01 AM generando boleto_id: 40583 -> pagador: 35346643885 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:25:02 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:25:03 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:25:07 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:25:07 AM generando boleto_id: 40583 -> pagador: 35346643885 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:25:07 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:25:09 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:25:13 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:25:13 AM generando boleto_id: 40583 -> pagador: 35346643885 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:25:13 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:25:21 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:25:23 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:25:23 AM generando boleto_id: 40584 -> pagador: 33228839818 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:25:23 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:25:23 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:28:20 AM <property object at 0x0000018301D5A8B8> -> Loaded skel from : citibank
+INFO: 09/16/2019 11:28:20 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/16/2019 11:28:20 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40579
 		enterprise_id: amanda.grimberg
 		cpf: 26112018896
@@ -337,7 +422,7 @@ boleto: 40579
 		cep:  8246066
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40580
 		enterprise_id: lucas.samuel.d.silva
 		cpf: 46173197863
@@ -349,7 +434,7 @@ boleto: 40580
 		cep:  6414070
 		city: BARUERI
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40581
 		enterprise_id: hugo.cezario
 		cpf: 32643185803
@@ -361,7 +446,7 @@ boleto: 40581
 		cep:  6028110
 		city: Osasco
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40582
 		enterprise_id: luiz.fsouza
 		cpf: 39400561890
@@ -373,7 +458,7 @@ boleto: 40582
 		cep:  5786010
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40583
 		enterprise_id: marcello.ozzetti
 		cpf: 35346643885
@@ -385,7 +470,7 @@ boleto: 40583
 		cep:  12231675
 		city: SAO JOSE DOS CAMPOS
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40584
 		enterprise_id: daniel.pereira.paulo
 		cpf: 33228839818
@@ -397,7 +482,7 @@ boleto: 40584
 		cep:  2815070
 		city: São Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40585
 		enterprise_id: g.a.macedo.carignato
 		cpf: 23788731826
@@ -409,8 +494,8 @@ boleto: 40585
 		cep:  4678060
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/16/2019 09:50:06 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+ERROR: 09/16/2019 11:28:21 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40587
 		enterprise_id: ivan.marques.de.lima
 		cpf: 21557259810
@@ -422,7 +507,7 @@ boleto: 40587
 		cep:  6764290
 		city: Taboao da Serra
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40588
 		enterprise_id: nilson.tomoo.sassaki
 		cpf: 37684295802
@@ -434,7 +519,7 @@ boleto: 40588
 		cep:  11015090
 		city: Santos
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40589
 		enterprise_id: karla.oliveira
 		cpf: 44262785890
@@ -446,7 +531,7 @@ boleto: 40589
 		cep:  2990338
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40685
 		enterprise_id: diego.t.nascimento
 		cpf: 34453359829
@@ -458,7 +543,7 @@ boleto: 40685
 		cep:  11085080
 		city: Santos
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40591
 		enterprise_id: guilherme.q.xavier
 		cpf: 44193301800
@@ -470,7 +555,7 @@ boleto: 40591
 		cep:  9210000
 		city: Santo Andre
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40592
 		enterprise_id: j.mello.martins
 		cpf: 40008581819
@@ -482,8 +567,8 @@ boleto: 40592
 		cep:  11035100
 		city: Santos
 		country_code: SP
-ERROR: 09/16/2019 09:50:06 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+ERROR: 09/16/2019 11:28:21 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40686
 		enterprise_id: ana.paula.s.macedo
 		cpf: 34943306896
@@ -495,8 +580,8 @@ boleto: 40686
 		cep:  2326220
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/16/2019 09:50:06 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+ERROR: 09/16/2019 11:28:21 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40688
 		enterprise_id: lucas.andrade.mello
 		cpf: 9736124606
@@ -508,7 +593,7 @@ boleto: 40688
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40689
 		enterprise_id: jefferson.a.venancio
 		cpf: 10157901602
@@ -520,7 +605,7 @@ boleto: 40689
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40690
 		enterprise_id: luiz.arruda
 		cpf: 8245091618
@@ -532,7 +617,7 @@ boleto: 40690
 		cep:  30535420
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40691
 		enterprise_id: marcio.mine
 		cpf: 6957673642
@@ -544,7 +629,7 @@ boleto: 40691
 		cep:  31015260
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40692
 		enterprise_id: marcos.v.o.freitas
 		cpf: 8291682658
@@ -556,7 +641,7 @@ boleto: 40692
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40693
 		enterprise_id: adson.gregorio
 		cpf: 11539465640
@@ -568,7 +653,7 @@ boleto: 40693
 		cep:  30140061
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40694
 		enterprise_id: m.mayrink
 		cpf: 4203684692
@@ -580,7 +665,7 @@ boleto: 40694
 		cep:  30315520
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40695
 		enterprise_id: g.ferreira.oliveira
 		cpf: 9974017610
@@ -592,7 +677,7 @@ boleto: 40695
 		cep:  31035330
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40696
 		enterprise_id: marcelo.fiuza
 		cpf: 7191063629
@@ -604,7 +689,7 @@ boleto: 40696
 		cep:  30240460
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40697
 		enterprise_id: vinicius.p.rodrigues
 		cpf: 7392924630
@@ -616,7 +701,7 @@ boleto: 40697
 		cep:  32240010
 		city: Contagem
 		country_code: MG
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40698
 		enterprise_id: victor.pimenta
 		cpf: 8783665633
@@ -628,7 +713,7 @@ boleto: 40698
 		cep:  1321001
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:06 AM Boleto correcto
+INFO: 09/16/2019 11:28:21 AM Boleto correcto
 boleto: 40699
 		enterprise_id: artur.galdino
 		cpf: 9071669629
@@ -640,16 +725,64 @@ boleto: 40699
 		cep:  30330000
 		city: Belo Horizonte
 		country_code: MG
-ERROR: 09/16/2019 09:50:06 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
-ERROR: 09/16/2019 09:50:06 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
-ERROR: 09/16/2019 09:50:06 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
-ERROR: 09/16/2019 09:50:06 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
-ERROR: 09/16/2019 09:50:06 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
-ERROR: 09/16/2019 09:50:06 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
-INFO: 09/16/2019 09:50:23 AM <property object at 0x000001C25FE6E958> -> Loaded skel from : citibank
-INFO: 09/16/2019 09:50:28 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/16/2019 09:50:28 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+ERROR: 09/16/2019 11:28:21 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
+ERROR: 09/16/2019 11:28:21 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
+ERROR: 09/16/2019 11:28:21 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
+ERROR: 09/16/2019 11:28:21 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
+ERROR: 09/16/2019 11:28:21 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
+ERROR: 09/16/2019 11:28:21 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
+INFO: 09/16/2019 11:28:29 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:28:30 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:28:30 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:30 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:28:30 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:28:31 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:28:31 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:31 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:28:33 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:28:34 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:28:34 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:34 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:28:36 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:28:37 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:28:37 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:37 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:28:43 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:28:43 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:28:43 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:43 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:28:44 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:28:45 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:28:45 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:45 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:28:47 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:28:48 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:28:48 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:49 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:28:51 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:28:52 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:28:52 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:52 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:28:58 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:28:58 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:28:58 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:28:58 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:28:59 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:29:00 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:29:00 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:00 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:29:02 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:29:03 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:29:03 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:03 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:29:05 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:29:06 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:29:06 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:06 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:29:27 AM <property object at 0x000001DE930AD8B8> -> Loaded skel from : citibank
+INFO: 09/16/2019 11:29:27 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/16/2019 11:29:27 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40579
 		enterprise_id: amanda.grimberg
 		cpf: 26112018896
@@ -661,7 +794,7 @@ boleto: 40579
 		cep:  8246066
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40580
 		enterprise_id: lucas.samuel.d.silva
 		cpf: 46173197863
@@ -673,7 +806,7 @@ boleto: 40580
 		cep:  6414070
 		city: BARUERI
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40581
 		enterprise_id: hugo.cezario
 		cpf: 32643185803
@@ -685,7 +818,7 @@ boleto: 40581
 		cep:  6028110
 		city: Osasco
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40582
 		enterprise_id: luiz.fsouza
 		cpf: 39400561890
@@ -697,7 +830,7 @@ boleto: 40582
 		cep:  5786010
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40583
 		enterprise_id: marcello.ozzetti
 		cpf: 35346643885
@@ -709,7 +842,7 @@ boleto: 40583
 		cep:  12231675
 		city: SAO JOSE DOS CAMPOS
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40584
 		enterprise_id: daniel.pereira.paulo
 		cpf: 33228839818
@@ -721,7 +854,7 @@ boleto: 40584
 		cep:  2815070
 		city: São Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40585
 		enterprise_id: g.a.macedo.carignato
 		cpf: 23788731826
@@ -733,8 +866,8 @@ boleto: 40585
 		cep:  4678060
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/16/2019 09:50:28 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+ERROR: 09/16/2019 11:29:27 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40587
 		enterprise_id: ivan.marques.de.lima
 		cpf: 21557259810
@@ -746,7 +879,7 @@ boleto: 40587
 		cep:  6764290
 		city: Taboao da Serra
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40588
 		enterprise_id: nilson.tomoo.sassaki
 		cpf: 37684295802
@@ -758,7 +891,7 @@ boleto: 40588
 		cep:  11015090
 		city: Santos
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40589
 		enterprise_id: karla.oliveira
 		cpf: 44262785890
@@ -770,7 +903,7 @@ boleto: 40589
 		cep:  2990338
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40685
 		enterprise_id: diego.t.nascimento
 		cpf: 34453359829
@@ -782,7 +915,7 @@ boleto: 40685
 		cep:  11085080
 		city: Santos
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40591
 		enterprise_id: guilherme.q.xavier
 		cpf: 44193301800
@@ -794,7 +927,7 @@ boleto: 40591
 		cep:  9210000
 		city: Santo Andre
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40592
 		enterprise_id: j.mello.martins
 		cpf: 40008581819
@@ -806,8 +939,8 @@ boleto: 40592
 		cep:  11035100
 		city: Santos
 		country_code: SP
-ERROR: 09/16/2019 09:50:28 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+ERROR: 09/16/2019 11:29:27 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40686
 		enterprise_id: ana.paula.s.macedo
 		cpf: 34943306896
@@ -819,8 +952,8 @@ boleto: 40686
 		cep:  2326220
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/16/2019 09:50:28 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+ERROR: 09/16/2019 11:29:27 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40688
 		enterprise_id: lucas.andrade.mello
 		cpf: 9736124606
@@ -832,7 +965,7 @@ boleto: 40688
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40689
 		enterprise_id: jefferson.a.venancio
 		cpf: 10157901602
@@ -844,7 +977,7 @@ boleto: 40689
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40690
 		enterprise_id: luiz.arruda
 		cpf: 8245091618
@@ -856,7 +989,7 @@ boleto: 40690
 		cep:  30535420
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40691
 		enterprise_id: marcio.mine
 		cpf: 6957673642
@@ -868,7 +1001,7 @@ boleto: 40691
 		cep:  31015260
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40692
 		enterprise_id: marcos.v.o.freitas
 		cpf: 8291682658
@@ -880,7 +1013,7 @@ boleto: 40692
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40693
 		enterprise_id: adson.gregorio
 		cpf: 11539465640
@@ -892,7 +1025,7 @@ boleto: 40693
 		cep:  30140061
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40694
 		enterprise_id: m.mayrink
 		cpf: 4203684692
@@ -904,7 +1037,7 @@ boleto: 40694
 		cep:  30315520
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40695
 		enterprise_id: g.ferreira.oliveira
 		cpf: 9974017610
@@ -916,7 +1049,7 @@ boleto: 40695
 		cep:  31035330
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40696
 		enterprise_id: marcelo.fiuza
 		cpf: 7191063629
@@ -928,7 +1061,7 @@ boleto: 40696
 		cep:  30240460
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40697
 		enterprise_id: vinicius.p.rodrigues
 		cpf: 7392924630
@@ -940,7 +1073,7 @@ boleto: 40697
 		cep:  32240010
 		city: Contagem
 		country_code: MG
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40698
 		enterprise_id: victor.pimenta
 		cpf: 8783665633
@@ -952,7 +1085,7 @@ boleto: 40698
 		cep:  1321001
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:50:28 AM Boleto correcto
+INFO: 09/16/2019 11:29:27 AM Boleto correcto
 boleto: 40699
 		enterprise_id: artur.galdino
 		cpf: 9071669629
@@ -964,16 +1097,136 @@ boleto: 40699
 		cep:  30330000
 		city: Belo Horizonte
 		country_code: MG
-ERROR: 09/16/2019 09:50:28 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
-ERROR: 09/16/2019 09:50:28 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
-ERROR: 09/16/2019 09:50:28 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
-ERROR: 09/16/2019 09:50:28 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
-ERROR: 09/16/2019 09:50:28 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
-ERROR: 09/16/2019 09:50:28 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
-INFO: 09/16/2019 09:50:58 AM <property object at 0x000001F19306F958> -> Loaded skel from : citibank
-INFO: 09/16/2019 09:51:05 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
-INFO: 09/16/2019 09:51:05 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+ERROR: 09/16/2019 11:29:27 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
+ERROR: 09/16/2019 11:29:27 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
+ERROR: 09/16/2019 11:29:27 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
+ERROR: 09/16/2019 11:29:27 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
+ERROR: 09/16/2019 11:29:27 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
+ERROR: 09/16/2019 11:29:27 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
+INFO: 09/16/2019 11:29:35 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:29:35 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:29:35 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:36 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:29:37 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:29:37 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:29:37 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:37 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:29:38 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:29:39 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:29:39 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:39 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:29:40 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:29:40 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:29:40 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:40 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:29:46 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:29:46 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:29:46 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:46 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:29:47 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:29:47 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:29:47 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:47 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:29:49 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:29:49 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:29:49 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:49 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:29:51 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:29:51 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:29:51 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:51 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:29:57 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:29:57 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:29:57 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:57 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:29:57 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:29:58 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:29:58 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:29:58 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:30:00 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:30:00 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:30:00 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:00 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:30:02 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:30:02 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:30:02 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:02 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:30:07 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:30:07 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:30:07 AM generando boleto_id: 40582 -> pagador: 39400561890 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:08 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:30:08 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:30:08 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:30:08 AM generando boleto_id: 40582 -> pagador: 39400561890 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:08 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:30:10 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:30:10 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:30:10 AM generando boleto_id: 40582 -> pagador: 39400561890 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:10 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:30:12 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:30:12 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:30:12 AM generando boleto_id: 40582 -> pagador: 39400561890 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:12 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:30:17 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:30:17 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:30:17 AM generando boleto_id: 40583 -> pagador: 35346643885 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:17 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:30:18 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:30:18 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:30:18 AM generando boleto_id: 40583 -> pagador: 35346643885 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:18 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:30:20 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:30:20 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:30:20 AM generando boleto_id: 40583 -> pagador: 35346643885 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:20 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:30:22 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:30:22 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:30:22 AM generando boleto_id: 40583 -> pagador: 35346643885 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:22 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:30:28 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:30:28 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:30:28 AM generando boleto_id: 40584 -> pagador: 33228839818 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:28 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:30:28 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:30:29 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:30:29 AM generando boleto_id: 40584 -> pagador: 33228839818 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:29 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:30:30 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:30:31 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:30:31 AM generando boleto_id: 40584 -> pagador: 33228839818 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:31 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:30:33 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:30:33 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:30:33 AM generando boleto_id: 40584 -> pagador: 33228839818 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:33 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:30:39 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:30:39 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:30:39 AM generando boleto_id: 40585 -> pagador: 23788731826 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:39 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:30:40 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:30:40 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:30:40 AM generando boleto_id: 40585 -> pagador: 23788731826 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:40 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:30:42 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:30:42 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:30:42 AM generando boleto_id: 40585 -> pagador: 23788731826 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:42 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:30:44 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:30:44 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:30:44 AM generando boleto_id: 40585 -> pagador: 23788731826 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:44 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:30:50 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:30:50 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:30:50 AM generando boleto_id: 40587 -> pagador: 21557259810 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:50 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:30:51 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:30:51 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:30:51 AM generando boleto_id: 40587 -> pagador: 21557259810 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:30:51 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:31:31 AM <property object at 0x000002425A4BA8B8> -> Loaded skel from : citibank
+INFO: 09/16/2019 11:31:31 AM Leyendo documento XLS :-> Fichero modelo para emision de boletos.xlsx
+INFO: 09/16/2019 11:31:31 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Fichero modelo para emision de boletos.xlsx']
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40579
 		enterprise_id: amanda.grimberg
 		cpf: 26112018896
@@ -985,7 +1238,7 @@ boleto: 40579
 		cep:  8246066
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40580
 		enterprise_id: lucas.samuel.d.silva
 		cpf: 46173197863
@@ -997,7 +1250,7 @@ boleto: 40580
 		cep:  6414070
 		city: BARUERI
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40581
 		enterprise_id: hugo.cezario
 		cpf: 32643185803
@@ -1009,7 +1262,7 @@ boleto: 40581
 		cep:  6028110
 		city: Osasco
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40582
 		enterprise_id: luiz.fsouza
 		cpf: 39400561890
@@ -1021,7 +1274,7 @@ boleto: 40582
 		cep:  5786010
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40583
 		enterprise_id: marcello.ozzetti
 		cpf: 35346643885
@@ -1033,7 +1286,7 @@ boleto: 40583
 		cep:  12231675
 		city: SAO JOSE DOS CAMPOS
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40584
 		enterprise_id: daniel.pereira.paulo
 		cpf: 33228839818
@@ -1045,7 +1298,7 @@ boleto: 40584
 		cep:  2815070
 		city: São Paulo
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40585
 		enterprise_id: g.a.macedo.carignato
 		cpf: 23788731826
@@ -1057,8 +1310,8 @@ boleto: 40585
 		cep:  4678060
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/16/2019 09:51:06 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+ERROR: 09/16/2019 11:31:31 AM Except Boleto_Item -> boleto: 40586, la cadena CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF no tiene un formato correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40587
 		enterprise_id: ivan.marques.de.lima
 		cpf: 21557259810
@@ -1070,7 +1323,7 @@ boleto: 40587
 		cep:  6764290
 		city: Taboao da Serra
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40588
 		enterprise_id: nilson.tomoo.sassaki
 		cpf: 37684295802
@@ -1082,7 +1335,7 @@ boleto: 40588
 		cep:  11015090
 		city: Santos
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40589
 		enterprise_id: karla.oliveira
 		cpf: 44262785890
@@ -1094,7 +1347,7 @@ boleto: 40589
 		cep:  2990338
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40685
 		enterprise_id: diego.t.nascimento
 		cpf: 34453359829
@@ -1106,7 +1359,7 @@ boleto: 40685
 		cep:  11085080
 		city: Santos
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40591
 		enterprise_id: guilherme.q.xavier
 		cpf: 44193301800
@@ -1118,7 +1371,7 @@ boleto: 40591
 		cep:  9210000
 		city: Santo Andre
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40592
 		enterprise_id: j.mello.martins
 		cpf: 40008581819
@@ -1130,8 +1383,8 @@ boleto: 40592
 		cep:  11035100
 		city: Santos
 		country_code: SP
-ERROR: 09/16/2019 09:51:06 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+ERROR: 09/16/2019 11:31:31 AM Except Boleto_Item -> boleto: 40593, la cadena Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo no tiene un formato correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40686
 		enterprise_id: ana.paula.s.macedo
 		cpf: 34943306896
@@ -1143,8 +1396,8 @@ boleto: 40686
 		cep:  2326220
 		city: Sao Paulo
 		country_code: SP
-ERROR: 09/16/2019 09:51:06 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+ERROR: 09/16/2019 11:31:31 AM Except Boleto_Item -> boleto: 40687, la cadena Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais no tiene un formato correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40688
 		enterprise_id: lucas.andrade.mello
 		cpf: 9736124606
@@ -1156,7 +1409,7 @@ boleto: 40688
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40689
 		enterprise_id: jefferson.a.venancio
 		cpf: 10157901602
@@ -1168,7 +1421,7 @@ boleto: 40689
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40690
 		enterprise_id: luiz.arruda
 		cpf: 8245091618
@@ -1180,7 +1433,7 @@ boleto: 40690
 		cep:  30535420
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40691
 		enterprise_id: marcio.mine
 		cpf: 6957673642
@@ -1192,7 +1445,7 @@ boleto: 40691
 		cep:  31015260
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40692
 		enterprise_id: marcos.v.o.freitas
 		cpf: 8291682658
@@ -1204,7 +1457,7 @@ boleto: 40692
 		cep:  30320690
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40693
 		enterprise_id: adson.gregorio
 		cpf: 11539465640
@@ -1216,7 +1469,7 @@ boleto: 40693
 		cep:  30140061
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40694
 		enterprise_id: m.mayrink
 		cpf: 4203684692
@@ -1228,7 +1481,7 @@ boleto: 40694
 		cep:  30315520
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40695
 		enterprise_id: g.ferreira.oliveira
 		cpf: 9974017610
@@ -1240,7 +1493,7 @@ boleto: 40695
 		cep:  31035330
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40696
 		enterprise_id: marcelo.fiuza
 		cpf: 7191063629
@@ -1252,7 +1505,7 @@ boleto: 40696
 		cep:  30240460
 		city: Belo Horizonte
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40697
 		enterprise_id: vinicius.p.rodrigues
 		cpf: 7392924630
@@ -1264,7 +1517,7 @@ boleto: 40697
 		cep:  32240010
 		city: Contagem
 		country_code: MG
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40698
 		enterprise_id: victor.pimenta
 		cpf: 8783665633
@@ -1276,7 +1529,7 @@ boleto: 40698
 		cep:  1321001
 		city: Sao Paulo
 		country_code: SP
-INFO: 09/16/2019 09:51:06 AM Boleto correcto
+INFO: 09/16/2019 11:31:31 AM Boleto correcto
 boleto: 40699
 		enterprise_id: artur.galdino
 		cpf: 9071669629
@@ -1288,9 +1541,57 @@ boleto: 40699
 		cep:  30330000
 		city: Belo Horizonte
 		country_code: MG
-ERROR: 09/16/2019 09:51:06 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
-ERROR: 09/16/2019 09:51:06 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
-ERROR: 09/16/2019 09:51:06 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
-ERROR: 09/16/2019 09:51:06 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
-ERROR: 09/16/2019 09:51:06 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
-ERROR: 09/16/2019 09:51:06 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
+ERROR: 09/16/2019 11:31:31 AM Except Boleto_Item -> boleto: 40700, la cadena Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais no tiene un formato correcto
+ERROR: 09/16/2019 11:31:31 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
+ERROR: 09/16/2019 11:31:31 AM boleto: 40586 -> formato no correcto en la cadena: CSB 6 LT 8 BL C AP 420, TAGUATINGA SUL.. CEP: 72015954. BRASILIA - DF
+ERROR: 09/16/2019 11:31:31 AM boleto: 40593 -> formato no correcto en la cadena: Av. Guarulhos 4329 AP73C. CEP: 7031001. Guarulhos - São Paulo
+ERROR: 09/16/2019 11:31:31 AM boleto: 40687 -> formato no correcto en la cadena: Av. Costa do Marfim, 160. CEP: 30575000. Belo Horizonte - Minas Gerais
+ERROR: 09/16/2019 11:31:31 AM boleto: 40700 -> formato no correcto en la cadena: Rua Herminda Lopes Ferreira, 358. Santa Rita II. CEP: 39402228. Montes Claros - Minas Gerais
+INFO: 09/16/2019 11:31:39 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:31:39 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:31:39 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:40 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:31:40 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:31:40 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:31:40 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:40 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:31:42 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:31:42 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:31:42 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:42 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:31:44 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:31:44 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:31:44 AM generando boleto_id: 40579 -> pagador: 26112018896 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:44 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:31:49 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:31:49 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:31:49 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:49 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:31:50 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:31:50 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:31:50 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:50 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:31:51 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:31:51 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:31:51 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:52 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:31:53 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:31:53 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:31:53 AM generando boleto_id: 40580 -> pagador: 46173197863 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:54 AM matched condition boton OK !! 
+INFO: 09/16/2019 11:31:59 AM Evaluando acciones generacion del boleto login
+INFO: 09/16/2019 11:31:59 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/16/2019 11:31:59 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:31:59 AM matched condition Seu numero !! 
+INFO: 09/16/2019 11:32:00 AM seteado  //input[@name='seuNumero'] ->  !! 
+INFO: 09/16/2019 11:32:00 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/16/2019 11:32:00 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:32:00 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/16/2019 11:32:02 AM seteado  //input[@name='txtSacado'] ->  !! 
+INFO: 09/16/2019 11:32:02 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/16/2019 11:32:02 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:32:02 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/16/2019 11:32:03 AM seteado  //input[@name='txtCedente'] ->  !! 
+INFO: 09/16/2019 11:32:03 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/16/2019 11:32:03 AM generando boleto_id: 40581 -> pagador: 32643185803 , beneficiario: 96534094000158
+INFO: 09/16/2019 11:32:03 AM matched condition boton OK !! 

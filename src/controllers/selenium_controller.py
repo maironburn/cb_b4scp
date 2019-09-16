@@ -1,10 +1,12 @@
 from time import sleep
+
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait as wait
+
 from common_config import IE_DRIVER
 
 # pickle.dump(driver.get_cookies() , open("QuoraCookies.pkl","wb"))
@@ -48,20 +50,6 @@ class SeleniumController(object):
             except Exception as e:
                 self._logger.debug("Error al iniciar Selenium -> {}".format(e))
 
-    '''
-    elem = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, '//*[@id=\"logged-in-message\"]/h2'))
-            )
-            
-        def is_visible(locator, timeout = 30): 
-            try: 
-                ui.WebDriverWait(chrome, timeout).until(EC.visibility_of_element_located((By.XPATH, locator))) 
-                return True
-            except TimeoutException: 
-                return False
-            
-    '''
-
     def load_references(self):
 
         self.find_method = self.load_find_method_references()
@@ -71,16 +59,18 @@ class SeleniumController(object):
                                    'multifactor_login': self.multifactor_login
                                    }
 
-    def create_boleto(self):
+    def create_boleto(self, boleto=None):
 
         try:
 
-            self.driver.get(self.bank.get('boleto_url'))
-            self._logger.debug("create_boleto, creacion del boleto")
-            # @todo, eliminar los sleeps...sustituir por ec
-            sleep(2)
-            self.pre_post_login_actions(lista_acciones=self.bank.get('boleto_workflow'), stage="generacion del boleto")
-            self.driver_close()
+            if self.driver:
+                self.driver.get(self.bank.get('boleto_url'))
+                self._logger.debug("create_boleto, creacion del boleto")
+                # @todo, eliminar los sleeps...sustituir por ec
+                sleep(2)
+                self.pre_post_login_actions(lista_acciones=self.bank.get('boleto_workflow'), boleto_obj=boleto,
+                                            stage="generacion del boleto")
+            # self.driver_close()
 
         except Exception as ex:
             self._logger.error("Excepcion en do_the_process -> {}".format(ex))
@@ -275,13 +265,19 @@ class SeleniumController(object):
             else:
                 self.driver.find_element_by_xpath(target)
 
-    def pre_post_login_actions(self, lista_acciones=None, stage=""):
+    def pre_post_login_actions(self, lista_acciones=None, boleto_obj=None, stage=""):
         '''
             acciones post login o post login, la mecanica es igual
             @:param, lista de acciones (pre o post acciones)
         '''
         if self.driver and len(lista_acciones):
+
             self._logger.info("Evaluando acciones {} login".format(stage))
+            dict_data = {
+                'boleto_number': boleto_obj.boleto_number,
+                'pagador': boleto_obj.cpf,
+                'beneficiario': '96534094000158',
+            }
             for actions in lista_acciones:
 
                 tipo = actions.get('tipo')
@@ -289,12 +285,17 @@ class SeleniumController(object):
                 desc = actions.get('description')
                 mode = actions.get('mode')
                 ec = actions.get('expected_conditions', None)
-                time_wait = actions.get('time_wait', 2)
-                sleep(time_wait)
+                # time_wait = actions.get('time_wait', 0.1)
+                id = actions.get('id', None)
+                # sleep(time_wait)
                 try:
 
                     self._logger.info(
                         "{} -> tipo busqueda: {} , expresion: {} , mode: {}".format(desc, tipo, target, mode))
+                    self._logger.info(
+                        "generando boleto_id: {} -> pagador: {} , beneficiario: {}".format(boleto_obj.boleto_number,
+                                                                                           boleto_obj.cpf,
+                                                                                           dict_data['beneficiario']))
 
                     if mode == 'frame_switch':
                         self.switch_to_frame(actions)
@@ -315,20 +316,20 @@ class SeleniumController(object):
                                 if mode == 'swap_window':
                                     self.swap_window(elem)
 
-                                if mode == 'fill':
+                                if mode == 'fill' and id:
                                     # previamente a send_keys se requiere un clear
                                     if actions.get('clear', None):
                                         elem.clear()
                                     if actions.get('focus', None):
                                         elem.click()
 
-                                    elem.send_keys(actions.get('data'))
+                                    elem.send_keys(dict_data[id])
                                     self._logger.info("seteado  {} ->  {}!! ".format(target, actions.get('data')))
                         if ec:
                             self.wait_for_expected_conditions(ec)
 
-                    time_wait = actions.get('time_wait', 2)
-                    sleep(time_wait)
+                    # time_wait = actions.get('time_wait', 0.1)
+                    # sleep(time_wait)
                 except Exception as e:
                     pass
 
@@ -351,11 +352,9 @@ class SeleniumController(object):
 
         except Exception as e:
             self._logger.error(
-                "Exception iniciando el drive de IExplorer:->  {}".format( e))
+                "Exception iniciando el drive de IExplorer:->  {}".format(e))
 
         return None
-
-
 
     # def save_cookie(self):
     #     pickle.dump(self.driver.get_cookies(), open(COOKIE_FILE, "wb"))
