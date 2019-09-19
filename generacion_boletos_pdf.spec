@@ -4,15 +4,17 @@ block_cipher = None
 
 
 a = Analysis(['generacion_boletos_pdf.py'],
-             pathex=['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos'],
-             binaries=[ ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\3rd_parties', '.\\3rd_parties' ),
-              ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\documentacion_usuario', '.\\documentacion_usuario' )
+             pathex=['C:\\PyCharm_WorkSpace\\Boletos_CityBank'],
+             binaries=[ ( 'C:\\PyCharm_WorkSpace\\Boletos_CityBank\\3rd_parties', '.\\3rd_parties' )
+
 			 ],
              datas=[ ( 'src', 'src' ),
 			 ( 'logger', 'logger' ),
 			  ( '.\\common_config.py', '.\\common_config.py' ),
-			 ( 'json_bank', 'json_bank' ),
-			  ( 'xls_folder', 'xls_folder' )
+			 ( 'Boletos descargados', 'Boletos descargados' ),
+			  ( 'json_bank', 'json_bank' ),
+			  ( 'xls_folder', 'xls_folder' ),
+			  ( 'documentacion_usuario', 'documentacion_usuario' )
 			 ],
              hiddenimports=[],
              hookspath=[],

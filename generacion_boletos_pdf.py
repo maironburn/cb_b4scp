@@ -30,3 +30,5 @@ if __name__ == '__main__':
     # @todo, definir q hacer con los boletos q no pasen la validacion
     xls_controller.get_boletos_items()
     bc.generate_boleto(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
+    import sys
+    sys.exit()

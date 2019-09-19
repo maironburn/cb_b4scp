@@ -28,6 +28,8 @@ class BankController(object):
         for bi in lst_instances_bi:
           self.sc.create_boleto(bi)
 
+        self.sc.driver_close()
+
 
 
     def extract_movements(self, bankname=None):
