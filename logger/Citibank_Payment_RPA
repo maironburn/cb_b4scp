@@ -348,3 +348,1667 @@ INFO: 09/16/2019 02:27:42 PM matched condition CPF/CNPJ do Cedente/Beneficiario 
 INFO: 09/16/2019 02:27:44 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
 INFO: 09/16/2019 02:27:44 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
 INFO: 09/16/2019 02:27:44 PM matched condition boton OK !! 
+INFO: 09/19/2019 09:51:06 AM <property object at 0x000001928D4B0C28> -> Loaded skel from : citibank
+INFO: 09/19/2019 09:51:17 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 09:51:17 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+ERROR: 09/19/2019 09:52:24 AM Except Boleto_Item -> boleto: 54947, la cadena AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP no tiene un formato correcto
+INFO: 09/19/2019 09:58:45 AM <property object at 0x000001A960EAEC28> -> Loaded skel from : citibank
+INFO: 09/19/2019 09:59:01 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 09:59:01 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+ERROR: 09/19/2019 09:59:02 AM Except Boleto_Item -> boleto: 54947, la cadena AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP no tiene un formato correcto
+ERROR: 09/19/2019 09:59:02 AM Except Boleto_Item -> boleto: 54948, la cadena AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP no tiene un formato correcto
+ERROR: 09/19/2019 09:59:02 AM Except Boleto_Item -> boleto: 54949, la cadena AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP no tiene un formato correcto
+ERROR: 09/19/2019 09:59:02 AM Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad
+ERROR: 09/19/2019 09:59:03 AM boleto: 54947 -> formato no correcto en la cadena: AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP
+ERROR: 09/19/2019 09:59:03 AM boleto: 54948 -> formato no correcto en la cadena: AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP
+ERROR: 09/19/2019 09:59:03 AM boleto: 54949 -> formato no correcto en la cadena: AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP
+INFO: 09/19/2019 09:59:25 AM <property object at 0x00000167DDA4DC28> -> Loaded skel from : citibank
+INFO: 09/19/2019 09:59:34 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 09:59:39 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+ERROR: 09/19/2019 10:02:15 AM Except Boleto_Item -> boleto: 54947, la cadena AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP no tiene un formato correcto
+INFO: 09/19/2019 10:03:08 AM <property object at 0x0000020521C3FCC8> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:03:10 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:03:10 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 10:03:14 AM <property object at 0x000002639C32DCC8> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:03:18 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:03:18 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+ERROR: 09/19/2019 10:03:28 AM Except Boleto_Item -> boleto: 54947, la cadena AV BRIGADEIRO FARIA LIMA 3477. CEP: 04538133. SAO PAULO. SP no tiene un formato correcto
+INFO: 09/19/2019 10:04:42 AM <property object at 0x0000021D13C74D68> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:04:44 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:04:44 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 10:08:59 AM <property object at 0x0000023F6401DE08> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:09:05 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:09:05 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 10:09:25 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:10:17 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:10:51 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:13:21 AM <property object at 0x000001FA1AD5ACC8> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:13:27 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:13:27 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 10:13:33 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:13:38 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:13:40 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:14:15 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 10:14:15 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 10:14:15 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 10:14:15 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 10:14:15 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 10:15:47 AM <property object at 0x000001E2914F7D68> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:15:50 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:15:50 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 10:15:52 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:16:00 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:16:00 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:16:37 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 10:16:45 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 10:18:22 AM <property object at 0x0000027CEBBE4C78> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:18:22 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:18:22 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 10:18:22 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:18:22 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:18:22 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:18:46 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 10:18:50 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 10:19:00 AM matched condition Seu numero !! 
+INFO: 09/19/2019 10:19:25 AM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 10:19:30 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 10:19:32 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 10:19:37 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 10:19:40 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 10:19:42 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 10:19:48 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 10:19:52 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 10:19:54 AM matched condition boton OK !! 
+INFO: 09/19/2019 10:27:29 AM <property object at 0x0000022DE25E8D18> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:27:29 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:27:29 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 10:27:29 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:27:29 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:27:29 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:27:48 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 10:27:48 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 10:27:48 AM matched condition Seu numero !! 
+INFO: 09/19/2019 10:27:48 AM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 10:27:48 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 10:27:48 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 10:27:49 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 10:27:49 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 10:27:49 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 10:27:50 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 10:27:50 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 10:27:50 AM matched condition boton OK !! 
+INFO: 09/19/2019 10:29:45 AM <property object at 0x0000027323322C28> -> Loaded skel from : citibank
+INFO: 09/19/2019 10:29:45 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 10:29:45 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 10:29:45 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:29:45 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:29:45 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 10:30:07 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 10:30:07 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 10:30:07 AM matched condition Seu numero !! 
+INFO: 09/19/2019 10:30:08 AM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 10:30:08 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 10:30:08 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 10:30:09 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 10:30:09 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 10:30:09 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 10:30:09 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 10:30:09 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 10:30:10 AM matched condition boton OK !! 
+INFO: 09/19/2019 11:03:04 AM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:03:04 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:03:04 AM matched condition Seu numero !! 
+INFO: 09/19/2019 11:03:04 AM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 11:03:04 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:03:05 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 11:03:05 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 11:03:05 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 11:03:05 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 11:03:06 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 11:03:06 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 11:03:06 AM matched condition boton OK !! 
+INFO: 09/19/2019 11:12:45 AM <property object at 0x0000020F7FCE6C78> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:12:45 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:12:46 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:12:46 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:12:46 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:12:46 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:12:52 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:12:52 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:12:52 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:12:52 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 11:12:52 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 11:12:59 AM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:12:59 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:12:59 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:12:59 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 11:12:59 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 11:13:49 AM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:13:53 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:14:30 AM <property object at 0x000002AFC6295D18> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:14:30 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:14:30 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:14:30 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:14:30 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:14:30 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:14:44 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:14:44 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:14:44 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:14:44 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 11:14:44 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 11:15:13 AM <property object at 0x0000014C724D0C28> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:15:13 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:15:13 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:15:13 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:15:13 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:15:13 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:15:17 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:15:23 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:15:47 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:16:38 AM <property object at 0x0000017C95144C28> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:16:38 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:16:38 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:16:38 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:16:38 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:16:38 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:16:41 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:16:47 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:16:51 AM matched condition Seu numero !! 
+INFO: 09/19/2019 11:16:55 AM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 11:16:58 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:16:58 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 11:16:59 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 11:17:00 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 11:17:00 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 11:17:01 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 11:17:06 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 11:17:08 AM matched condition boton OK !! 
+ERROR: 09/19/2019 11:17:37 AM Excepcion en do_the_process -> Message: Unable to get browser
+
+ERROR: 09/19/2019 11:17:37 AM Excepcion en do_the_process -> Message: Unable to get browser
+
+INFO: 09/19/2019 11:27:36 AM <property object at 0x0000025ECE5BDC28> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:27:36 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:27:36 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:27:36 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:27:36 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:27:36 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:28:25 AM <property object at 0x0000018E2D236C28> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:28:25 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:28:25 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:28:26 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:28:26 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:28:26 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:28:39 AM <property object at 0x00000160F3CF7D18> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:28:39 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:28:39 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:28:39 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:28:39 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:28:39 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:29:28 AM <property object at 0x00000299D6F32C78> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:29:28 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:29:28 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:29:28 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:29:28 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:29:28 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:29:36 AM <property object at 0x0000024C2B8CDC78> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:29:36 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:29:36 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:29:36 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:29:36 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:29:36 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:30:09 AM <property object at 0x0000024C2E453C78> -> Loaded skel from : citibank
+INFO: 09/19/2019 11:30:09 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 11:30:09 AM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 11:30:09 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:30:09 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:30:09 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 11:30:34 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:30:36 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:30:38 AM matched condition Seu numero !! 
+INFO: 09/19/2019 11:30:42 AM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 11:30:46 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:30:48 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 11:30:52 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 11:30:57 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 11:30:59 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 11:31:02 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 11:31:05 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 11:31:06 AM matched condition boton OK !! 
+INFO: 09/19/2019 11:31:25 AM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:31:27 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:31:29 AM matched condition Seu numero !! 
+INFO: 09/19/2019 11:31:33 AM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 11:31:35 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:31:37 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 11:31:40 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 11:31:42 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 11:31:42 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 11:31:42 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 11:31:43 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 11:31:43 AM matched condition boton OK !! 
+INFO: 09/19/2019 11:31:47 AM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 11:31:49 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 11:31:49 AM matched condition Seu numero !! 
+INFO: 09/19/2019 11:31:50 AM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/19/2019 11:31:50 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 11:31:50 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 11:31:50 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 11:31:51 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 11:31:51 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 11:31:51 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 11:31:51 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 11:31:51 AM matched condition boton OK !! 
+INFO: 09/19/2019 12:00:29 PM <property object at 0x0000012311E96D68> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:00:29 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:00:29 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:00:29 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:00:29 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:00:29 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:00:56 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:01:00 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:01:00 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:01:00 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:01:01 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:01:01 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:01:01 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:01:02 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:01:02 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:01:02 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:01:04 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:01:04 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:03:58 PM <property object at 0x000001F310670D18> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:03:58 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:03:58 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:03:58 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:03:58 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:03:58 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:04:05 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:04:09 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:04:09 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:04:09 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:04:09 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:04:09 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:04:09 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:04:09 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:04:09 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:04:09 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:04:09 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:04:09 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:04:10 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:04:10 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:04:10 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:04:10 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:04:10 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:04:10 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:04:10 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:04:10 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:04:10 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:04:10 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:04:10 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:04:10 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:04:40 PM <property object at 0x00000230421A2C78> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:04:40 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:04:40 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:04:40 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:04:40 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:04:40 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:04:48 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:04:48 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:04:48 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:04:48 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:04:48 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:04:48 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:04:48 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:04:48 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:04:48 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:04:49 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:04:49 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:04:49 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:04:49 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:04:49 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:04:49 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:04:49 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:04:49 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:04:49 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:04:49 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:04:49 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:04:49 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:04:49 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:04:49 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:04:49 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:04:50 PM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:04:50 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:04:50 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:04:50 PM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/19/2019 12:04:50 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:04:50 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:04:50 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:04:50 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:04:50 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:04:50 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:04:50 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:04:50 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:06:27 PM <property object at 0x00000226D3BA0C78> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:06:27 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:06:27 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:06:27 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:06:27 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:06:27 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:06:39 PM <property object at 0x0000020A04F9EC28> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:06:39 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:06:39 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:06:40 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:06:40 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:06:40 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:06:47 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:06:47 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:06:47 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:06:47 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:06:47 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:06:47 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:06:47 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:06:47 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:06:47 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:06:47 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:06:47 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:06:47 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:06:48 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:06:48 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:06:48 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:06:48 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:06:48 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:06:48 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:06:48 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:06:48 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:06:48 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:06:48 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:06:48 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:06:48 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:06:49 PM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:06:49 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:06:49 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:06:49 PM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/19/2019 12:06:49 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:06:49 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:06:49 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:06:49 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:06:49 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:06:49 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:06:49 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:06:49 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:07:57 PM <property object at 0x0000024FC3E94C78> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:07:57 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:07:57 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:07:57 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:07:57 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:07:57 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:08:04 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:08:04 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:08:04 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:08:04 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:08:04 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:08:04 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:08:05 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:08:05 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:08:05 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:08:05 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:08:05 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:08:05 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:08:05 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:08:05 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:08:05 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:08:05 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:08:05 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:08:05 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:08:06 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:08:06 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:08:06 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:08:06 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:08:06 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:08:06 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:08:06 PM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:08:06 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:08:06 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:08:06 PM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/19/2019 12:08:06 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:08:06 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:08:06 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:08:06 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:08:06 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:08:07 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:08:07 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:08:07 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:09:57 PM <property object at 0x000001E88842AC28> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:09:57 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:09:57 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:09:57 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:09:57 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:09:57 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:10:05 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:10:05 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:10:05 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:10:05 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:10:05 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:10:05 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:10:05 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:10:05 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:10:05 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:10:05 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:10:05 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:10:05 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:10:06 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:10:06 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:10:06 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:10:06 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:10:06 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:10:06 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:10:06 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:10:06 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:10:06 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:10:07 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:10:07 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:10:07 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:10:07 PM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:10:07 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:10:07 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:10:07 PM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/19/2019 12:10:07 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:10:07 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:10:07 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:10:07 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:10:07 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:10:07 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:10:07 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:10:07 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:10:47 PM <property object at 0x000001C62DECDCC8> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:10:47 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:10:47 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:10:47 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:10:47 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:10:47 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:11:03 PM <property object at 0x0000020285A80C28> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:11:03 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:11:03 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:11:03 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:11:03 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:11:03 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:11:17 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:11:17 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:11:17 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:11:17 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:11:17 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:11:17 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:11:17 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:11:17 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:11:17 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:11:18 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:11:18 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:11:18 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:11:18 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:11:18 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:11:18 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:11:18 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:11:18 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:11:18 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:11:18 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:11:18 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:11:18 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:11:19 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:11:19 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:11:19 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:11:19 PM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:11:19 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:11:19 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:11:19 PM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/19/2019 12:11:19 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:11:19 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:11:19 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:11:19 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:11:19 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:11:20 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:11:20 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:11:20 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:12:13 PM <property object at 0x000001F0A87B0C28> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:12:13 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:12:13 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:12:13 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:12:13 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:12:13 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:12:27 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:12:27 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:12:27 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:12:27 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:12:27 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:12:27 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:12:27 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:12:27 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:12:27 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:12:27 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:12:27 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:12:27 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:12:28 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:12:28 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:12:28 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:12:28 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:12:28 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:12:28 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:12:28 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:12:28 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:12:28 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:12:28 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:12:28 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:12:28 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:12:28 PM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:12:28 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:12:28 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:12:28 PM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/19/2019 12:12:28 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:12:28 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:12:29 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:12:29 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:12:29 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:12:29 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:12:29 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:12:29 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:20:56 PM <property object at 0x000001A4CFF68CC8> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:20:56 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:20:56 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:20:57 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:20:57 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:20:57 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:21:07 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:21:07 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:21:07 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:21:24 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:21:24 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:21:24 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:21:24 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:21:24 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:21:24 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:21:24 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:21:24 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:21:24 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:31:36 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:31:36 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:31:36 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:31:39 PM <property object at 0x000001CA202A7D18> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:31:39 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:31:39 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:31:39 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:31:39 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:31:39 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:31:50 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:31:50 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:31:50 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:31:50 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:31:50 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:31:50 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:31:50 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:31:50 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:31:50 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:31:50 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:31:50 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:31:50 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:32:19 PM <property object at 0x000002CCD199AC78> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:32:19 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:32:19 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:32:19 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:32:19 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:32:19 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:32:27 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:32:27 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:32:27 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:32:27 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:32:27 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:32:27 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:32:27 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:32:27 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:32:27 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:32:27 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:32:27 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:32:27 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:32:40 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:32:40 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:32:40 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:32:40 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:32:40 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:32:40 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:32:40 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:32:40 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:32:40 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:32:40 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:32:40 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:32:40 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:33:01 PM <property object at 0x000001B4749FCC78> -> Loaded skel from : citibank
+INFO: 09/19/2019 12:33:01 PM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/19/2019 12:33:01 PM Lectura de la carpeta C:\PyCharm_WorkSpace\Boletos_CityBank\xls_folder completada, hallados 1 documentos, ['C:\\PyCharm_WorkSpace\\Boletos_CityBank\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/19/2019 12:33:01 PM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:33:01 PM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:33:01 PM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/19/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/19/2019 12:33:09 PM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:33:09 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:33:09 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:33:09 PM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/19/2019 12:33:09 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:33:09 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:33:09 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:33:09 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:33:09 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:33:09 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:33:09 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:33:09 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:33:19 PM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:33:19 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:33:19 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:33:19 PM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/19/2019 12:33:19 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:33:19 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:33:19 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:33:19 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:33:19 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:33:19 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:33:19 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:33:19 PM matched condition boton OK !! 
+INFO: 09/19/2019 12:33:22 PM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/19/2019 12:33:22 PM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/19/2019 12:33:22 PM matched condition Seu numero !! 
+INFO: 09/19/2019 12:33:22 PM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/19/2019 12:33:22 PM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/19/2019 12:33:22 PM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/19/2019 12:33:22 PM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/19/2019 12:33:22 PM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/19/2019 12:33:22 PM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/19/2019 12:33:22 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/19/2019 12:33:22 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/19/2019 12:33:22 PM matched condition boton OK !! 

@@ -1,12 +1,12 @@
 from time import sleep
-
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait as wait
 
-from common_config import IE_DRIVER
+from common_config import IE_DRIVER, CHROME_DRIVER, DOWNLOAD_FOLDER
 
 # pickle.dump(driver.get_cookies() , open("QuoraCookies.pkl","wb"))
 '''
@@ -64,7 +64,7 @@ class SeleniumController(object):
 
                 self._logger.debug("create_boleto, creacion del boleto")
                 # @todo, eliminar los sleeps...sustituir por ec
-                sleep(2)
+
                 self.do_workflow(lista_acciones=self.bank.get('boleto_workflow'), boleto_obj=boleto,
                                  stage="generacion del boleto")
             # self.driver_close()
@@ -170,7 +170,8 @@ class SeleniumController(object):
             dict_data = {
                 'boleto_number': boleto_obj.boleto_number,
                 'pagador': boleto_obj.cpf,
-                'beneficiario': '96534094000158',
+                'beneficiario': boleto_obj.cpnj_beneficiario,
+                'enterprise_id' : boleto_obj.enterprise_id
             }
 
             self._logger.info(
@@ -207,7 +208,8 @@ class SeleniumController(object):
 
                                 if mode == 'click':
                                     elem.click()
-
+                                    sleep(2)
+                                    self.check_file_and_rename(dict_data)
                                 if mode == 'swap_window':
                                     self.swap_window(elem)
 
@@ -227,28 +229,61 @@ class SeleniumController(object):
                     pass
 
 
-    def start(self):
+    def check_file_and_rename(self,dict_data):
+        fichero_descargado= os.path.join(DOWNLOAD_FOLDER, 'Boleto.pdf')
+        fichero_renombrado ="{}_{}.pdf".format(dict_data['boleto_number'], dict_data['enterprise_id'])
+        renombrado_path= os.path.join(DOWNLOAD_FOLDER, fichero_renombrado)
 
-        try:
-            browser_driver = self.bank.get('browser_driver')
-            cap = DesiredCapabilities().INTERNETEXPLORER
-            cap['browserName'] = "internet explorer"
-            cap['ignoreProtectedModeSettings'] = True
-            cap['IntroduceInstabilityByIgnoringProtectedModeSettings'] = True
-            cap['nativeEvents'] = True
-            cap['ignoreZoomSetting'] = True
-            cap['requireWindowFocus'] = True
-            cap['INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS'] = True
-            self._driver = webdriver.Ie(capabilities=cap,
-                                        executable_path=IE_DRIVER)
+        if os.path.exists(fichero_descargado):
+            os.rename(fichero_descargado,renombrado_path)
 
+
+    def start(self, default_opc=["--start-maximized"]):
+        '''
+        @:param, lista de opciones con las que inicializar el driver de selenium
+        '''
+        options = webdriver.ChromeOptions()
+        #options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
+        for opc in default_opc:
+            options.add_argument(opc)
+
+        prefs = {'download.default_directory': DOWNLOAD_FOLDER}
+        options.add_experimental_option('prefs', prefs)
+
+        options.add_argument("download.default_directory=C:/Users/dmb/Downloads/Boletos_descargados")
+        # preferencias para la carpeta de  descarga
+        # options.add_experimental_option()
+        # https://stackoverflow.com/questions/18026391/setting-chrome-preferences-w-selenium-webdriver-in-python
+        self._driver = webdriver.Chrome(CHROME_DRIVER, chrome_options=options)
+
+        if self._driver:
+            self.load_find_method_references()
             return self._driver
 
-        except Exception as e:
-            self._logger.error(
-                "Exception iniciando el drive de IExplorer:->  {}".format(e))
-
         return None
+
+    # def start(self):
+    #
+    #     try:
+    #         browser_driver = self.bank.get('browser_driver')
+    #         cap = DesiredCapabilities().INTERNETEXPLORER
+    #         cap['browserName'] = "internet explorer"
+    #         cap['ignoreProtectedModeSettings'] = True
+    #         cap['IntroduceInstabilityByIgnoringProtectedModeSettings'] = True
+    #         cap['nativeEvents'] = True
+    #         cap['ignoreZoomSetting'] = True
+    #         cap['requireWindowFocus'] = True
+    #         cap['INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS'] = True
+    #         self._driver = webdriver.Ie(capabilities=cap,
+    #                                     executable_path=IE_DRIVER)
+    #
+    #         return self._driver
+    #
+    #     except Exception as e:
+    #         self._logger.error(
+    #             "Exception iniciando el drive de IExplorer:->  {}".format(e))
+    #
+    #     return None
 
     def driver_close(self):
         if self.driver:

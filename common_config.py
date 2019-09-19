@@ -13,7 +13,12 @@ JSON_BANK = os.path.join(ROOT_DIR, 'json_bank')
 EXT_BUNDLES = os.path.join(ROOT_DIR, '3rd_parties')
 # selenium IE Driver
 IE_DRIVER_FOLDER = os.path.join(EXT_BUNDLES, 'IEDriver')
-IE_DRIVER = os.path.join(IE_DRIVER_FOLDER, 'IEDriverServer.exe')
+IE_DRIVER = os.path.join(IE_DRIVER_FOLDER, 'IEDriver.exe')
+
+CHROME_DRIVER_FOLDER = os.path.join(EXT_BUNDLES, 'chromedriver_win32')
+CHROME_DRIVER = os.path.join(CHROME_DRIVER_FOLDER, 'chromedriver.exe')
+
+DOWNLOAD_FOLDER=os.path.join(ROOT_DIR, 'Boletos descargados')
 # XLS folder
 XLS_FOLDER = os.path.join(ROOT_DIR, 'xls_folder')
 COLS_NAMES = [
@@ -21,6 +26,7 @@ COLS_NAMES = [
     'Enterprise id/ Racao social',
     'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)',
     'PID',
+    'CNPJ Beneficiario',
     'Endereço faturamento (Estate,Cep necesita 8 caracteres,City)',
     'Data de emision del boleto (según la configuracion del idioma)',
     'Data de Vencimento (según la configuracion del idioma)',
@@ -32,6 +38,7 @@ COLS_DICT_TO_ENTITY = {
     'Enterprise id/ Racao social': 'enteprise_id',
     'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)': 'cpf',
     'PID': 'pid',
+    'CNPJ Beneficiario' : 'cnpj_beneficiario',
     'Endereço faturamento (Estate,Cep necesita 8 caracteres,City)': 'location_data',
     'Data de emision del boleto (según la configuracion del idioma)': 'emision_date',
     'Data de Vencimento (según la configuracion del idioma)': 'due_date',

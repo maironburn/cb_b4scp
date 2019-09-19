@@ -13,7 +13,7 @@ JSON_BANK = os.path.join(ROOT_DIR, 'json_bank')
 EXT_BUNDLES = os.path.join(ROOT_DIR, '3rd_parties')
 # selenium IE Driver
 IE_DRIVER_FOLDER = os.path.join(EXT_BUNDLES, 'IEDriver')
-IE_DRIVER = os.path.join(IE_DRIVER_FOLDER, 'IEDriverServer.exe')
+IE_DRIVER = os.path.join(IE_DRIVER_FOLDER, 'IEDriver.exe')
 # XLS folder
 XLS_FOLDER = os.path.join(ROOT_DIR, 'xls_folder')
 

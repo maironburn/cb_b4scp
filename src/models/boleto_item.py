@@ -6,9 +6,10 @@ from datetime import datetime
 class Boleto_Item(object):
     _logger = None
     _boleto_number = str()
-    _enteprise_id = str()
+    _enterprise_id = str()
     _cpf = str()
     _pid = str()
+    _cpnj_beneficiario = str()
 
     _emision_date = str()
     _due_date = str()
@@ -30,10 +31,12 @@ class Boleto_Item(object):
         self.load_entity_data(kw)
 
     def load_entity_data(self, kw):
+
         self.boleto_number = kw.get('boleto_number')
         if self.get_data_from_location(kw.get('location_data')):
             self.enteprise_id = kw.get('enteprise_id')
             self.cpf = kw.get('cpf')
+            self.cpnj_beneficiario = kw.get('cnpj_beneficiario')
             self.pid = kw.get('pid')
             self.due_date = kw.get('due_date')
             self.amount = kw.get('amount')
@@ -41,12 +44,12 @@ class Boleto_Item(object):
 
     def get_data_from_location(self, location):
 
-        if location and len(location.split('.')) == 3:
+        if location and len(location.split('.')) == 4:
             try:
                 self.address = location.split('.')[0]
                 self.cep = location.split('.')[1].split(':')[1]
                 self.city = location.split('.')[2].split('-')[0].strip()
-                ac = location.split('.')[2].split('-')[1].strip()
+                ac =location.split('.')[3]
                 self.country_code = ac if len(ac.split())==1 else ''.join([i[0].upper() for i in ac.split()])
 
                 return self.address, self.cep, self.city, self.country_code
@@ -80,13 +83,13 @@ class Boleto_Item(object):
             self._boleto_number = value
 
     @property
-    def enteprise_id(self):
-        return self._enteprise_id
+    def enterprise_id(self):
+        return self._enterprise_id
 
-    @enteprise_id.setter
+    @enterprise_id.setter
     def enteprise_id(self, value):
         if value:
-            self._enteprise_id = value
+            self._enterprise_id = value
 
     @property
     def cpf(self):
@@ -96,6 +99,16 @@ class Boleto_Item(object):
     def cpf(self, value):
         if value:
             self._cpf = value
+
+    @property
+    def cpnj_beneficiario(self):
+        return self._cpnj_beneficiario
+
+    @cpnj_beneficiario.setter
+    def cpnj_beneficiario(self, value):
+        if value:
+            self._cpnj_beneficiario = value
+
 
     @property
     def pid(self):
