@@ -47,7 +47,7 @@ class SeleniumController(object):
                 self.start()
                 self.load_references()
             except Exception as e:
-                self._logger.debug("Error al iniciar Selenium -> {}".format(e))
+                self._logger.debug("Error al iniciar el driver de Selenium -> {}".format(e))
 
     def load_references(self):
 
@@ -259,7 +259,8 @@ class SeleniumController(object):
         if self._driver:
             self.load_find_method_references()
             return self._driver
-
+        else:
+            self._logger.error("{}, start ,El driver no se inicio correctamente".format(__class__.__name__))
         return None
 
     # def start(self):

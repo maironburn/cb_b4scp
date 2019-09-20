@@ -32,3 +32,4 @@ if __name__ == '__main__':
     bc.generate_boleto(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
     import sys
     sys.exit()
+    quit()

@@ -96,9 +96,10 @@ class XlsController(object):
                 if len(self.instance_collection_errors):
                     self._logger.error(
                         "Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad")
-                    return False
-
-                return True
+                    #return False
+            else:
+                self._logger.error("El documento: {} no pudo ser procesado porque no presenta columnas validas".format(doc))
+        return True
         # Boleto_Item
 
     def check_columns_in_xls_document(self,xls_df):
