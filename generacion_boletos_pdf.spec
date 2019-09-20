@@ -10,9 +10,9 @@ a = Analysis(['generacion_boletos_pdf.py'],
 			         ( 'logger', 'logger' ),
 			         ( '.\\common_config.py', '.\\common_config.py' ),
 			         ( 'Boletos descargados', 'Boletos descargados' ),
-			        ( 'json_bank', 'json_bank' ),
-			        ( 'xls_folder', 'xls_folder' ),
-			        ( 'documentacion_usuario', 'documentacion_usuario' )
+			         ( 'json_bank', 'json_bank' ),
+			         ( 'xls_folder', 'xls_folder' ),
+			         ( 'documentacion_usuario', 'documentacion_usuario' )
 			 ],
              hiddenimports=[],
              hookspath=[],
