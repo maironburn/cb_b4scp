@@ -12,18 +12,6 @@ from common_config import IE_DRIVER, CHROME_DRIVER, DOWNLOAD_FOLDER
 '''
 incializa el driver 
 
-@start_opc... si requiere parametros adicionales, ni lo considero ahora mismo
-options for session_id ?
-headless como opcion en skell? 
-probablemente -> user-data-dir; 
-    string: path to user data directory that Chrome is using
-    option_set.add_argument('disable-notifications')
-
-interesante:  Enable popup blocking with chromedriver
-https://bugs.chromium.org/p/chromedriver/issues/detail?id=1291
-
-chrome options / capabilities:
-https://chromedriver.chromium.org/capabilities
 '''
 
 
@@ -242,11 +230,6 @@ class SeleniumController(object):
 
         prefs = {'download.default_directory': DOWNLOAD_FOLDER}
         options.add_experimental_option('prefs', prefs)
-
-        options.add_argument("download.default_directory=C:/Users/dmb/Downloads/Boletos_descargados")
-        # preferencias para la carpeta de  descarga
-        # options.add_experimental_option()
-        # https://stackoverflow.com/questions/18026391/setting-chrome-preferences-w-selenium-webdriver-in-python
         self._driver = webdriver.Chrome(CHROME_DRIVER, chrome_options=options)
 
         if self._driver:
@@ -256,28 +239,7 @@ class SeleniumController(object):
             self._logger.error("{}, start ,El driver no se inicio correctamente".format(__class__.__name__))
         return None
 
-    # def start(self):
-    #
-    #     try:
-    #         browser_driver = self.bank.get('browser_driver')
-    #         cap = DesiredCapabilities().INTERNETEXPLORER
-    #         cap['browserName'] = "internet explorer"
-    #         cap['ignoreProtectedModeSettings'] = True
-    #         cap['IntroduceInstabilityByIgnoringProtectedModeSettings'] = True
-    #         cap['nativeEvents'] = True
-    #         cap['ignoreZoomSetting'] = True
-    #         cap['requireWindowFocus'] = True
-    #         cap['INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS'] = True
-    #         self._driver = webdriver.Ie(capabilities=cap,
-    #                                     executable_path=IE_DRIVER)
-    #
-    #         return self._driver
-    #
-    #     except Exception as e:
-    #         self._logger.error(
-    #             "Exception iniciando el drive de IExplorer:->  {}".format(e))
-    #
-    #     return None
+
 
     def driver_close(self):
         if self.driver:
