@@ -192,36 +192,29 @@ class SeleniumController(object):
                     self._logger.info(
                         "{} -> tipo busqueda: {} , expresion: {} , mode: {}".format(desc, tipo, target, mode))
 
+                    if tipo:
 
-                    if mode == 'frame_switch':
-                        self.switch_to_frame(actions)
+                        elements_finded = self.finds_method[tipo](target)
+                        if len(elements_finded):
+                            self._logger.info("matched condition {} !! ".format(desc))
+                            elem = self.find_method[tipo](target)
 
-                    if mode == 'go_parent':
-                        self.driver.switch_to.parent_frame()
+                            if mode == 'click':
+                                elem.click()
+                                sleep(2)
+                                self.check_file_and_rename(dict_data)
+                            if mode == 'swap_window':
+                                self.swap_window(elem)
 
-                    else:
-                        if tipo:
-                            elements_finded = self.finds_method[tipo](target)
-                            if len(elements_finded):
-                                self._logger.info("matched condition {} !! ".format(desc))
-                                elem = self.find_method[tipo](target)
-
-                                if mode == 'click':
+                            if mode == 'fill' and id:
+                                # previamente a send_keys se requiere un clear
+                                if actions.get('clear', None):
+                                    elem.clear()
+                                if actions.get('focus', None):
                                     elem.click()
-                                    sleep(2)
-                                    self.check_file_and_rename(dict_data)
-                                if mode == 'swap_window':
-                                    self.swap_window(elem)
 
-                                if mode == 'fill' and id:
-                                    # previamente a send_keys se requiere un clear
-                                    if actions.get('clear', None):
-                                        elem.clear()
-                                    if actions.get('focus', None):
-                                        elem.click()
-
-                                    elem.send_keys(dict_data[id])
-                                    self._logger.info("seteado  {} ->  {}!! ".format(target, dict_data[id]))
+                                elem.send_keys(dict_data[id])
+                                self._logger.info("seteado  {} ->  {}!! ".format(target, dict_data[id]))
                         if ec:
                             self.wait_for_expected_conditions(ec)
 
