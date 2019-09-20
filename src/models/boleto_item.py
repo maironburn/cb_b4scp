@@ -33,14 +33,21 @@ class Boleto_Item(object):
     def load_entity_data(self, kw):
 
         self.boleto_number = kw.get('boleto_number')
-        if self.get_data_from_location(kw.get('location_data')):
-            self.enteprise_id = kw.get('enteprise_id')
-            self.cpf = kw.get('cpf')
-            self.cpnj_beneficiario = kw.get('cnpj_beneficiario')
-            self.pid = kw.get('pid')
-            self.due_date = kw.get('due_date')
-            self.amount = kw.get('amount')
-            self.emision_date = datetime.now().strftime("%m/%d/%y")
+        #if self.get_data_from_location(kw.get('location_data')):
+        self.enteprise_id = kw.get('enteprise_id')
+        self.cpnj_beneficiario = kw.get('cnpj_beneficiario')
+        self.cpf = kw.get('cpf')
+        self.cpnj_beneficiario = kw.get('cnpj_beneficiario')
+        self.pid = kw.get('pid')
+        self.due_date = kw.get('due_date')
+        self.amount = kw.get('amount')
+        self.emision_date = datetime.now().strftime("%m/%d/%y")
+
+
+    def check_is_valid(self):
+
+
+        return self.boleto_number.strip() != '' and self.enteprise_id.strip() != '' and self.cpnj_beneficiario.strip() != ''
 
     def get_data_from_location(self, location):
 
@@ -205,18 +212,10 @@ class Boleto_Item(object):
     def __repr__(self):
 
         if not self.error_description:
-            return "boleto: %s\n\t\tenterprise_id: %s\n\t\tcpf: %s\n\t\tpid: %s\n\t\temision_date: %s\n\t\tdue_date: %s\n\t\tamount: %s\n\t\taddress: %s\n\t\tcep: %s\n\t\tcity: %s\n\t\tcountry_code: %s" % (
+            return "boleto: %s\n\t\tenterprise_id: %s\n\t\tcpnj_beneficiario: %s" % (
                 self.boleto_number,
                 self.enteprise_id,
-                self.cpf,
-                self.pid,
-                self.emision_date,
-                self.due_date,
-                self.amount,
-                self.address,
-                self.cep,
-                self.city,
-                self.country_code
+                self.cpnj_beneficiario
             )
 
         return "boleto: %s\n\t error:  %s" % (self.boleto_number, self.error_description)

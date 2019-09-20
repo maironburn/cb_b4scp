@@ -68,37 +68,47 @@ class XlsController(object):
             xls_df = pd.read_excel(doc, encoding=sys.getfilesystemencoding())
             xls_df = xls_df[COLS_NAMES].astype('str')
 
-            for _, row in xls_df.iterrows():
-                item_dict = {}
-                for col_name in row.keys():
-                    # row.keys() son los nombres de los indices de la serie de panda
-                    if col_name in COLS_DICT_TO_ENTITY.keys():
-                        # mapeo, key: propiedades de la entidad Boleto_item / value: valor porcedente del excel
-                        # self._logger.info(
-                        #     "Actualizando boleto obj:  {} -> {} ".format(COLS_DICT_TO_ENTITY[col_name], row[col_name]))
-                        item_dict.update({COLS_DICT_TO_ENTITY[col_name]: row[col_name]})
-                    else:
-                        # @todo, tratamiento de errores
-                        self._logger.error("errorrrrr")
+            if self.check_columns_in_xls_document(xls_df):
+                '''comprobamos que las columnas presentes en el excel coincidan con las definidas en el common_config (COLS_NAMES) '''
+                for _, row in xls_df.iterrows():
+                    item_dict = {}
+                    for col_name in row.keys():
+                        # row.keys() son los nombres de los indices de la serie de panda
+                        if col_name in COLS_DICT_TO_ENTITY.keys():
+                            # mapeo, key: propiedades de la entidad Boleto_item / value: valor porcedente del excel
+                            # self._logger.info(
+                            #     "Actualizando boleto obj:  {} -> {} ".format(COLS_DICT_TO_ENTITY[col_name], row[col_name]))
+                            item_dict.update({COLS_DICT_TO_ENTITY[col_name]: row[col_name]})
+                        else:
+                            # @todo, tratamiento de errores
+                            self._logger.error("Error en read_xls_docs, Columna: {} desconocida".format(col_name))
 
-                if len(item_dict.keys()) == row.shape[0]:
-                    item_dict.update({'logger': self._logger})
-                    instance = Boleto_Item(**item_dict)
-                    if instance.is_valid:
-                        self._logger.info("Boleto correcto\n{}".format(instance))
-                        self.valid_instances_collection.append(instance)
-                    else:
-                        self.instance_collection_errors.append(instance)
+                    if len(item_dict.keys()) == row.shape[0]:
+                        item_dict.update({'logger': self._logger})
+                        instance = Boleto_Item(**item_dict)
+                        if instance.check_is_valid():
+                            self._logger.info("Boleto correcto\n{}".format(instance))
+                            self.valid_instances_collection.append(instance)
+                        else:
+                            self.instance_collection_errors.append(instance)
 
 
-            if len(self.instance_collection_errors):
-                self._logger.error(
-                    "Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad")
+                if len(self.instance_collection_errors):
+                    self._logger.error(
+                        "Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad")
+                    return False
 
-                return False
-
-        return True
+                return True
         # Boleto_Item
+
+    def check_columns_in_xls_document(self,xls_df):
+
+        for c in xls_df.columns:
+            if c not in COLS_NAMES:
+                self._logger.error("{} ,(check_columns_in_xls_document) Columna desconocida: {} ".format(__class__.__name__, c))
+                return False
+        return True
+
 
     def error_info(self):
 

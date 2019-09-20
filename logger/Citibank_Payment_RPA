@@ -2087,3 +2087,241 @@ INFO: 09/19/2019 12:39:18 PM matched condition CPF/CNPJ do Cedente/Beneficiario 
 INFO: 09/19/2019 12:39:18 PM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
 INFO: 09/19/2019 12:39:18 PM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
 INFO: 09/19/2019 12:39:18 PM matched condition boton OK !! 
+INFO: 09/20/2019 08:01:28 AM <property object at 0x00000146804C5DB8> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:01:28 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:01:28 AM Leyendo documento XLS :-> ~$Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:01:28 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx', 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\~$Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:01:28 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/20/2019 08:01:28 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/20/2019 08:01:28 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/20/2019 08:02:07 AM <property object at 0x000001A9D47B4E58> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:02:21 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:02:25 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:02:41 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/20/2019 08:02:48 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/20/2019 08:02:49 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: AV BRIGADEIRO FARIA LIMA 3477
+		cep:  04538133
+		city: SAO PAULO
+		country_code:  SP
+INFO: 09/20/2019 08:05:02 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/20/2019 08:05:02 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/20/2019 08:05:02 AM matched condition Seu numero !! 
+INFO: 09/20/2019 08:05:02 AM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/20/2019 08:05:02 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/20/2019 08:05:02 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/20/2019 08:05:03 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/20/2019 08:05:03 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/20/2019 08:05:03 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/20/2019 08:05:03 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/20/2019 08:05:03 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/20/2019 08:05:03 AM matched condition boton OK !! 
+INFO: 09/20/2019 08:05:13 AM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/20/2019 08:05:13 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/20/2019 08:05:13 AM matched condition Seu numero !! 
+INFO: 09/20/2019 08:05:13 AM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/20/2019 08:05:13 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/20/2019 08:05:13 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/20/2019 08:05:14 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/20/2019 08:05:14 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/20/2019 08:05:14 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/20/2019 08:05:14 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/20/2019 08:05:14 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/20/2019 08:05:14 AM matched condition boton OK !! 
+INFO: 09/20/2019 08:05:19 AM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/20/2019 08:05:19 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/20/2019 08:05:19 AM matched condition Seu numero !! 
+INFO: 09/20/2019 08:05:19 AM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/20/2019 08:05:19 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/20/2019 08:05:19 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/20/2019 08:05:19 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/20/2019 08:05:19 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/20/2019 08:05:19 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/20/2019 08:05:19 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/20/2019 08:05:19 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/20/2019 08:05:19 AM matched condition boton OK !! 
+INFO: 09/20/2019 08:06:49 AM <property object at 0x000001A7ABC23DB8> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:06:49 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:06:49 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:20:53 AM <property object at 0x000001CDD2AE5E08> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:20:53 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:20:53 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:23:37 AM <property object at 0x000001B2BAAD0E58> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:23:37 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:23:37 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:28:44 AM <property object at 0x0000015FCF843DB8> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:28:44 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:28:44 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:30:03 AM <property object at 0x0000013B646B5E08> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:30:03 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:30:03 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:31:56 AM <property object at 0x0000029D99A55E08> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:31:56 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:31:56 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:32:09 AM <property object at 0x00000194B9A55E08> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:32:09 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:32:09 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:34:27 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: 
+		cep: 
+		city: 
+		country_code: 
+INFO: 09/20/2019 08:34:40 AM <property object at 0x00000273DAE35DB8> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:34:40 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:34:40 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:35:16 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 26875.31
+		address: 
+		cep: 
+		city: 
+		country_code: 
+INFO: 09/20/2019 08:35:30 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 59021.68
+		address: 
+		cep: 
+		city: 
+		country_code: 
+INFO: 09/20/2019 08:35:30 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpf: 30306294000226
+		pid: nan
+		emision_date: 09/20/19
+		due_date: 30/09/2019
+		amount: 24122.23
+		address: 
+		cep: 
+		city: 
+		country_code: 
+INFO: 09/20/2019 08:38:27 AM <property object at 0x00000232E2001D18> -> Loaded skel from : citibank
+INFO: 09/20/2019 08:38:27 AM Leyendo documento XLS :-> Propuesta_fichero_generador_boletos.xlsx
+INFO: 09/20/2019 08:38:27 AM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 1 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\Propuesta_fichero_generador_boletos.xlsx']
+INFO: 09/20/2019 08:38:27 AM Boleto correcto
+boleto: 54947
+		enterprise_id: Banco BTG Pactual SA
+		cpnj_beneficiario: 96534094000158
+INFO: 09/20/2019 08:38:27 AM Boleto correcto
+boleto: 54948
+		enterprise_id: Banco BTG Pactual SA
+		cpnj_beneficiario: 96534094000158
+INFO: 09/20/2019 08:38:27 AM Boleto correcto
+boleto: 54949
+		enterprise_id: Banco BTG Pactual SA
+		cpnj_beneficiario: 96534094000158
+INFO: 09/20/2019 08:38:34 AM generando boleto_id: 54947 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/20/2019 08:38:34 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/20/2019 08:38:34 AM matched condition Seu numero !! 
+INFO: 09/20/2019 08:38:34 AM seteado  //input[@name='seuNumero'] ->  54947!! 
+INFO: 09/20/2019 08:38:34 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/20/2019 08:38:34 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/20/2019 08:38:34 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/20/2019 08:38:34 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/20/2019 08:38:34 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/20/2019 08:38:34 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/20/2019 08:38:34 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/20/2019 08:38:34 AM matched condition boton OK !! 
+INFO: 09/20/2019 08:38:37 AM generando boleto_id: 54948 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/20/2019 08:38:37 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/20/2019 08:38:37 AM matched condition Seu numero !! 
+INFO: 09/20/2019 08:38:37 AM seteado  //input[@name='seuNumero'] ->  54948!! 
+INFO: 09/20/2019 08:38:37 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/20/2019 08:38:37 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/20/2019 08:38:37 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/20/2019 08:38:37 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/20/2019 08:38:37 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/20/2019 08:38:38 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/20/2019 08:38:38 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/20/2019 08:38:38 AM matched condition boton OK !! 
+INFO: 09/20/2019 08:38:40 AM generando boleto_id: 54949 -> pagador: 30306294000226 , beneficiario: 96534094000158
+INFO: 09/20/2019 08:38:40 AM Seu numero -> tipo busqueda: xpath , expresion: //input[@name='seuNumero'] , mode: fill
+INFO: 09/20/2019 08:38:40 AM matched condition Seu numero !! 
+INFO: 09/20/2019 08:38:40 AM seteado  //input[@name='seuNumero'] ->  54949!! 
+INFO: 09/20/2019 08:38:40 AM CPF/CNPJ do  Sacado/Pagador -> tipo busqueda: xpath , expresion: //input[@name='txtSacado'] , mode: fill
+INFO: 09/20/2019 08:38:40 AM matched condition CPF/CNPJ do  Sacado/Pagador !! 
+INFO: 09/20/2019 08:38:41 AM seteado  //input[@name='txtSacado'] ->  30306294000226!! 
+INFO: 09/20/2019 08:38:41 AM CPF/CNPJ do Cedente/Beneficiario -> tipo busqueda: xpath , expresion: //input[@name='txtCedente'] , mode: fill
+INFO: 09/20/2019 08:38:41 AM matched condition CPF/CNPJ do Cedente/Beneficiario !! 
+INFO: 09/20/2019 08:38:41 AM seteado  //input[@name='txtCedente'] ->  96534094000158!! 
+INFO: 09/20/2019 08:38:41 AM boton OK -> tipo busqueda: xpath , expresion: //form[@name='form2']//input[@name='btnConfirmar'] , mode: click
+INFO: 09/20/2019 08:38:41 AM matched condition boton OK !! 
