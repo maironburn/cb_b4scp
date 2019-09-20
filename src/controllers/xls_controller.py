@@ -66,9 +66,9 @@ class XlsController(object):
 
         for doc in self.doc_list:
             xls_df = pd.read_excel(doc, encoding=sys.getfilesystemencoding())
-            xls_df = xls_df[COLS_NAMES].astype('str')
 
-            if self.check_columns_in_xls_document(xls_df):
+            if self.check_columns_in_xls_document(xls_df, doc):
+                xls_df = xls_df[COLS_NAMES].astype('str')
                 '''comprobamos que las columnas presentes en el excel coincidan con las definidas en el common_config (COLS_NAMES) '''
                 for _, row in xls_df.iterrows():
                     item_dict = {}
@@ -102,11 +102,12 @@ class XlsController(object):
         return True
         # Boleto_Item
 
-    def check_columns_in_xls_document(self,xls_df):
+    def check_columns_in_xls_document(self,xls_df, doc):
 
-        for c in xls_df.columns:
-            if c not in COLS_NAMES:
-                self._logger.error("{} ,(check_columns_in_xls_document) Columna desconocida: {} ".format(__class__.__name__, c))
+        for c in COLS_NAMES:
+            self._logger.info ("Comprobando columna: {} en el documento: {}".format(c, doc))
+            if c not in  xls_df.columns:
+                self._logger.error("{} ,(check_columns_in_xls_document) Columna NO encontrada: {} ".format(__class__.__name__, c))
                 return False
         return True
 

@@ -217,6 +217,8 @@ class SeleniumController(object):
 
         if os.path.exists(fichero_descargado):
             os.rename(fichero_descargado,renombrado_path)
+        else:
+            self._logger.error("El boleto {} no se pudo descargar , datos erroneos o caducados".format(dict_data['boleto_number']))
 
 
     def start(self, default_opc=["--start-maximized"]):
