@@ -100,6 +100,16 @@ class XlsController(object):
         return True
         # Boleto_Item
 
+    def check_columns_in_xls_document(self,xls_df, doc):
+
+        for c in COLS_NAMES:
+            self._logger.info ("Comprobando columna: {} en el documento: {}".format(c, doc))
+            if c not in  xls_df.columns:
+                self._logger.error("{} ,(check_columns_in_xls_document) Columna NO encontrada: {} ".format(__class__.__name__, c))
+                return False
+        return True
+
+
     def error_info(self):
 
         for bie in self.instance_collection_errors:

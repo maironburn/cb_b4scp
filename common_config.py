@@ -6,6 +6,11 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 # logger stuff
 LOGGER_NAME = "Citibank_Payment_RPA"
 LOG_FILE = os.path.join(ROOT_DIR, "logger{}{}".format(os.path.sep, LOGGER_NAME))
+COOKIE_FILE = os.path.join(ROOT_DIR, "cookie.pkl")
+DOWNLOAD_FOLDER=os.path.join(ROOT_DIR, 'Boletos emitidos')
+IMGS_FOLDER=  os.path.join(ROOT_DIR, 'images')
+TEMP_IMGS=  os.path.join(IMGS_FOLDER, 'temp')
+IMGS_DATASET=  os.path.join(IMGS_FOLDER, 'dataset')
 
 # json bancos
 JSON_BANK = os.path.join(ROOT_DIR, 'json_bank')
@@ -20,6 +25,7 @@ COLS_NAMES = [
     'Boleto (para algunos casos nueve digitos)',
     'Enterprise id/ Racao social',
     'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)',
+    'CNPJ Beneficiario',
     'PID',
     'Endereço faturamento (Estate,Cep necesita 8 caracteres,City)',
     'Data de emision del boleto (según la configuracion del idioma)',
@@ -31,6 +37,7 @@ COLS_DICT_TO_ENTITY = {
     'Boleto (para algunos casos nueve digitos)': 'boleto_number',
     'Enterprise id/ Racao social': 'enteprise_id',
     'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)': 'cpf',
+    'CNPJ Beneficiario' : 'beneficiario',
     'PID': 'pid',
     'Endereço faturamento (Estate,Cep necesita 8 caracteres,City)': 'location_data',
     'Data de emision del boleto (según la configuracion del idioma)': 'emision_date',

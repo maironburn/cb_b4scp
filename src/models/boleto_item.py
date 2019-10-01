@@ -9,7 +9,7 @@ class Boleto_Item(object):
     _enteprise_id = str()
     _cpf = str()
     _pid = str()
-
+    _cpnj_beneficiario = str()
     _emision_date = str()
     _due_date = str()
     _amount = str()
@@ -33,21 +33,55 @@ class Boleto_Item(object):
         self.boleto_number = kw.get('boleto_number')
         if self.get_data_from_location(kw.get('location_data')):
             self.enteprise_id = kw.get('enteprise_id')
-            self.cpf = kw.get('cpf')
+            self.cpf = self.check_correct_length( kw.get('cpf'))
             self.pid = kw.get('pid')
             self.due_date = kw.get('due_date')
             self.amount = kw.get('amount')
-            self.emision_date = datetime.now().strftime("%m/%d/%y")
+            self.emision_date = datetime.now().strftime("%d/%m/%Y")
+
+
+    def check_is_valid(self):
+        return self.boleto_number.strip() != '' and self.enteprise_id.strip() != '' and self.cpnj_beneficiario.strip() != ''
+
+
+
+    def check_correct_length(self, cpf):
+
+        # pueden venir 2 tipos de datos
+        # caso CPF , necesariamente debe tener 11 caracteres
+        # caso CNPJ, necesariamente debe tener 14 caracteres
+
+        need_add = False
+        n_iter = 0
+        to_append = ''
+
+        if len(cpf) < 11:
+            self._logger.info("check_correct_length, CPF con {}, need add".format(len(cpf)))
+            n_iter = 11 - len(cpf)
+
+        if len(cpf)>11 and len(cpf)<14:
+            self._logger.info("check_correct_length, CNPJ con {}, need add".format(len(cpf)))
+            n_iter = 14 - len(cpf)
+
+        if n_iter:
+            for i in range(n_iter):
+                to_append += '0'
+
+
+            return to_append + cpf
+
+        return cpf
+
 
     def get_data_from_location(self, location):
 
-        if location and len(location.split('.')) == 3:
+        if location:
             try:
                 self.address = location.split('.')[0]
                 self.cep = location.split('.')[1].split(':')[1]
-                self.city = location.split('.')[2].split('-')[0].strip()
-                ac = location.split('.')[2].split('-')[1].strip()
-                self.country_code = ac if len(ac.split())==1 else ''.join([i[0].upper() for i in ac.split()])
+                self.city = location.split('.')[2].split('.')[0].strip()
+                self.country_code =  location.split('.')[-1]
+
 
                 return self.address, self.cep, self.city, self.country_code
 
@@ -105,6 +139,15 @@ class Boleto_Item(object):
     def pid(self, value):
         if value:
             self._pid = value
+
+    @property
+    def cpnj_beneficiario(self):
+        return self._cpnj_beneficiario
+
+    @cpnj_beneficiario.setter
+    def cpnj_beneficiario(self, value):
+        if value:
+            self._cpnj_beneficiario = value
 
     @property
     def emision_date(self):
@@ -191,22 +234,20 @@ class Boleto_Item(object):
 
     def __repr__(self):
 
+
         if not self.error_description:
-            return "boleto: %s\n\t\tenterprise_id: %s\n\t\tcpf: %s\n\t\tpid: %s\n\t\temision_date: %s\n\t\tdue_date: %s\n\t\tamount: %s\n\t\taddress: %s\n\t\tcep: %s\n\t\tcity: %s\n\t\tcountry_code: %s" % (
+            tipo_dato = 'CNPJ' if len(self.cpf) == 14 else 'CPF'
+            return "Num boleto: %s\n\tenterprise_id: %s\n\tcpnj_beneficiario: %s\n\t%s pagador: %s" % (
+
                 self.boleto_number,
                 self.enteprise_id,
-                self.cpf,
-                self.pid,
-                self.emision_date,
-                self.due_date,
-                self.amount,
-                self.address,
-                self.cep,
-                self.city,
-                self.country_code
+                self.cpnj_beneficiario,
+                tipo_dato,
+                self.cpf
             )
 
         return "boleto: %s\n\t error:  %s" % (self.boleto_number, self.error_description)
+
 
 
 if __name__ == '__main__':

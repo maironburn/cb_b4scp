@@ -10,6 +10,11 @@ class BankController(object):
     _banknames = []
     _sc = None  # selenium controller
     _logger = None
+    _total_a_crear = 0
+    _creados_ok = 0
+    _errores_al_crear = 0
+    _lst_correctos = []
+    _lst_erroneos = []
 
     def __init__(self, kw):
 
@@ -18,14 +23,24 @@ class BankController(object):
         if self._banknames:
             self.load_banks()
 
-    def extract_movements(self, bankname=None):
+    def emit_boleto(self, bankname=None, lst_instances_bi=None):
 
-        if bankname and bankname in self._dict_bank.keys():
-            kw = {'logger': self._logger, 'bank': self._dict_bank.get(bankname).json_data}
-            self.sc = SeleniumController(kw)
-            if self.sc.do_the_process():
-                if kw.get('bank').get('boleto_workflow'):
-                    self.sc.create_boleto()
+        kw = {'logger': self._logger, 'bank': self._dict_bank.get(bankname).json_data}
+        self.sc = SeleniumController(kw)
+
+        if len(lst_instances_bi):
+            self.total_a_crear = len(lst_instances_bi)
+
+            print("\n\n\tFASE DE CREACION de Boletos\n*****************************************************")
+            print("Num de boletos leidos del excel y pendientes de crear: {}".format(len(lst_instances_bi)))
+            for bi in lst_instances_bi:
+                if self.sc.do_selenium_workflow(bi):
+                    # self.sc.do_image_automation()
+                    self.lst_correctos.append(bi)
+                    self.creados_ok += 1
+                else:
+                    self.errores_al_crear += 1
+                    self.lst_erroneos.append(bi)
 
 
     def load_banks(self):
@@ -79,6 +94,6 @@ if __name__ == '__main__':
     bancos = ['citibank']
     bc = BankController({'banknames': bancos})
     xls_controller= XlsController (**{'logger': bc.logger})
+    # @todo, definir q hacer con los boletos q no pasen la validacion
     if xls_controller.get_boletos_items():
-        for b in bancos:
-            bc.extract_movements(b)
+        bc.emit_boleto(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
