@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from src.models.credencial import Credencial
+
 
 
 class Cuenta(object):
@@ -9,14 +9,7 @@ class Cuenta(object):
     def __init__(self, kw):
         self._credenciales = kw.get('credenciales', None)
 
-    @property
-    def credencial(self):
-        return self._credencial
 
-    @credencial.setter
-    def credencial(self, value):
-        if isinstance(value, Credencial):
-            self._credenciales = value
 
     @property
     def num_cuenta(self):
