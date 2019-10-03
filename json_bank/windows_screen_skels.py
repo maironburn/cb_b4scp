@@ -21,7 +21,8 @@ menu_transaction_and_services = {
     "_parent": None,
     "_img_folder":  os.path.join(IMGS_DATASET, 'menu_transaction_and_services'),
     "_dict_elements": {'transactions_and_services': '',
-                       'collection_item_initiation': ''
+                       'collection_item_initiation': '',
+                       'new' : ''
                        }
 }
 

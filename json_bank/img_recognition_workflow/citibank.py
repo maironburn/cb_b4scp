@@ -14,12 +14,13 @@ citibank = {
         {'Menu_Transaction_and_Services': [
             {'target': 'transactions_and_services', 'action': "click"},
 
-            {'target': 'collection_item_initiation', 'action': "click"}
+            {'target': 'collection_item_initiation', 'action': "click"},
+            #todo
+            {'target': 'new', 'action': "click"}
+
         ]
         },
         {'search_definition_dialog': [
-            {'target': '', 'action': "click"},
-
             {'target': 'run_search', 'action': "click"}
         ]
         }
