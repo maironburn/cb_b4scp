@@ -14,6 +14,9 @@ IMGS_DATASET=  os.path.join(IMGS_FOLDER, 'dataset')
 
 # json bancos
 JSON_BANK = os.path.join(ROOT_DIR, 'json_bank')
+IMG_RECON_WF = os.path.join(JSON_BANK, 'img_recognition_workflow')
+SELENIUM_WF = os.path.join(JSON_BANK, 'selenium_workflow')
+
 # Paquetes de terceros
 EXT_BUNDLES = os.path.join(ROOT_DIR, '3rd_parties')
 # selenium IE Driver

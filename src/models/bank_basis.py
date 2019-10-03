@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
-from src.helpers.common_helper import load_json_bank_from_skel
-from src.models.cuenta import Cuenta
+from src.helpers.common_helper import load_json
 
+from common_config import JSON_BANK, IMG_RECON_WF , SELENIUM_WF
 
 class Bank(object):
     _name = None
     _json_data = None
+    _json_selenium_wf = None
+    _json_img_recognition = None
     _logger = None
     _cuentas_asociadas = []
 
@@ -19,7 +21,10 @@ class Bank(object):
     def load_skel(self):
 
         try:
-            self._json_data = load_json_bank_from_skel(self.name)
+            self._json_data = load_json(self.name, JSON_BANK)
+            self._json_selenium_wf  =load_json(self.name, SELENIUM_WF)
+            self._json_img_recognition = load_json(self.name, IMG_RECON_WF)
+
             self._logger.info('{} -> Loaded skel from : {}'.format(self.__class__.name, self.name))
             return self._json_data
 
@@ -46,11 +51,4 @@ class Bank(object):
         if value:
             self._json_data = value
 
-    @property
-    def cuentas_asociadas(self):
-        return self._cuentas_asociadas
 
-    @cuentas_asociadas.setter
-    def cuentas_asociadas(self, value):
-        if isinstance(value, Cuenta):
-            self._cuentas_asociadas = value

@@ -1550,3 +1550,4 @@ Num boleto: 54949
 	cpnj_beneficiario: 
 	CNPJ pagador: 30306294000226
 ERROR: 09/30/2019 08:18:42 PM Excepcion en do_the_process -> 'Boleto_Item' object has no attribute 'enterprise_id'
+INFO: 10/02/2019 03:27:51 PM <property object at 0x000002BB5555FCC8> -> Loaded skel from : citibank

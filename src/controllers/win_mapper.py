@@ -61,7 +61,7 @@ class WinMapper(object):
             if not self.is_already_mapped():
                 '''Se mapean los elementos x reconocimiento de imgs'''
                 get_ancestors_map(
-                    self.pantalla)  # <------------------------------ comentado para probar la activacion de tabs
+                    self.pantalla)  # <---dinamic_instance_elements--------------------------- comentado para probar la activacion de tabs
                 '''serializamos y guardamos con el nombre la panta y su resolucion'''
                 if SAVE_MAPPING:
                     self.pantalla.save_to_file(self._current_window_name, resolution=screen_resolution())

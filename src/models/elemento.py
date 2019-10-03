@@ -63,8 +63,34 @@ class Element(object):
 
     # </editor-fold>
 
+class Combo(Element):
+
+    _cmbotions= {}
+
+    def __init__(self, kw):
+        super().__init__(kw)
+
+    def add_element(self, element):
+        if isinstance(element, Element):
+            self._cmbotions.update({element.name: element})
+
+
+    @property
+    def options(self):
+        return self._cmbotions
+
+    @options.setter
+    def options(self, value):
+        if isinstance(value, dict):
+            self._cmbotions = value
 
 class Boton(Element):
+
+    def __init__(self, kw):
+        super().__init__(kw)
+
+
+class Cmboption(Element):
 
     def __init__(self, kw):
         super().__init__(kw)

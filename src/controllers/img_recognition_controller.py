@@ -1,23 +1,44 @@
 from os.path import sep
 import pyautogui, os
-from common_config import TEMP_IMGS, DATASET_IMGS
+from common_config import TEMP_IMGS,IMGS_DATASET
 import cv2
+from matplotlib import pyplot as plt
+import numpy as np
+
+
+
+def capture_screen(name="screenshot"):
+    pyautogui.screenshot("{}{}.png".format(TEMP_IMGS, name))
+    print("captured windows: {}".format(name))
+
 
 
 def getElementCoords(haystack, needle):
-
+    combo_element = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\collection_item_detail\\combo_element.png'
     img = cv2.imread(haystack, cv2.IMREAD_COLOR)
     img_display = img.copy()
     templ = cv2.imread(needle, cv2.IMREAD_COLOR)
+
     result = cv2.matchTemplate(img, templ, cv2.TM_CCORR_NORMED)
     cv2.normalize(result, result, 0, 1, cv2.NORM_MINMAX, -1)
     _minVal, _maxVal, minLoc, maxLoc = cv2.minMaxLoc(result, None)
     matchLoc = maxLoc
+
+    # Show the final image with the matched area.
     h, w, _ = templ.shape
 
     center = (int((matchLoc[0] + w / 2)), int((matchLoc[1] + templ.shape[0]) - h / 2))
     x_center = int(matchLoc[0] + w / 2)
     y_center = int((matchLoc[1] + templ.shape[0]) - h / 2)
+    top_left = maxLoc
+    bottom_right = (top_left[0] + w, top_left[1] + h)
+    print ("x_center: {}".format(x_center))
+    print("y_center: {}".format(y_center))
+    rect_img = cv2.rectangle(img_display, maxLoc , bottom_right,  (255, 0, 0), 2)
+
+    print("needle: {}".format(needle.split('\\')[-1]))
+
+    cv2.imshow("whatever", rect_img)
 
     return x_center, y_center
 
@@ -31,7 +52,7 @@ if __name__ == '__main__':
 
     image_window = "Source Image"
     result_window = "Result window"
-    directory = ("{}{}".format(DATASET_IMGS, 'main_window'))
+    directory = ("{}{}".format(IMGS_DATASET, 'main_window'))
     print("directorio de busqueda: {}".format(directory))
     img_path = ("{}{}".format(TEMP_IMGS, "declarantes_screenshot.png"))
 
@@ -42,7 +63,7 @@ if __name__ == '__main__':
         if filename.endswith(".py"):
             continue
         else:
-            template = ("{}{}{}{}".format(DATASET_IMGS, "main_window", sep, filename))
+            template = ("{}{}{}{}".format(IMGS_DATASET, "main_window", sep, filename))
             print("buscando template: {}".format(filename))
             templ = cv2.imread(template, cv2.IMREAD_COLOR)
             img_display = img.copy()
