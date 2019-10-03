@@ -39,7 +39,7 @@ def getElementCoords(haystack, needle):
     print("needle: {}".format(needle.split('\\')[-1]))
 
     cv2.imshow("whatever", rect_img)
-
+    cv2.waitKey(0)
     return x_center, y_center
 
 

@@ -38,7 +38,7 @@ select_account_dialog= {
     "_name": "select_account_dialog",
     "_parent": None,
     "_img_folder":  os.path.join(IMGS_DATASET, 'select_account_dialog'),
-    "_dict_elements": {'btn_ok': '', 'account_items': {}}
+    "_dict_elements": {'ok': '', 'account_items': {}}
 }
 
 

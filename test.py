@@ -88,8 +88,7 @@ def load_combo_options(combo, folder):
 def load_screen_elements(elemento_contenedor):
     # captura de pantalla dinamica alojada en la carpeta temporal
 
-    screen_img = os.path.join(TEMP_IMGS, elemento_contenedor.name)
-
+    haystack = os.path.join(TEMP_IMGS, "{}.png".format(elemento_contenedor.name))
     for filename in [x for x in os.listdir(elemento_contenedor.image_folder) if
                          not x.startswith('_') and
                      os.path.isfile(os.path.join(elemento_contenedor.image_folder, x))]:
@@ -104,12 +103,14 @@ def load_screen_elements(elemento_contenedor):
                 print("")
 
 if __name__ == '__main__':
-    haystack = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\CitiBank_Dataset\\collection_item_details.png'
+    #haystack = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\CitiBank_Dataset\\select_account_dialog.png'
+    haystack = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\CitiBank_Dataset\\collection_item_detail.png'
     # needle = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\collection_item_detail\\combo_product.png'
     needle = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\collection_item_detail\\test_payer_name.png'
 
     # captura pantalla
 
+    #pantalla_name = 'select_account_dialog'
     pantalla_name = 'collection_item_detail'
     pantalla_instance = load_json_skel(pantalla_name)
     try:
