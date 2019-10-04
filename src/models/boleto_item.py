@@ -5,20 +5,22 @@ from datetime import datetime
 
 class Boleto_Item(object):
     _logger = None
+
     _boleto_number = str()
     _enteprise_id = str()
     _cpf = str()
-    _pid = str()
     _cpnj_beneficiario = str()
+    _product = str()
+    _account_number = str()
+    _address = str()
+    _state = str()
+    _city = str()
+    _zip_code = str()
+
     _emision_date = str()
     _due_date = str()
     _amount = str()
 
-    # los datos de localizacion se dividen en calle, cep (cod postal), ciudad y abreviatura de la ciudad
-    _address = str()
-    _cep = str()
-    _city = str()
-    _country_code = str()
 
     _is_valid = True  # Flag que identidica si la instancia tiene validados todos los campos
     # esta propia sera comprobada por el xls_controller, en caso de no ser valida no se añade a la collecion de items
@@ -30,20 +32,46 @@ class Boleto_Item(object):
         self.load_entity_data(kw)
 
     def load_entity_data(self, kw):
+
         self.boleto_number = kw.get('boleto_number')
-        if self.get_data_from_location(kw.get('location_data')):
-            self.enteprise_id = kw.get('enteprise_id')
-            self.cpf = self.check_correct_length( kw.get('cpf'))
-            self.pid = kw.get('pid')
-            self.due_date = kw.get('due_date')
-            self.amount = kw.get('amount')
-            self.emision_date = datetime.now().strftime("%d/%m/%Y")
+        self.enteprise_id = kw.get('enteprise_id')
+        self.cpf = self.check_correct_length( kw.get('cpf'))
+        self.cpnj_beneficiario = self.check_correct_length( kw.get('cpnj_beneficiario'))
+        self.product = kw.get('product')
+        self.account_number = kw.get('account_number')
+        self.address  = kw.get('address')
+        self.state = kw.get('state')
+        self.city = kw.get('city')
+        self.zip_code = kw.get('zip_code') #need 8 caracteres
+        #self.emision_date = datetime.now().strftime("%d/%m/%Y")
+        self.emision_date =  kw.get('emision_date')
+        self.due_date = kw.get('due_date')
+        self.amount = kw.get('amount')
 
 
+    #@todo
     def check_is_valid(self):
         return self.boleto_number.strip() != '' and self.enteprise_id.strip() != '' and self.cpnj_beneficiario.strip() != ''
 
 
+    def check_correct_zip_code(self, zip):
+
+        need_add = False
+        n_iter = 0
+        to_append = ''
+
+        if len(zip) < 8:
+            self._logger.info("check_correct_length, CPF con {}, need add".format(len(cpf)))
+            n_iter = 8 - len(zip)
+
+        if n_iter:
+            for i in range(n_iter):
+                to_append += '0'
+
+
+            return to_append + zip
+
+        return zip
 
     def check_correct_length(self, cpf):
 
@@ -72,31 +100,6 @@ class Boleto_Item(object):
 
         return cpf
 
-
-    def get_data_from_location(self, location):
-
-        if location:
-            try:
-                self.address = location.split('.')[0]
-                self.cep = location.split('.')[1].split(':')[1]
-                self.city = location.split('.')[2].split('.')[0].strip()
-                self.country_code =  location.split('.')[-1]
-
-
-                return self.address, self.cep, self.city, self.country_code
-
-            except Exception as e:
-                self.is_valid = False
-                self._logger.error("Except {} -> get_data_from_location -> {}".format(__class__.__name__, e))
-                self.error_description = "{}".format(e)
-        else:
-            self.is_valid = False
-            self._logger.error(
-                "Except {} -> boleto: {}, la cadena {} no tiene un formato correcto".format(__class__.__name__,
-                                                                                            self.boleto_number,
-                                                                                            location))
-            self.error_description = "formato no correcto en la cadena: {}".format(location)
-        return False
 
     # @todo
     def validate(self):
@@ -132,15 +135,6 @@ class Boleto_Item(object):
             self._cpf = value
 
     @property
-    def pid(self):
-        return self._pid
-
-    @pid.setter
-    def pid(self, value):
-        if value:
-            self._pid = value
-
-    @property
     def cpnj_beneficiario(self):
         return self._cpnj_beneficiario
 
@@ -148,6 +142,60 @@ class Boleto_Item(object):
     def cpnj_beneficiario(self, value):
         if value:
             self._cpnj_beneficiario = value
+
+    @property
+    def product(self):
+        return self._product
+
+    @product.setter
+    def product(self, value):
+        if value:
+            self._product = value
+
+    @property
+    def account_number(self):
+        return self._account_number
+
+    @account_number.setter
+    def account_number(self, value):
+        if value:
+            self._account_number = value
+
+    @property
+    def address(self):
+        return self._address
+
+    @address.setter
+    def address(self, value):
+        if value:
+            self._address = value
+
+    @property
+    def state(self):
+        return self._state
+
+    @state.setter
+    def state(self, value):
+        if value:
+            self._state = value
+
+    @property
+    def city(self):
+        return self._city
+
+    @city.setter
+    def city(self, value):
+        if value:
+            self._city = value
+
+    @property
+    def zip_code(self):
+        return self._zip_code
+
+    @zip_code.setter
+    def zip_code(self, value):
+        if value:
+            self._zip_code = value
 
     @property
     def emision_date(self):
@@ -176,41 +224,6 @@ class Boleto_Item(object):
         if value:
             self._amount = value
 
-    @property
-    def address(self):
-        return self._address
-
-    @address.setter
-    def address(self, value):
-        if value:
-            self._address = value
-
-    @property
-    def cep(self):
-        return self._cep
-
-    @cep.setter
-    def cep(self, value):
-        if value:
-            self._cep = value
-
-    @property
-    def city(self):
-        return self._city
-
-    @city.setter
-    def city(self, value):
-        if value:
-            self._city = value
-
-    @property
-    def country_code(self):
-        return self._country_code
-
-    @country_code.setter
-    def country_code(self, value):
-        if value:
-            self._country_code = value
 
     @property
     def is_valid(self):

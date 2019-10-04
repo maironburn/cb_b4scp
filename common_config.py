@@ -29,8 +29,12 @@ COLS_NAMES = [
     'Enterprise id/ Racao social',
     'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)',
     'CNPJ Beneficiario',
-    'PID',
-    'Endereço faturamento (Estate,Cep necesita 8 caracteres,City)',
+    'Product',
+    'Account Number',
+    'Payer Address',
+    'Payer State',
+    'Payer City',
+    'Payer Zip Code',
     'Data de emision del boleto (según la configuracion del idioma)',
     'Data de Vencimento (según la configuracion del idioma)',
     'Total'
@@ -40,20 +44,25 @@ COLS_DICT_TO_ENTITY = {
     'Boleto (para algunos casos nueve digitos)': 'boleto_number',
     'Enterprise id/ Racao social': 'enteprise_id',
     'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)': 'cpf',
-    'CNPJ Beneficiario' : 'beneficiario',
-    'PID': 'pid',
-    'Endereço faturamento (Estate,Cep necesita 8 caracteres,City)': 'location_data',
+    'CNPJ Beneficiario' : 'cpnj_beneficiario',
+    'Product' : 'product',
+    'Account Number': 'account_number',
+    'Payer Address': 'address',
+    'Payer State': 'state',
+    'Payer City': 'city',
+    'Payer Zip Code': 'zip_code',
     'Data de emision del boleto (según la configuracion del idioma)': 'emision_date',
     'Data de Vencimento (según la configuracion del idioma)': 'due_date',
     'Total': 'amount'
 }
 
 DICT_REGEX_BOLETO_ITEM = {
+
     'boleto_number': '^\d{5,9}$',
     'enteprise_id': '\w+',
-    'cpf': '^\d{9,15}$',
+    'cpf': '^\d{11,14}$',
     'pid': '^\d+$',
-    'cep': '^\d{7,9}$',
+    'zip_code': '^\d{8}$',
     'due_date': '(\d{1,2}\/)*\d{4}$'
 }
 
@@ -61,16 +70,3 @@ DICT_REGEX_BOLETO_ITEM = {
 APP_NAME = ""
 TIME_SLEEP = 10
 
-'''
-login bello de reconocimiento de imagenes
-
-# imagenes
-IMG_DIRS = os.path.join(ROOT_DIR, 'img')
-TEMP_IMGS = os.path.join(IMG_DIRS, 'temps_imgs')
-DATASET_IMGS = os.path.join(IMG_DIRS, 'datasets')
-# crypto
-RSA_KEYS = os.path.join(ROOT_DIR, "crypto{}{}".format(os.path.sep, "rsa_keys"))
-FICHERO_CREDENCIALES=os.path.join(SETTINGS, "credentials{}{}".format(os.path.sep, "credentials.py"))
-'''
-
-# Folder to store after generate public /private RSA keys

@@ -22,11 +22,20 @@ bancos = ['citibank']
 from  src.controllers.bank_controller import BankController
 from  src.controllers.xls_controller import XlsController
 
+
 if __name__ == '__main__':
+
+
 
     bancos = ['citibank']
     bc = BankController({'banknames': bancos})
     xls_controller= XlsController (**{'logger': bc.logger})
+    # @todo, definir q hacer con los boletos q no pasen la validacion
     if xls_controller.get_boletos_items():
-        for b in bancos:
-            bc.extract_movements(b)
+        bc.start_party(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
+    else:
+        print("No se encontraron documentos xlsx")
+        input()
+    import sys
+    sys.exit()
+    quit()

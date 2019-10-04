@@ -1551,3 +1551,220 @@ Num boleto: 54949
 	CNPJ pagador: 30306294000226
 ERROR: 09/30/2019 08:18:42 PM Excepcion en do_the_process -> 'Boleto_Item' object has no attribute 'enterprise_id'
 INFO: 10/02/2019 03:27:51 PM <property object at 0x000002BB5555FCC8> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:22:40 PM <property object at 0x0000022655846138> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:23:46 PM <property object at 0x000002A418438098> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:25:07 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:25:11 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 05:30:57 PM <property object at 0x000002A075363138> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:30:57 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:30:57 PM Leyendo documento XLS :-> ~$adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:30:57 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 3 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx', 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\~$adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 05:35:54 PM <property object at 0x000002001E7CB0E8> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:35:54 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:35:54 PM Leyendo documento XLS :-> ~$adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:35:54 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 3 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx', 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\~$adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 05:36:40 PM <property object at 0x000001D3DC3A3138> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:36:40 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:36:40 PM Leyendo documento XLS :-> ~$adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:36:40 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 3 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx', 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\~$adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 05:37:20 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:38:03 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:38:03 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:38:31 PM <property object at 0x000001B29A7A3138> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:38:31 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:38:31 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 05:38:31 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:38:31 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:38:31 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:46:21 PM <property object at 0x000001F6011190E8> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:46:21 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:46:21 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 05:46:21 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:46:21 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:46:21 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+ERROR: 10/04/2019 05:55:13 PM Exception iniciando el drive de IExplorer:->  Message: Unexpected error launching Internet Explorer. Protected Mode settings are not the same for all zones. Enable Protected Mode must be set to the same value (enabled or disabled) for all zones.
+
+INFO: 10/04/2019 05:55:26 PM <property object at 0x000002740BBFDC78> -> Loaded skel from : citibank
+INFO: 10/04/2019 05:55:26 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 05:55:26 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 05:55:27 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:55:27 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 05:55:27 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:29:05 PM <property object at 0x000002731E70EC78> -> Loaded skel from : citibank
+INFO: 10/04/2019 06:29:05 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 06:29:05 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 06:29:05 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:29:05 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:29:05 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:29:39 PM <property object at 0x000001F6AE13DC28> -> Loaded skel from : citibank
+INFO: 10/04/2019 06:29:39 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 06:29:39 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 06:29:39 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:29:39 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:29:39 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:30:30 PM <property object at 0x00000250B7F4FC28> -> Loaded skel from : citibank
+INFO: 10/04/2019 06:30:30 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 06:30:30 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 06:30:30 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:30:30 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:30:30 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:31:14 PM <property object at 0x000001A3C537EC28> -> Loaded skel from : citibank
+INFO: 10/04/2019 06:31:14 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 06:31:14 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 06:31:14 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:31:14 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:31:14 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+ERROR: 10/04/2019 06:31:33 PM Exception iniciando el drive de IExplorer:->  Message: Unexpected error launching Internet Explorer. Protected Mode settings are not the same for all zones. Enable Protected Mode must be set to the same value (enabled or disabled) for all zones.
+
+ERROR: 10/04/2019 06:31:54 PM Tiempo expirado
+INFO: 10/04/2019 06:32:19 PM <property object at 0x000001D2FD30DD18> -> Loaded skel from : citibank
+INFO: 10/04/2019 06:32:19 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 06:32:19 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 06:32:19 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:32:19 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:32:19 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:34:29 PM <property object at 0x000001C84265ECC8> -> Loaded skel from : citibank
+INFO: 10/04/2019 06:34:29 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 06:34:29 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 06:34:29 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:34:29 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:34:29 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:35:40 PM Click sobre item menu citiDirect Services -> tipo busqueda: xpath , expresion: //a[@id='uifw-megamenu-8100'] , mode: click
+INFO: 10/04/2019 06:36:10 PM <property object at 0x0000020793E3EC78> -> Loaded skel from : citibank
+INFO: 10/04/2019 06:36:10 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/04/2019 06:36:10 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/04/2019 06:36:10 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:36:10 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/04/2019 06:36:10 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226

@@ -1,8 +1,7 @@
-from src.models.citibank import CitiBank
-from src.models.bank_basis import Bank
+from logger.app_logger import AppLogger
 from src.controllers.selenium_controller import SeleniumController
 from src.controllers.xls_controller import XlsController
-from logger.app_logger import AppLogger
+from src.models.bank_basis import Bank
 
 
 class BankController(object):
@@ -23,30 +22,33 @@ class BankController(object):
         if self._banknames:
             self.load_banks()
 
-    def emit_boleto(self, bankname=None, lst_instances_bi=None):
+    def start_party(self, bankname=None, lst_instances_bi=None):
 
-        kw = {'logger': self._logger, 'bank': self._dict_bank.get(bankname).json_data}
+        kw = {'logger': self._logger, 'bank': self._dict_bank.get(bankname).json_data,
+              'workflow': self._dict_bank.get(bankname)._json_selenium_wf}
+
         self.sc = SeleniumController(kw)
 
         if len(lst_instances_bi):
             self.total_a_crear = len(lst_instances_bi)
+            print("\n\n\tFASE Automatismo Selenium \n*****************************************************")
+            print("Num de boletos leidos del excel y pendientes de emitir: {}".format(len(lst_instances_bi)))
 
-            print("\n\n\tFASE DE CREACION de Boletos\n*****************************************************")
-            print("Num de boletos leidos del excel y pendientes de crear: {}".format(len(lst_instances_bi)))
-            for bi in lst_instances_bi:
-                if self.sc.do_selenium_workflow(bi):
-                    # self.sc.do_image_automation()
-                    self.lst_correctos.append(bi)
-                    self.creados_ok += 1
-                else:
-                    self.errores_al_crear += 1
-                    self.lst_erroneos.append(bi)
+            self.sc.do_selenium_workflow()
 
+            # for bi in lst_instances_bi:
+            #     if self.sc.do_selenium_workflow(bi):
+            #         # self.sc.do_image_automation()
+            #         self.lst_correctos.append(bi)
+            #         self.creados_ok += 1
+            #     else:
+            #         self.errores_al_crear += 1
+            #         self.lst_erroneos.append(bi)
 
     def load_banks(self):
         for bank in self.banknames:
             kw = {'logger': self._logger, 'name': bank}
-            bank_instance =  CitiBank(kw) if bank=='citibank' else Bank(kw)
+            bank_instance = Bank(kw)
             self.add_bank(bank_instance)
 
     def add_bank(self, bank):
@@ -85,7 +87,6 @@ class BankController(object):
     def logger(self):
         return self._logger
 
-
     # </editor-fold>
 
 
@@ -93,7 +94,7 @@ if __name__ == '__main__':
 
     bancos = ['citibank']
     bc = BankController({'banknames': bancos})
-    xls_controller= XlsController (**{'logger': bc.logger})
+    xls_controller = XlsController(**{'logger': bc.logger})
     # @todo, definir q hacer con los boletos q no pasen la validacion
     if xls_controller.get_boletos_items():
-        bc.emit_boleto(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
+        bc.emit_boleto(bankname='citibank', lst_instances_bi=xls_controller.valid_instances_collection)

@@ -31,6 +31,7 @@ https://chromedriver.chromium.org/capabilities
 class SeleniumController(object):
     _driver = None
     _bank = None
+    _workflow = None
     _logger = None
     _navigated_elements = []
     _current_window = None
@@ -42,27 +43,15 @@ class SeleniumController(object):
     def __init__(self, kw):
 
         self._logger = kw.get('logger')
-        if kw.get('bank', None):
+        if kw.get('bank', None) and kw.get('workflow', None):
             self.bank = kw.get('bank')
+            self.workflow = kw.get('workflow', None).get('selenium_workflow')
             try:
                 self.start()
                 self.load_references()
             except Exception as e:
                 self._logger.debug("Error al iniciar Selenium -> {}".format(e))
 
-    '''
-    elem = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, '//*[@id=\"logged-in-message\"]/h2'))
-            )
-            
-        def is_visible(locator, timeout = 30): 
-            try: 
-                ui.WebDriverWait(chrome, timeout).until(EC.visibility_of_element_located((By.XPATH, locator))) 
-                return True
-            except TimeoutException: 
-                return False
-            
-    '''
 
     def load_references(self):
 
@@ -85,25 +74,23 @@ class SeleniumController(object):
         for cookie in cookies:
             self.driver.add_cookie(cookie)
 
-    def do_selenium_workflow(self, boleto=None):
+    def do_selenium_workflow(self):
 
         try:
 
             if self.driver:
                 self.driver.get(self.bank.get('login_url'))
                 # expected condition presence menu
-
                 self._logger.debug("create_boleto, creacion del boleto")
-                # @todo, eliminar los sleeps...sustituir por ec
-                if not self.check_cookies() and self.load_hold_on():
-                    self.save_cookies()
-                else:
-                    pass
-                    #https://portal.citidirect.com/portal/welcome/index
-                    #self.load_cookies()
+                # # @todo, eliminar los sleeps...sustituir por ec
+                # if not self.check_cookies() and self.load_hold_on():
+                #     self.save_cookies()
+                # else:
+                #     pass
+                #     #https://portal.citidirect.com/portal/welcome/index
+                #     #self.load_cookies()
 
-                return self.do_workflow(workflow=self.bank.get('selenium_workflow'), boleto_obj=boleto,
-                                 stage="generacion del boleto")
+                return self.do_workflow( stage="Automatismo Selenium")
             # self.driver_close()
 
         except Exception as ex:
@@ -163,26 +150,12 @@ class SeleniumController(object):
 
     # </editor-fold>
 
-    # <editor-fold desc="Login Methods">
-
-
-    def multifactor_login(self):
-
-        login_form = self.bank.get('login_form')
-        id_auth_meth = self.bank.get('id_authentication_methods').get('default')
-        '''
-        1-seleccionar del combo el method de autencicacion
-        # suponiendo q sea multifactor...
-        
-        '''
-
-
-    # </editor-fold>
 
     def wait_for_expected_conditions(self, actions):
+
         tipo = actions.get('tipo')  # tipo de ec
         target = actions.get('target')
-        time_wait = actions.get('time_wait')
+        time_wait = float(actions.get('time_wait'))
         e_description = actions.get('e_description')
         success = False
         try:
@@ -231,14 +204,14 @@ class SeleniumController(object):
             else:
                 self.driver.find_element_by_xpath(target)
 
-    def do_workflow(self, workflow=None, boleto_obj=None, stage=""):
+    def do_workflow(self, stage=""):
         '''
             acciones post login o post login, la mecanica es igual
             @:param, lista de acciones (pre o post acciones)
         '''
         created = False
 
-        if self.driver and len(workflow):
+        if self.driver:
 
             # dict_data = {
             #     'boleto_number': boleto_obj.boleto_number,
@@ -247,12 +220,8 @@ class SeleniumController(object):
             #     'enterprise_id': boleto_obj.enterprise_id
             # }
 
-            self._logger.info(
-                "generando boleto_id: {} -> pagador: {} , beneficiario: {}".format(boleto_obj.boleto_number,
-                                                                                   boleto_obj.cpf,
-                                                                                   dict_data['beneficiario']))
 
-            for actions in workflow:
+            for actions in self.workflow:
 
                 tipo = actions.get('tipo')
                 target = actions.get('target')
@@ -262,10 +231,13 @@ class SeleniumController(object):
                 id = actions.get('id', None)
 
                 try:
-                    self._logger.info(
-                        "{} -> tipo busqueda: {} , expresion: {} , mode: {}".format(desc, tipo, target, mode))
+
+                    if ec:
+                        self.wait_for_expected_conditions(ec)
 
                     if tipo:
+                        self._logger.info(
+                            "{} -> tipo busqueda: {} , expresion: {} , mode: {}".format(desc, tipo, target, mode))
 
                         elements_finded = self.finds_method[tipo](target)
                         if len(elements_finded):
@@ -273,16 +245,10 @@ class SeleniumController(object):
                             elem = self.find_method[tipo](target)
 
                             if mode == 'click':
-                                # antes de hacer click y descargarse automaticamente el boleto
-                                # vamos a comprobar si existe.
-                                # En caso de que exista lo borraremos para regenerarlo
-                                #self.check_exist(dict_data)
 
                                 elem.click()
                                 sleep(2)
                                 #created = self.check_file_and_rename(dict_data)
-                            if mode == 'swap_window':
-                                self.swap_window(elem)
 
                             if mode == 'fill' and id:
                                 # previamente a send_keys se requiere un clear
@@ -293,8 +259,7 @@ class SeleniumController(object):
 
                                 # elem.send_keys(dict_data[id])
                                 # self._logger.info("seteado  {} ->  {}!! ".format(target, dict_data[id]))
-                        if ec:
-                            self.wait_for_expected_conditions(ec)
+
 
                 except Exception as e:
                     pass
@@ -375,6 +340,15 @@ class SeleniumController(object):
     def bank(self, value):
         if isinstance(value, dict):
             self._bank = value
+
+    @property
+    def workflow(self):
+        return self._workflow
+
+    @workflow.setter
+    def workflow(self, value):
+        if value:
+            self._workflow = value
 
     @property
     def navigated_elements(self):

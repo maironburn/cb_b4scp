@@ -21,7 +21,6 @@ class XlsController(object):
 
         self._logger = AppLogger.create_rotating_log() if not kw.get('logger') else kw.get('logger')
 
-
     def get_boletos_items(self):
 
         if os.path.exists(XLS_FOLDER) and os.path.isdir(XLS_FOLDER):
@@ -65,7 +64,15 @@ class XlsController(object):
         self.instance_collection_errors = []
 
         for doc in self.doc_list:
-            xls_df = pd.read_excel(doc, encoding=sys.getfilesystemencoding())
+            xls_df = pd.read_excel(doc, encoding=sys.getfilesystemencoding(),
+                                   converters={'Account Number': str, 'Payer Zip Code': str,
+                                               'Data de emision del boleto (según la configuracion del idioma) Number': str,
+                                               'Data de Vencimento (según la configuracion del idioma)': str,
+                                               'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)': str,
+                                               'Boleto (para algunos casos nueve digitos)': str,
+                                               'CNPJ Beneficiario': str,
+                                               'CNPJ Payer Zip Code': str
+                                               })
             xls_df = xls_df[COLS_NAMES].astype('str')
 
             for _, row in xls_df.iterrows():
@@ -90,7 +97,6 @@ class XlsController(object):
                     else:
                         self.instance_collection_errors.append(instance)
 
-
             if len(self.instance_collection_errors):
                 self._logger.error(
                     "Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad")
@@ -100,15 +106,15 @@ class XlsController(object):
         return True
         # Boleto_Item
 
-    def check_columns_in_xls_document(self,xls_df, doc):
+    def check_columns_in_xls_document(self, xls_df, doc):
 
         for c in COLS_NAMES:
-            self._logger.info ("Comprobando columna: {} en el documento: {}".format(c, doc))
-            if c not in  xls_df.columns:
-                self._logger.error("{} ,(check_columns_in_xls_document) Columna NO encontrada: {} ".format(__class__.__name__, c))
+            self._logger.info("Comprobando columna: {} en el documento: {}".format(c, doc))
+            if c not in xls_df.columns:
+                self._logger.error(
+                    "{} ,(check_columns_in_xls_document) Columna NO encontrada: {} ".format(__class__.__name__, c))
                 return False
         return True
-
 
     def error_info(self):
 
@@ -205,7 +211,7 @@ class XlsController(object):
     @valid_instances_collection.setter
     def valid_instances_collection(self, value):
         if value:
-            self._valid_instances_collection=value
+            self._valid_instances_collection = value
 
     @property
     def instance_collection_errors(self):
@@ -214,7 +220,7 @@ class XlsController(object):
     @instance_collection_errors.setter
     def instance_collection_errors(self, value):
         if value:
-            self._instance_collection_errors= value
+            self._instance_collection_errors = value
 
     # </editor-fold>
 
