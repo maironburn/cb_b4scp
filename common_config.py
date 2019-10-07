@@ -9,6 +9,8 @@ LOG_FILE = os.path.join(ROOT_DIR, "logger{}{}".format(os.path.sep, LOGGER_NAME))
 COOKIE_FILE = os.path.join(ROOT_DIR, "cookie.pkl")
 DOWNLOAD_FOLDER=os.path.join(ROOT_DIR, 'Boletos emitidos')
 IMGS_FOLDER=  os.path.join(ROOT_DIR, 'images')
+
+TEMPLATES_IMGS=  os.path.join(IMGS_FOLDER, 'templates')
 TEMP_IMGS=  os.path.join(IMGS_FOLDER, 'temp')
 IMGS_DATASET=  os.path.join(IMGS_FOLDER, 'dataset')
 

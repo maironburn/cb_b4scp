@@ -1,40 +1,29 @@
-from time import sleep
 import os
-from selenium import webdriver
 import pickle
-from selenium.common.exceptions import NoSuchElementException
+from time import sleep
+from src.helpers.common_helper import load_skel
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait as wait
-from common_config import IE_DRIVER, DOWNLOAD_FOLDER, ROOT_DIR
+
+import src.controllers.img_recognition_controller as irc
+from common_config import IE_DRIVER, ROOT_DIR
+
 
 # pickle.dump(driver.get_cookies() , open("QuoraCookies.pkl","wb"))
-'''
-incializa el driver 
-
-@start_opc... si requiere parametros adicionales, ni lo considero ahora mismo
-options for session_id ?
-headless como opcion en skell? 
-probablemente -> user-data-dir; 
-    string: path to user data directory that Chrome is using
-    option_set.add_argument('disable-notifications')
-
-interesante:  Enable popup blocking with chromedriver
-https://bugs.chromium.org/p/chromedriver/issues/detail?id=1291
-
-chrome options / capabilities:
-https://chromedriver.chromium.org/capabilities
-'''
 
 
 class SeleniumController(object):
     _driver = None
     _bank = None
     _workflow = None
+    _img_recon_workflow = None
     _logger = None
     _navigated_elements = []
     _current_window = None
+    _skels = {}
     find_method = None
     finds_method = None
     ec_ref = None
@@ -46,12 +35,14 @@ class SeleniumController(object):
         if kw.get('bank', None) and kw.get('workflow', None):
             self.bank = kw.get('bank')
             self.workflow = kw.get('workflow', None).get('selenium_workflow')
+            # contiene la linea ppal y loop
+            self.img_recon_workflow = kw.get('img_recon_workflow', None)
+
             try:
                 self.start()
                 self.load_references()
             except Exception as e:
                 self._logger.debug("Error al iniciar Selenium -> {}".format(e))
-
 
     def load_references(self):
 
@@ -61,12 +52,11 @@ class SeleniumController(object):
 
     def check_cookies(self):
 
-        return os.path.exists(os.path.join(ROOT_DIR,"citibank_cookies.pkl"))
+        return os.path.exists(os.path.join(ROOT_DIR, "citibank_cookies.pkl"))
 
     def save_cookies(self):
-        citibank_cookies= os.path.join(ROOT_DIR,"citibank_cookies.pkl")
+        citibank_cookies = os.path.join(ROOT_DIR, "citibank_cookies.pkl")
         pickle.dump(self.driver.get_cookies(), open(citibank_cookies, "wb"))
-
 
     def load_cookies(self):
         citibank_cookies = os.path.join(ROOT_DIR, "citibank_cookies.pkl")
@@ -79,7 +69,7 @@ class SeleniumController(object):
         try:
 
             if self.driver:
-                self.driver.get(self.bank.get('login_url'))
+                self.driver.get(self.bank.get('url_base'))
                 # expected condition presence menu
                 self._logger.debug("create_boleto, creacion del boleto")
                 # # @todo, eliminar los sleeps...sustituir por ec
@@ -90,27 +80,11 @@ class SeleniumController(object):
                 #     #https://portal.citidirect.com/portal/welcome/index
                 #     #self.load_cookies()
 
-                return self.do_workflow( stage="Automatismo Selenium")
+                return self.do_workflow(stage="Automatismo Selenium")
             # self.driver_close()
 
         except Exception as ex:
             self._logger.error("Excepcion en do_the_process -> {}".format(ex))
-
-        return False
-
-
-    def load_hold_on(self):
-        try:
-            # menu
-            element = wait(self.driver, 10000).until(
-                ec.presence_of_element_located((By.XPATH, "//div[@id='uifw-megamenu']"))
-            )
-
-            return True
-
-        except Exception as e:
-            self._logger.error("Tiempo expirado")
-            self.driver.quit()
 
         return False
 
@@ -150,7 +124,6 @@ class SeleniumController(object):
 
     # </editor-fold>
 
-
     def wait_for_expected_conditions(self, actions):
 
         tipo = actions.get('tipo')  # tipo de ec
@@ -168,58 +141,12 @@ class SeleniumController(object):
 
         return success
 
-    def swap_window(self, element_that_cause_the_swapping=None):
-        '''
-            apertura de nuevo tab
-            @:param, element_that_cause_the_swapping (elemento que causa el swap)
-        '''
-        current = self.driver.window_handles[0]
-        if element_that_cause_the_swapping:
-            element_that_cause_the_swapping.click()
-
-            wait(self.driver, 20).until(ec.number_of_windows_to_be(2))
-            new_windows = [window for window in self.driver.window_handles if window != current][0]
-            self.driver.switch_to.window(new_windows)
-            sleep(5)
-
-    def switch_to_frame(self, actions=None):
-        try:
-            wait(self.driver, 10).until(
-                ec.frame_to_be_available_and_switch_to_it((By.XPATH, actions.get('target'))))
-
-        except Exception as e:
-            pass
-
-        return None
-
-    # @todo: improve navigation through frames
-    def navigate_to_element(self, actions):
-
-        self.driver.switch_to_default_content()
-        for e in actions:
-            target = e['target']
-            switch = e['switch']
-            if switch:
-                pass
-            else:
-                self.driver.find_element_by_xpath(target)
-
     def do_workflow(self, stage=""):
         '''
             acciones post login o post login, la mecanica es igual
             @:param, lista de acciones (pre o post acciones)
         '''
-        created = False
-
         if self.driver:
-
-            # dict_data = {
-            #     'boleto_number': boleto_obj.boleto_number,
-            #     'pagador': boleto_obj.cpf,
-            #     'beneficiario': boleto_obj.cpnj_beneficiario,
-            #     'enterprise_id': boleto_obj.enterprise_id
-            # }
-
 
             for actions in self.workflow:
 
@@ -232,10 +159,8 @@ class SeleniumController(object):
 
                 try:
 
-                    if ec:
-                        self.wait_for_expected_conditions(ec)
+                    if self.wait_for_expected_conditions(ec):
 
-                    if tipo:
                         self._logger.info(
                             "{} -> tipo busqueda: {} , expresion: {} , mode: {}".format(desc, tipo, target, mode))
 
@@ -245,43 +170,42 @@ class SeleniumController(object):
                             elem = self.find_method[tipo](target)
 
                             if mode == 'click':
-
                                 elem.click()
-                                sleep(2)
-                                #created = self.check_file_and_rename(dict_data)
 
-                            if mode == 'fill' and id:
+                            # @todo borrar !!
+                            if mode == 'fill':
                                 # previamente a send_keys se requiere un clear
                                 if actions.get('clear', None):
                                     elem.clear()
                                 if actions.get('focus', None):
                                     elem.click()
 
-                                # elem.send_keys(dict_data[id])
-                                # self._logger.info("seteado  {} ->  {}!! ".format(target, dict_data[id]))
-
+                            return True
 
                 except Exception as e:
                     pass
 
-        return created
+        return False
 
+    def do_image_automation(self):
 
-    def do_image_automation (self):
-        pass
+        # wait until maxVal ==1
+        for wf_item in self.img_recon_workflow.get('img_recognition_workflow_main'):
+            needle = None
+            pantalla_name = None
+            if not needle:
+                for k, v in wf_item.items():
+                    pantalla_name = k
+                    workflow = v
+                    needle_img =load_skel(pantalla_name).get('_template') # template de la pantalla
+            haystack = irc.capture_screen(pantalla_name)
+            pantalla_instance = irc.load_json_skel(pantalla_name)
+            while not irc.image_finded(haystack, needle):
+                haystack = irc.capture_screen(wf_item)
+                sleep(10)
 
-
-    def check_file_and_rename(self,dict_data):
-        fichero_descargado= os.path.join(DOWNLOAD_FOLDER, 'Boleto.pdf')
-        fichero_renombrado ="{}_{}.pdf".format(dict_data['boleto_number'], dict_data['enterprise_id'])
-        renombrado_path= os.path.join(DOWNLOAD_FOLDER, fichero_renombrado)
-
-        if os.path.exists(fichero_descargado):
-            os.rename(fichero_descargado,renombrado_path)
-        else:
-            self._logger.error("El boleto {} no se pudo descargar , datos erroneos o caducados".format(dict_data['boleto_number']))
-
-
+            irc.load_screen_elements(pantalla_instance)
+            print("")
     def start(self):
 
         try:
@@ -301,11 +225,9 @@ class SeleniumController(object):
 
         except Exception as e:
             self._logger.error(
-                "Exception iniciando el drive de IExplorer:->  {}".format( e))
+                "Exception iniciando el drive de IExplorer:->  {}".format(e))
 
         return None
-
-
 
     # def save_cookie(self):
     #     pickle.dump(self.driver.get_cookies(), open(COOKIE_FILE, "wb"))
@@ -333,6 +255,15 @@ class SeleniumController(object):
             return self._driver
 
     @property
+    def skels(self):
+        return self._skels
+
+    @skels.setter
+    def skels(self, value):
+        if value:
+            return self._skels
+
+    @property
     def bank(self):
         return self._bank
 
@@ -344,6 +275,15 @@ class SeleniumController(object):
     @property
     def workflow(self):
         return self._workflow
+
+    @property
+    def img_recon_workflow(self):
+        return self._img_recon_workflow
+
+    @img_recon_workflow.setter
+    def img_recon_workflow(self, value):
+        if value:
+            self._img_recon_workflow = value
 
     @workflow.setter
     def workflow(self, value):

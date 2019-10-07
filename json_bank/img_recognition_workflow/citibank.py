@@ -2,7 +2,7 @@ citibank = {
 
 # @todo ,  to think about (key adicional para invocar un callback o metodo ?... )
 
-'img_recognition_workflow': [
+'img_recognition_workflow_main': [
         {'warning_msg': [
             {'target': 'yes', 'action': "click"}]
         },

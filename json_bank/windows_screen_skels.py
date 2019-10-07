@@ -1,10 +1,11 @@
 import os.path
-from common_config import TEMP_IMGS, IMGS_DATASET
+from common_config import TEMP_IMGS, IMGS_DATASET, TEMPLATES_IMGS
 
 
 warning_msg = {
     "_name": "warning_msg",
     "_parent":None,
+    "_template" : os.path.join(TEMPLATES_IMGS, 'warning_msg.png'),
     "_img_folder": os.path.join(IMGS_DATASET, 'warning_msg'),
     "_dict_elements": {'yes': '', 'no': ''}
 }
@@ -12,13 +13,26 @@ warning_msg = {
 russian_msg = {
     "_name": "russian_msg",
     "_parent": None,
+    "_template" : os.path.join(TEMPLATES_IMGS, 'russian_msg.png'),
     "_img_folder":  os.path.join(IMGS_DATASET, 'russian_msg'),
     "_dict_elements": {'ok': ''}
+}
+
+main_transaction_and_services = {
+    "_name": "main_transaction_and_services",
+    "_parent": None,
+    "_template" :  os.path.join(TEMPLATES_IMGS, 'main_transaction_and_services.png'),
+    "_img_folder":  os.path.join(IMGS_DATASET, 'main_transaction_and_services'),
+    "_dict_elements": {'transactions_and_services': '',
+                       'collection_item_initiation': '',
+                       'new' : ''
+                       }
 }
 
 menu_transaction_and_services = {
     "_name": "menu_transaction_and_services",
     "_parent": None,
+    "_template" : os.path.join(TEMPLATES_IMGS, 'menu_transaction_and_services.png'),
     "_img_folder":  os.path.join(IMGS_DATASET, 'menu_transaction_and_services'),
     "_dict_elements": {'transactions_and_services': '',
                        'collection_item_initiation': '',
@@ -30,6 +44,7 @@ menu_transaction_and_services = {
 search_definition_dialog= {
     "_name": "search_definition_dialog",
     "_parent": None,
+    "_template" : os.path.join(TEMPLATES_IMGS, 'search_definition_dialog.png'),
     "_img_folder":  os.path.join(IMGS_DATASET, 'search_definition_dialog'),
     "_dict_elements": {'run_search': ''}
 }
@@ -38,6 +53,7 @@ search_definition_dialog= {
 select_account_dialog= {
     "_name": "select_account_dialog",
     "_parent": None,
+    "_template" : os.path.join(TEMPLATES_IMGS, 'select_account_dialog.png'),
     "_img_folder":  os.path.join(IMGS_DATASET, 'select_account_dialog'),
     "_dict_elements": {'ok': '', 'account_items': {}}
 }
@@ -46,6 +62,7 @@ select_account_dialog= {
 collection_item_detail = {
     "_name": "collection_item_detail",
     "_parent": None, #submit o return to summary
+    "_template" : os.path.join(TEMPLATES_IMGS, 'collection_item_detail.png'),
     "_img_folder": os.path.join(IMGS_DATASET,  "collection_item_detail"),
     "_dict_elements": { 'product': '', 'original_amount': '',
                         'type_of_collection_item_code': '', 'emission_date': '',

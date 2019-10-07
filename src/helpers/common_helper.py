@@ -30,6 +30,14 @@ def load_json(bankname, path):
     return None
 
 
+def load_skel(which_one):
+
+    module_name ='json_bank.windows_screen_skels'
+    module = import_module(module_name)
+
+    return getattr(module, which_one)
+
+
 # def load_json_bank(bankname):
 #     try:
 #         json_data = os.path.join(JSON_BANK, "{}.py".format(bankname))

@@ -5,6 +5,6 @@ citibank = {
 
     'url_base': 'https://portal.citidirect.com/portalservices/forms/login.pser?',
     # url de para el login
-    'login_url': 'https://portal.citidirect.com/portalservices/forms/login.pser?',
+    'applet_url': 'https://citidirectbeportalnam.citidirect.com/CasaSSL/picdEntry.html?citidirect=yes',
     # end json
 }
