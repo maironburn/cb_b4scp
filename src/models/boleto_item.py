@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from datetime import datetime
-
-
 class Boleto_Item(object):
     _logger = None
 
@@ -21,6 +18,9 @@ class Boleto_Item(object):
     _due_date = str()
     _amount = str()
 
+    _type_of_collection_item_code = 0
+    _collection_item_document_type = 7
+    _allow_divergent = 3
 
     _is_valid = True  # Flag que identidica si la instancia tiene validados todos los campos
     # esta propia sera comprobada por el xls_controller, en caso de no ser valida no se añade a la collecion de items
@@ -35,24 +35,22 @@ class Boleto_Item(object):
 
         self.boleto_number = kw.get('boleto_number')
         self.enteprise_id = kw.get('enteprise_id')
-        self.cpf = self.check_correct_length( kw.get('cpf'))
-        self.cpnj_beneficiario = self.check_correct_length( kw.get('cpnj_beneficiario'))
+        self.cpf = self.check_correct_length(kw.get('cpf'))
+        self.cpnj_beneficiario = self.check_correct_length(kw.get('cpnj_beneficiario'))
         self.product = kw.get('product')
         self.account_number = kw.get('account_number')
-        self.address  = kw.get('address')
+        self.address = kw.get('address')
         self.state = kw.get('state')
         self.city = kw.get('city')
-        self.zip_code = kw.get('zip_code') #need 8 caracteres
-        #self.emision_date = datetime.now().strftime("%d/%m/%Y")
-        self.emision_date =  kw.get('emision_date')
+        self.zip_code = kw.get('zip_code')  # need 8 caracteres
+        # self.emision_date = datetime.now().strftime("%d/%m/%Y")
+        self.emision_date = kw.get('emision_date')
         self.due_date = kw.get('due_date')
         self.amount = kw.get('amount')
 
-
-    #@todo
+    # @todo
     def check_is_valid(self):
         return self.boleto_number.strip() != '' and self.enteprise_id.strip() != '' and self.cpnj_beneficiario.strip() != ''
-
 
     def check_correct_zip_code(self, zip):
 
@@ -61,13 +59,12 @@ class Boleto_Item(object):
         to_append = ''
 
         if len(zip) < 8:
-            self._logger.info("check_correct_length, CPF con {}, need add".format(len(cpf)))
+            self._logger.info("check_correct_length, ZIP Code con {}, need add".format(len(zip)))
             n_iter = 8 - len(zip)
 
         if n_iter:
             for i in range(n_iter):
                 to_append += '0'
-
 
             return to_append + zip
 
@@ -83,23 +80,40 @@ class Boleto_Item(object):
         n_iter = 0
         to_append = ''
 
-        if len(cpf) < 11:
+        if cpf and len(cpf) < 11:
             self._logger.info("check_correct_length, CPF con {}, need add".format(len(cpf)))
             n_iter = 11 - len(cpf)
 
-        if len(cpf)>11 and len(cpf)<14:
+        if cpf and len(cpf) > 11 and len(cpf) < 14:
             self._logger.info("check_correct_length, CNPJ con {}, need add".format(len(cpf)))
             n_iter = 14 - len(cpf)
 
-        if n_iter:
+        if cpf and n_iter:
             for i in range(n_iter):
                 to_append += '0'
-
 
             return to_append + cpf
 
         return cpf
 
+    def get_json(self):
+
+        return {'product': self._product,
+                'amount': self._amount,
+                'emision_date': self._emision_date,
+                'boleto_number': self._boleto_number,
+                'due_date': self._due_date,
+                'enteprise_id': self._enteprise_id,
+                'cpf': self._cpf,
+                'address': self._address,
+                'state': self._state,
+                'city': self._city,
+                'zip_code': self._zip_code,
+
+                'type_of_collection_item_code': self._type_of_collection_item_code,
+                'collection_item_document_type' : self._collection_item_document_type,
+                'allow_divergent' : self._allow_divergent
+                }
 
     # @todo
     def validate(self):
@@ -224,7 +238,6 @@ class Boleto_Item(object):
         if value:
             self._amount = value
 
-
     @property
     def is_valid(self):
         return self._is_valid
@@ -247,7 +260,6 @@ class Boleto_Item(object):
 
     def __repr__(self):
 
-
         if not self.error_description:
             tipo_dato = 'CNPJ' if len(self.cpf) == 14 else 'CPF'
             return "Num boleto: %s\n\tenterprise_id: %s\n\tcpnj_beneficiario: %s\n\t%s pagador: %s" % (
@@ -262,7 +274,8 @@ class Boleto_Item(object):
         return "boleto: %s\n\t error:  %s" % (self.boleto_number, self.error_description)
 
 
-
 if __name__ == '__main__':
     bi = Boleto_Item()
-    print("{}".format(bi.emision_date))
+    print("{}".format(bi.get_json()))
+    print("")
+    # print("{}".format(bi.emision_date))

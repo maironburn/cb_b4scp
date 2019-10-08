@@ -55,7 +55,7 @@ select_account_dialog = {
     "_parent": None,
     "_template": os.path.join(TEMPLATES_IMGS, 'select_account_dialog.png'),
     "_img_folder": os.path.join(IMGS_DATASET, 'select_account_dialog'),
-    "_dict_elements": {'ok': '', 'account_items': {}}
+    "_dict_elements": {'ok': ''} # aqui tb irian las cuentas de los boletos (pero se simplifica updateando el dict
 }
 
 collection_item_detail = {
@@ -68,9 +68,11 @@ collection_item_detail = {
                        'customer_reference': '',
                        'due_date': '', 'collection_item_document_type': '',
                        'allow_divergent': '', 'payer_name': '',
-                       'payer_type': '', 'payer_address': '',
-                       'payer_city': '', 'payer_state': '',
-                       'payer_zipcode': '', 'submit': ''
+                       'payer_type': '', 'payer_type_txtbox': '',
+                       'payer_address': '', 'payer_state': '',
+                       'payer_city': '',
+                       'payer_zipcode': '',
+                       'submit': ''
                        ## add submit o return to summary
                        }
 }

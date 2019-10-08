@@ -31,6 +31,10 @@ class SeleniumController(object):
 
     def __init__(self, kw):
 
+        self.dictio_actions = {'click': irc.click,
+                               'fill': irc.fill
+                               }
+
         self._logger = kw.get('logger')
         if kw.get('bank', None) and kw.get('workflow', None):
             self.bank = kw.get('bank')
@@ -177,28 +181,31 @@ class SeleniumController(object):
 
         return False
 
-    def do_image_automation(self, json_workflow=None):
-        import time
+    def get_wf_details(wf_item):
+
+        for k, v in wf_item.items():
+            pantalla_name = k
+            workflow = v
+            needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
+
+        return pantalla_name, needle_img, workflow
+
+    def do_image_automation(self, json_workflow=None, boleto_instance=None):
 
         json_workflow = self.img_recon_workflow.get(
-            'img_recognition_workflow_main') if json_workflow is None else json_workflow
-        self.driver.get(self.bank.get('applet_url'))
-        time.sleep(30)
-        self.driver.maximize_window()
-        # wait until maxVal ==1
-
-        dictio_actions = {'click': irc.click
-                          }
+            'img_recognition_workflow_main') if json_workflow is None else self.img_recon_workflow.get(json_workflow)
+        if not boleto_instance:
+            self.driver.get(self.bank.get('applet_url'))
+            self.driver.maximize_window()
+            sleep(20)
 
         for wf_item in json_workflow:
-
+            sleep(5)
             needle_img = None
             pantalla_name = None
             if not pantalla_name:
-                for k, v in wf_item.items():
-                    pantalla_name = k
-                    workflow = v
-                    needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
+                pantalla_name, needle_img, workflow = self.get_wf_details(wf_item)
+
             haystack = irc.capture_screen(pantalla_name)
             pantalla_instance = irc.load_json_skel(pantalla_name)
             while not irc.image_finded(haystack, needle_img):
@@ -207,11 +214,73 @@ class SeleniumController(object):
             # carga y mapea los elementos de la pantalla
             irc.load_screen_elements(pantalla_instance)
 
-            elemento = pantalla_instance.get_element_by_name(workflow[0].get('target'))
-            # realizando accion sobre el elemento target
-            dictio_actions[workflow[0].get('action')](elemento)
+            if pantalla_name == 'select_account_dialog' and boleto_instance:
+                sleep(15)
+                account_element = pantalla_instance.get_element_by_name(boleto_instance.account_number)
+                irc.click(account_element)
+                ok_element = pantalla_instance.get_element_by_name('ok')
+                irc.click(ok_element)
 
-            print("")
+            else:
+                elemento = pantalla_instance.get_element_by_name(workflow[0].get('target'))
+                # realizando accion sobre el elemento target
+                self.dictio_actions[workflow[0].get('action')](elemento)
+
+    def check_screen(self, pantalla_name, haystack, needle_img):
+        '''
+        :param pantalla_name: nombre de la pantalla, con ese nombre se guarda en el TMP
+        :param haystack: captura de la pantalla
+        :param needle_img: imagen "template" de la carpeta template
+        :return:
+            comprueba la imagen del template con la captura de pantalla para asegurar que nos hallamos en la pantalla objetivo
+
+        '''
+        while not irc.image_finded(haystack, needle_img):
+            sleep(10)
+            print ("Comprobando correspondencia template / captured img ")
+            haystack = irc.capture_screen(pantalla_name)
+
+        return True
+
+    def boleto_wf_loop(self, boleto):
+
+        sleep(5)
+        boleto_json = boleto.get_json()
+        pantalla_name = None
+
+        for wf_item in self.img_recon_workflow.get('img_recognition_loop_workflow'):
+
+            needle_img = None
+            if not pantalla_name:
+                pantalla_name, needle_img, workflow = self.get_wf_details(wf_item)
+                haystack = irc.capture_screen(pantalla_name)
+                pantalla_instance = irc.load_json_skel(pantalla_name)
+                self.check_screen(pantalla_name, haystack, needle_img)
+
+            # carga y mapea los elementos de la pantalla
+            irc.load_screen_elements(pantalla_instance)  # carga inmediata, no elementos diferidos
+
+            for wf_item in range(workflow):
+                if wf_item.get('action') == 'click':
+                    if wf_item.get('target') == 'cmboption':
+                        pass
+                    else:
+                        elemento = pantalla_instance.get_element_by_name(workflow[wf_item].get('target'))
+                        # realizando accion sobre el elemento target
+                        self.dictio_actions['click'](elemento)
+                else:
+                    elemento = pantalla_instance.get_element_by_name(workflow[wf_item].get('target'))
+                    data_key = workflow[wf_item].get('boleto_data')
+                    data = boleto_json.get(data_key)
+                    self.dictio_actions['fill'](elemento, data)
+                print("")
+
+
+    def papafrita(self):
+        #caotura de pantalla
+
+
+
 
     def start(self):
 

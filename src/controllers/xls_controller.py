@@ -91,6 +91,7 @@ class XlsController(object):
                 if len(item_dict.keys()) == row.shape[0]:
                     item_dict.update({'logger': self._logger})
                     instance = Boleto_Item(**item_dict)
+                    #print ("{}".format(instance.get_json()))
                     if instance.is_valid:
                         self._logger.info("Boleto correcto\n{}".format(instance))
                         self.valid_instances_collection.append(instance)

@@ -40,10 +40,9 @@ class BankController(object):
             self.sc.do_image_automation()
 
             for bi in lst_instances_bi:
-                #wimtermezzo wf
-                self.sc.do_image_automation()
+                self.sc.do_image_automation(json_workflow = 'img_recognition_workflow_intermezzo',boleto_instance = bi ) # new and run_search
                 # ya wf dependiente de las instancias del boleto
-
+                self.sc.boleto_wf_loop(bi)
             #self.sc.do_image_automation(boletos=lst_instances_bi)
 
             # for bi in lst_instances_bi:

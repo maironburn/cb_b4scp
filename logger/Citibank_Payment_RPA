@@ -2646,3 +2646,47 @@ Num boleto: 54949
 	CNPJ pagador: 30306294000226
 ERROR: 10/08/2019 04:06:25 PM Exception waiting for expected conditions -> target //a[@id='uifw-megamenu-8100'], desc: Esperando la carga del menu despues del login
 INFO: 10/08/2019 04:06:30 PM Click sobre item menu citiDirect Services -> tipo busqueda: xpath , expresion: //a[@id='uifw-megamenu-8100'] , mode: click
+INFO: 10/08/2019 04:43:15 PM <property object at 0x00000220C4BF6548> -> Loaded skel from : citibank
+INFO: 10/08/2019 04:43:15 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/08/2019 04:43:15 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/08/2019 04:43:15 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/08/2019 04:43:15 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/08/2019 04:43:15 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/08/2019 06:46:11 PM <property object at 0x000001A10F412638> -> Loaded skel from : citibank
+INFO: 10/08/2019 06:46:11 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/08/2019 06:46:11 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/08/2019 07:25:43 PM <property object at 0x000001E4DE0EF778> -> Loaded skel from : citibank
+INFO: 10/08/2019 07:25:43 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/08/2019 07:25:43 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/08/2019 07:26:02 PM <property object at 0x000001D9E0372728> -> Loaded skel from : citibank
+INFO: 10/08/2019 07:26:02 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/08/2019 07:26:02 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/08/2019 07:26:02 PM Boleto correcto
+Num boleto: 54947
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/08/2019 07:26:02 PM Boleto correcto
+Num boleto: 54948
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+INFO: 10/08/2019 07:26:02 PM Boleto correcto
+Num boleto: 54949
+	enterprise_id: Banco BTG Pactual SA
+	cpnj_beneficiario: 96534094000158
+	CNPJ pagador: 30306294000226
+ERROR: 10/08/2019 07:27:46 PM Exception waiting for expected conditions -> target //a[@id='uifw-megamenu-8100'], desc: Esperando la carga del menu despues del login
+INFO: 10/08/2019 07:27:51 PM Click sobre item menu citiDirect Services -> tipo busqueda: xpath , expresion: //a[@id='uifw-megamenu-8100'] , mode: click

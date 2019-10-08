@@ -128,6 +128,12 @@ def click(target):
     pyautogui.moveTo(target.x, target.y)
     pyautogui.click()
 
+def fill (target, data):
+    pyautogui.moveTo(target.x, target.y)
+    pyautogui.doubleClick()
+    pyautogui.typewrite(str(data), 0.05)
+
+
 def create_element_instance(kw, get_coords=False, contenedor_path=None):
     ''' Instancia a los elementos componentes de la pantalla
         a partir de la imagen del dataset se obtiene el tipo de elemento
