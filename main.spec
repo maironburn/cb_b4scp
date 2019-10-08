@@ -6,13 +6,15 @@ block_cipher = None
 a = Analysis(['main.py'],
              pathex=['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos'],
              binaries=[ ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\3rd_parties', '.\\3rd_parties' ),
-              ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\documentacion_usuario', '.\\documentacion_usuario' )
+              ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\documentacion_usuario', '.\\documentacion_usuario' ),
+              ( 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images', '.\\images' )
 			 ],
-             datas=[ ( 'src', 'src' ),
-			 ( 'logger', 'logger' ),
-			  ( '.\\common_config.py', '.\\common_config.py' ),
-			 ( 'json_bank', 'json_bank' ),
-			  ( 'xls_folder', 'xls_folder' )
+             datas=[
+             ( 'json_bank', 'json_bank' ),
+             ( 'logger', 'logger' ),
+             ( 'src', 'src' ),
+			 ( 'xls_folder', 'xls_folder' ),
+			 ( '.\\common_config.py', '.\\common_config.py' )
 			 ],
              hiddenimports=[],
              hookspath=[],

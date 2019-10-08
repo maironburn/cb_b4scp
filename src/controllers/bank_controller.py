@@ -26,7 +26,7 @@ class BankController(object):
 
         kw = {'logger': self._logger, 'bank': self._dict_bank.get(bankname).json_data,
               'workflow': self._dict_bank.get(bankname)._json_selenium_wf,
-              'img_recon_workflow' : self._dict_bank.get(bankname)._json_img_recognition
+              'img_recon_workflow' : self._dict_bank.get(bankname)._json_img_recognition,
               }
 
         self.sc = SeleniumController(kw)
@@ -37,8 +37,14 @@ class BankController(object):
             print("Num de boletos leidos del excel y pendientes de emitir: {}".format(len(lst_instances_bi)))
 
             self.sc.do_selenium_workflow()
-            self.sc.driver.get(self._dict_bank.get(bankname).json_data.get('applet_url'))
             self.sc.do_image_automation()
+
+            for bi in lst_instances_bi:
+                #wimtermezzo wf
+                self.sc.do_image_automation()
+                # ya wf dependiente de las instancias del boleto
+
+            #self.sc.do_image_automation(boletos=lst_instances_bi)
 
             # for bi in lst_instances_bi:
             #     if self.sc.do_selenium_workflow(bi):

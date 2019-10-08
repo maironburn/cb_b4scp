@@ -10,24 +10,30 @@ citibank = {
         {'russian_msg': [
             {'target': 'ok', 'action': "click"}]
         },
-
-        {'Menu_Transaction_and_Services': [
-            {'target': 'transactions_and_services', 'action': "click"},
-
-            {'target': 'collection_item_initiation', 'action': "click"},
-            #todo
-            {'target': 'new', 'action': "click"}
-
-        ]
+        {'main_transactions_and_services': [
+            {'target': 'transactions_and_services', 'action': "click"}]
         },
+        {'menu_transactions_and_services': [
+            {'target': 'collection_item_initiation', 'action': "click"}
+            ]
+        }
+    ]
+    ,
+    'img_recognition_workflow_intermezzo': [
+        {'loaded_transactions_and_services': [
+            {'target': 'new', 'action': "click"}
+        ]
+        }
+        ,
         {'search_definition_dialog': [
             {'target': 'run_search', 'action': "click"}
         ]
         }
-    ]
+        ]
     ,
-
+    #loop para la generacion de boletos
     'img_recognition_loop_workflow': [
+
         {'select_account_dialog': [
             {'target': '', 'action': "click"},
 

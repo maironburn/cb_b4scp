@@ -1,7 +1,7 @@
 import os
 import pickle
 from time import sleep
-from src.helpers.common_helper import load_skel
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -10,6 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait as wait
 
 import src.controllers.img_recognition_controller as irc
 from common_config import IE_DRIVER, ROOT_DIR
+from src.helpers.common_helper import load_skel
 
 
 # pickle.dump(driver.get_cookies() , open("QuoraCookies.pkl","wb"))
@@ -21,8 +22,7 @@ class SeleniumController(object):
     _workflow = None
     _img_recon_workflow = None
     _logger = None
-    _navigated_elements = []
-    _current_window = None
+
     _skels = {}
     find_method = None
     finds_method = None
@@ -70,7 +70,6 @@ class SeleniumController(object):
 
             if self.driver:
                 self.driver.get(self.bank.get('url_base'))
-                # expected condition presence menu
                 self._logger.debug("create_boleto, creacion del boleto")
                 # # @todo, eliminar los sleeps...sustituir por ec
                 # if not self.check_cookies() and self.load_hold_on():
@@ -119,7 +118,8 @@ class SeleniumController(object):
         return {
             'element_located': ec.presence_of_element_located,
             'frame_switch': ec.frame_to_be_available_and_switch_to_it,
-            'clickable': ec.element_to_be_clickable
+            'clickable': ec.element_to_be_clickable,
+            'alert': ec.alert_is_present
         }
 
     # </editor-fold>
@@ -134,6 +134,11 @@ class SeleniumController(object):
         try:
             exp_type = self.ec_ref[tipo]
             success = wait(self.driver, time_wait).until(exp_type((By.XPATH, target)))
+
+            if wait(self.driver, 10).until(ec.alert_is_present()):
+                alert = self.driver.switch_to.alert
+                alert.accept()
+
         except Exception as e:
             self._logger.error(
                 "Exception waiting for expected conditions -> target {}, desc: {}".format(target, e_description))
@@ -160,52 +165,54 @@ class SeleniumController(object):
                 try:
 
                     if self.wait_for_expected_conditions(ec):
-
+                        # un poco de tiempo para la carga de la web
+                        sleep(5)
                         self._logger.info(
                             "{} -> tipo busqueda: {} , expresion: {} , mode: {}".format(desc, tipo, target, mode))
 
-                        elements_finded = self.finds_method[tipo](target)
-                        if len(elements_finded):
-                            self._logger.info("matched condition {} !! ".format(desc))
-                            elem = self.find_method[tipo](target)
-
-                            if mode == 'click':
-                                elem.click()
-
-                            # @todo borrar !!
-                            if mode == 'fill':
-                                # previamente a send_keys se requiere un clear
-                                if actions.get('clear', None):
-                                    elem.clear()
-                                if actions.get('focus', None):
-                                    elem.click()
-
-                            return True
+                        return True
 
                 except Exception as e:
                     pass
 
         return False
 
-    def do_image_automation(self):
+    def do_image_automation(self, json_workflow=None):
+        import time
 
+        json_workflow = self.img_recon_workflow.get(
+            'img_recognition_workflow_main') if json_workflow is None else json_workflow
+        self.driver.get(self.bank.get('applet_url'))
+        time.sleep(30)
+        self.driver.maximize_window()
         # wait until maxVal ==1
-        for wf_item in self.img_recon_workflow.get('img_recognition_workflow_main'):
-            needle = None
+
+        dictio_actions = {'click': irc.click
+                          }
+
+        for wf_item in json_workflow:
+
+            needle_img = None
             pantalla_name = None
-            if not needle:
+            if not pantalla_name:
                 for k, v in wf_item.items():
                     pantalla_name = k
                     workflow = v
-                    needle_img =load_skel(pantalla_name).get('_template') # template de la pantalla
+                    needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
             haystack = irc.capture_screen(pantalla_name)
             pantalla_instance = irc.load_json_skel(pantalla_name)
-            while not irc.image_finded(haystack, needle):
-                haystack = irc.capture_screen(wf_item)
+            while not irc.image_finded(haystack, needle_img):
                 sleep(10)
-
+                haystack = irc.capture_screen(pantalla_name)
+            # carga y mapea los elementos de la pantalla
             irc.load_screen_elements(pantalla_instance)
+
+            elemento = pantalla_instance.get_element_by_name(workflow[0].get('target'))
+            # realizando accion sobre el elemento target
+            dictio_actions[workflow[0].get('action')](elemento)
+
             print("")
+
     def start(self):
 
         try:
@@ -220,6 +227,9 @@ class SeleniumController(object):
             cap['INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS'] = True
             self._driver = webdriver.Ie(capabilities=cap,
                                         executable_path=IE_DRIVER)
+
+            self.driver.delete_all_cookies()
+            self._driver.maximize_window()
 
             return self._driver
 
@@ -289,18 +299,5 @@ class SeleniumController(object):
     def workflow(self, value):
         if value:
             self._workflow = value
-
-    @property
-    def navigated_elements(self):
-        return self._navigated_elements
-
-    @navigated_elements.setter
-    def navigated_elements(self, value):
-        if isinstance(value, list):
-            self._navigated_elements = value
-
-    @property
-    def current_windows(self):
-        return self._current_window
 
     # </editor-fold>

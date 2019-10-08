@@ -1,4 +1,5 @@
 import os
+import time
 from os.path import sep
 
 import cv2
@@ -11,8 +12,12 @@ from src.models.pantalla import Pantalla
 
 
 def capture_screen(name="screenshot"):
-    pyautogui.screenshot("{}{}.png".format(TEMP_IMGS, name))
+    captured= os.path.join(TEMP_IMGS, "{}.png".format(name))
+    pyautogui.screenshot(captured)
+    time.sleep(2)
     print("captured windows: {}".format(name))
+
+    return captured
 
 
 def image_finded(haystack, needle):
@@ -22,10 +27,10 @@ def image_finded(haystack, needle):
     templ = cv2.imread(needle, cv2.IMREAD_COLOR)
 
     result = cv2.matchTemplate(img, templ, cv2.TM_CCORR_NORMED)
-    cv2.normalize(result, result, 0, 1, cv2.NORM_MINMAX, -1)
+    #cv2.normalize(result, result, 0, 1, cv2.NORM_MINMAX, -1)
     _minVal, _maxVal, minLoc, maxLoc = cv2.minMaxLoc(result, None)
 
-    return _maxVal == 1.0
+    return _maxVal >0.95
 
 
 def getElementCoords(haystack, needle):
@@ -46,16 +51,16 @@ def getElementCoords(haystack, needle):
     center = (int((matchLoc[0] + w / 2)), int((matchLoc[1] + templ.shape[0]) - h / 2))
     x_center = int(matchLoc[0] + w / 2)
     y_center = int((matchLoc[1] + templ.shape[0]) - h / 2)
-    top_left = maxLoc
-    bottom_right = (top_left[0] + w, top_left[1] + h)
-    print("x_center: {}".format(x_center))
-    print("y_center: {}".format(y_center))
-    rect_img = cv2.rectangle(img_display, maxLoc, bottom_right, (255, 0, 0), 2)
-
-    print("needle: {}".format(needle.split('\\')[-1]))
-
-    cv2.imshow("whatever", rect_img)
-    cv2.waitKey(0)
+    # top_left = maxLoc
+    # bottom_right = (top_left[0] + w, top_left[1] + h)
+    # print("x_center: {}".format(x_center))
+    # print("y_center: {}".format(y_center))
+    # rect_img = cv2.rectangle(img_display, maxLoc, bottom_right, (255, 0, 0), 2)
+    #
+    # print("needle: {}".format(needle.split('\\')[-1]))
+    #
+    # cv2.imshow("whatever", rect_img)
+    # cv2.waitKey(0)
     return x_center, y_center
 
 
@@ -119,6 +124,10 @@ def load_screen_elements(elemento_contenedor):
             print("")
 
 
+def click(target):
+    pyautogui.moveTo(target.x, target.y)
+    pyautogui.click()
+
 def create_element_instance(kw, get_coords=False, contenedor_path=None):
     ''' Instancia a los elementos componentes de la pantalla
         a partir de la imagen del dataset se obtiene el tipo de elemento
@@ -158,7 +167,9 @@ if __name__ == '__main__':
     # refresh_screenshot()
     # text_recognition()
     # start_window = which_window_am_i()
-
+    needle='C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\templates\\warning_msg.png'
+    haystack= 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\temp\\warning_msg.png'
+    test= image_finded(haystack, needle)
     image_window = "Source Image"
     result_window = "Result window"
     directory = ("{}{}".format(IMGS_DATASET, 'main_window'))

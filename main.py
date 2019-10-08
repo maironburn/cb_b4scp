@@ -25,8 +25,6 @@ from  src.controllers.xls_controller import XlsController
 
 if __name__ == '__main__':
 
-
-
     bancos = ['citibank']
     bc = BankController({'banknames': bancos})
     xls_controller= XlsController (**{'logger': bc.logger})
