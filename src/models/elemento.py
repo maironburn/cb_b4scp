@@ -15,8 +15,6 @@ class Element(object):
 
     # <editor-fold desc="Getter y Setters">
 
-
-
     @property
     def name(self):
         return self._name
