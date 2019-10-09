@@ -135,20 +135,30 @@ class SeleniumController(object):
         time_wait = float(actions.get('time_wait'))
         e_description = actions.get('e_description')
         success = False
+
+        print ("Pendiente del Logado del usuario para continuar el automatismo")
+        self._logger.info("Pendiente del Logado del usuario para continuar el automatismo")
         try:
             exp_type = self.ec_ref[tipo]
             success = wait(self.driver, time_wait).until(exp_type((By.XPATH, target)))
 
-            if wait(self.driver, 10).until(ec.alert_is_present()):
-                print ("Eliminado mensaje de Alert")
-                self._logger.info("Eliminado mensaje de Alert")
-                alert = self.driver.switch_to.alert
-                alert.accept()
+            print("Web cargada con exito")
+            self._logger.info("Web cargada con exito")
+
+            try:
+                if wait(self.driver, 10).until(ec.alert_is_present()):
+                    print ("Eliminado mensaje de Alert")
+                    self._logger.info("Eliminado mensaje de Alert")
+                    alert = self.driver.switch_to.alert
+                    alert.accept()
+
+            except Exception:
+                pass # solo para que no escupa en el log
 
         except Exception as e:
             self._logger.error(
                 "Exception waiting for expected conditions -> target {}, desc: {}".format(target, e_description))
-        print("done")
+
 
         return success
 
@@ -215,6 +225,8 @@ class SeleniumController(object):
             self.check_screen(pantalla_name, haystack, needle_img)
             # carga y mapea los elementos de la pantalla
             irc.load_screen_elements(pantalla_instance)
+            print("Obteniendo posicion del elemento: {}".format(workflow[0].get('target')))
+            self._logger.info("Obteniendo posicion del elemento: {}".format(workflow[0].get('target')))
 
             if pantalla_name == 'select_account_dialog' and boleto_instance:
 
@@ -226,8 +238,7 @@ class SeleniumController(object):
                 irc.click(ok_element)
 
             else:
-                print("Obteniendo posicion del elemento: {}".format(workflow[0].get('target')))
-                self._logger.info("Obteniendo posicion del elemento: {}".format(workflow[0].get('target')))
+
                 elemento = pantalla_instance.get_element_by_name(workflow[0].get('target'))
                 # realizando accion sobre el elemento target
                 self.dictio_actions[workflow[0].get('action')](elemento)
@@ -241,12 +252,16 @@ class SeleniumController(object):
             comprueba la imagen del template con la captura de pantalla para asegurar que nos hallamos en la pantalla objetivo
 
         '''
+        print(
+            "Comprobando correspondencia de imagenes \ntemplate: {} \n/ captured img {} ".format(needle_img, haystack))
+        self._logger.info(
+            "Comprobando correspondencia de imagenes \ntemplate: {} \n/ captured img {} ".format(needle_img, haystack))
         while not irc.image_finded(haystack, needle_img):
             sleep(10)
-            print("Comprobando correspondencia de imagenes \ntemplate: {} \n/ captured img {} ".format(needle_img, haystack))
-            self._logger.info("Comprobando correspondencia de imagenes \ntemplate: {} \n/ captured img {} ".format(needle_img, haystack))
-
             haystack = irc.capture_screen(pantalla_name)
+
+        print("Screen Matched !!")
+        self._logger.info("Screen Matched !!")
 
         return True
 
@@ -264,6 +279,7 @@ class SeleniumController(object):
         # check capture vs template to ensure the right screen
         self.check_screen(pantalla_name, haystack, needle_img)
 
+
         # carga y mapea las coordenadas de los elementos de la pantalla
         irc.load_screen_elements(pantalla_instance)  # carga inmediata, no elementos diferidos
 
@@ -275,10 +291,14 @@ class SeleniumController(object):
             self._logger.info("action :{}, target: {}".format(action, target))
 
             boleto_searched_data = wfi.get('boleto_data', None)
+            print("Obteniedo dato del boleto : {}".format(boleto_searched_data))
+            self._logger.info("Obteniedo dato del boleto : {}".format(boleto_searched_data))
             if boleto_searched_data:
                 data = boleto.get_json()[boleto_searched_data]
                 element = pantalla_instance.get_element_by_name(target)
+                print("Dato del boleto : {}".format(data))
 
+                self._logger.info("Dato del boleto : {}".format(data))
                 if action == 'select':
                     # element es de tipo combo
                     print ("Haciendo click sobre: {}".format(element.name))

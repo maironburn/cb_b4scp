@@ -1,243 +1,89 @@
-INFO: 10/09/2019 04:20:55 PM <property object at 0x000001F5AE3FC908> -> Loaded skel from : citibank
-INFO: 10/09/2019 04:20:55 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
-INFO: 10/09/2019 04:20:55 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
-INFO: 10/09/2019 04:20:55 PM Boleto correcto
+INFO: 10/09/2019 05:28:58 PM <property object at 0x000001F58FEABA48> -> Loaded skel from : citibank
+INFO: 10/09/2019 05:28:58 PM Leyendo documento XLS :-> adaptacion_emision_boletos.xlsx
+INFO: 10/09/2019 05:28:58 PM Lectura de la carpeta C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\xls_folder completada, hallados 2 documentos, ['C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\xls_folder\\adaptacion_emision_boletos.xlsx']
+INFO: 10/09/2019 05:28:58 PM Boleto correcto
 Num boleto: 54947
 	enterprise_id: Banco BTG Pactual SA
 	cpnj_beneficiario: 96534094000158
 	CNPJ pagador: 30306294000226
-INFO: 10/09/2019 04:20:55 PM Boleto correcto
+INFO: 10/09/2019 05:28:58 PM Boleto correcto
 Num boleto: 54948
 	enterprise_id: Banco BTG Pactual SA
 	cpnj_beneficiario: 96534094000158
 	CNPJ pagador: 30306294000226
-INFO: 10/09/2019 04:20:55 PM Boleto correcto
+INFO: 10/09/2019 05:28:58 PM Boleto correcto
 Num boleto: 54949
 	enterprise_id: Banco BTG Pactual SA
 	cpnj_beneficiario: 96534094000158
 	CNPJ pagador: 30306294000226
-ERROR: 10/09/2019 04:22:31 PM Exception waiting for expected conditions -> target //a[@id='uifw-megamenu-8100'], desc: Esperando la carga del menu despues del login
-INFO: 10/09/2019 04:22:36 PM Click sobre item menu citiDirect Services -> tipo busqueda: xpath , expresion: //a[@id='uifw-megamenu-8100'] , mode: click
-INFO: 10/09/2019 04:22:39 PM Esperando la carga del Applet de Java
-INFO: 10/09/2019 04:23:07 PM Obteniendo posicion del elemento: yes
-INFO: 10/09/2019 04:23:15 PM Obteniendo posicion del elemento: ok
-INFO: 10/09/2019 04:23:23 PM Obteniendo posicion del elemento: transactions_and_services
-INFO: 10/09/2019 04:23:31 PM Obteniendo posicion del elemento: collection_item_initiation
-INFO: 10/09/2019 04:23:39 PM Obteniendo posicion del elemento: new
-INFO: 10/09/2019 04:23:47 PM Obteniendo posicion del elemento: run_search
-INFO: 10/09/2019 04:24:00 PM select_account_dialog -> account: 0036518013
-INFO: 10/09/2019 04:24:34 PM action :select, target: product
-INFO: 10/09/2019 04:25:35 PM action :fill, target: original_amount
-INFO: 10/09/2019 04:25:56 PM action :select, target: type_of_collection_item_code
-INFO: 10/09/2019 04:27:18 PM action :fill, target: emission_date
-INFO: 10/09/2019 04:27:34 PM action :fill, target: customer_reference
-INFO: 10/09/2019 04:27:48 PM action :fill, target: due_date
-INFO: 10/09/2019 04:28:00 PM action :select, target: collection_item_document_type
-INFO: 10/09/2019 04:28:23 PM action :select, target: allow_divergent
-INFO: 10/09/2019 04:29:02 PM action :fill, target: payer_name
-INFO: 10/09/2019 04:31:07 PM action :fill, target: payer_address
-INFO: 10/09/2019 04:31:26 PM action :fill, target: payer_state
-INFO: 10/09/2019 04:31:26 PM action :fill, target: payer_city
-INFO: 10/09/2019 04:31:27 PM action :fill, target: payer_zipcode
-INFO: 10/09/2019 04:31:28 PM action :click, target: submit
-INFO: 10/09/2019 04:31:45 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:31:58 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:32:10 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:32:23 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:32:35 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:32:48 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:33:00 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:33:13 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:33:25 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:33:38 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:33:50 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:34:03 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:34:15 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:34:28 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:34:40 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:34:53 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:35:05 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:35:18 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:35:30 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:35:43 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:35:55 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:36:08 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:36:20 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:36:33 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:36:46 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:36:58 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:37:11 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:37:23 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:37:36 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:37:48 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:38:01 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:38:13 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:38:26 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:38:38 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:38:51 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:39:03 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:39:16 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:39:28 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:39:41 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:39:53 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:40:05 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:40:18 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:40:31 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:40:43 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:40:56 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:41:09 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:41:21 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:41:34 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:41:46 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:41:58 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:42:11 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:42:23 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:42:36 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:42:48 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:43:01 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:43:13 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:43:26 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:43:38 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:43:51 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:44:04 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:44:16 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:44:29 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:44:41 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:44:53 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:45:06 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:45:18 PM Comprobando correspondencia de imagenes 
-template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
-/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
-INFO: 10/09/2019 04:45:31 PM Comprobando correspondencia de imagenes 
+INFO: 10/09/2019 05:30:03 PM Eliminado mensaje de Alert
+INFO: 10/09/2019 05:30:10 PM Click sobre item menu citiDirect Services -> tipo busqueda: xpath , expresion: //a[@id='uifw-megamenu-8100'] , mode: click
+INFO: 10/09/2019 05:30:17 PM Esperando la carga del Applet de Java
+INFO: 10/09/2019 05:30:44 PM Screen Matched !!
+INFO: 10/09/2019 05:30:44 PM Obteniendo posicion del elemento: yes
+INFO: 10/09/2019 05:30:52 PM Screen Matched !!
+INFO: 10/09/2019 05:30:52 PM Obteniendo posicion del elemento: ok
+INFO: 10/09/2019 05:31:00 PM Screen Matched !!
+INFO: 10/09/2019 05:31:00 PM Obteniendo posicion del elemento: transactions_and_services
+INFO: 10/09/2019 05:31:08 PM Screen Matched !!
+INFO: 10/09/2019 05:31:08 PM Obteniendo posicion del elemento: collection_item_initiation
+INFO: 10/09/2019 05:31:16 PM Screen Matched !!
+INFO: 10/09/2019 05:31:16 PM Obteniendo posicion del elemento: new
+INFO: 10/09/2019 05:31:24 PM Screen Matched !!
+INFO: 10/09/2019 05:31:24 PM Obteniendo posicion del elemento: run_search
+INFO: 10/09/2019 05:31:32 PM Screen Matched !!
+INFO: 10/09/2019 05:31:37 PM select_account_dialog -> account: 0036518013
+INFO: 10/09/2019 05:31:44 PM Screen Matched !!
+INFO: 10/09/2019 05:31:48 PM action :select, target: product
+INFO: 10/09/2019 05:31:48 PM Obteniedo dato del boleto : product
+INFO: 10/09/2019 05:31:48 PM Dato del boleto : 100
+INFO: 10/09/2019 05:31:53 PM action :fill, target: original_amount
+INFO: 10/09/2019 05:31:53 PM Obteniedo dato del boleto : amount
+INFO: 10/09/2019 05:31:53 PM Dato del boleto : 26875.31
+INFO: 10/09/2019 05:31:54 PM action :select, target: type_of_collection_item_code
+INFO: 10/09/2019 05:31:54 PM Obteniedo dato del boleto : type_of_collection_item_code
+INFO: 10/09/2019 05:31:54 PM Dato del boleto : 0
+INFO: 10/09/2019 05:31:59 PM action :fill, target: emission_date
+INFO: 10/09/2019 05:31:59 PM Obteniedo dato del boleto : emision_date
+INFO: 10/09/2019 05:31:59 PM Dato del boleto : 13/09/2019
+INFO: 10/09/2019 05:32:00 PM action :fill, target: customer_reference
+INFO: 10/09/2019 05:32:00 PM Obteniedo dato del boleto : boleto_number
+INFO: 10/09/2019 05:32:00 PM Dato del boleto : 54947
+INFO: 10/09/2019 05:32:01 PM action :fill, target: due_date
+INFO: 10/09/2019 05:32:01 PM Obteniedo dato del boleto : due_date
+INFO: 10/09/2019 05:32:01 PM Dato del boleto : 30/09/2019
+INFO: 10/09/2019 05:32:02 PM action :select, target: collection_item_document_type
+INFO: 10/09/2019 05:32:02 PM Obteniedo dato del boleto : collection_item_document_type
+INFO: 10/09/2019 05:32:02 PM Dato del boleto : 7
+INFO: 10/09/2019 05:32:07 PM action :select, target: allow_divergent
+INFO: 10/09/2019 05:32:07 PM Obteniedo dato del boleto : allow_divergent
+INFO: 10/09/2019 05:32:07 PM Dato del boleto : 3
+INFO: 10/09/2019 05:32:11 PM action :fill, target: payer_name
+INFO: 10/09/2019 05:32:11 PM Obteniedo dato del boleto : enteprise_id
+INFO: 10/09/2019 05:32:11 PM Dato del boleto : Banco BTG Pactual SA
+INFO: 10/09/2019 05:32:13 PM action :select, target: payer_type
+INFO: 10/09/2019 05:32:13 PM Obteniedo dato del boleto : payer_type
+INFO: 10/09/2019 05:32:13 PM Dato del boleto : cnpj
+INFO: 10/09/2019 05:32:18 PM action :fill, target: cpf
+INFO: 10/09/2019 05:32:18 PM Obteniedo dato del boleto : cpf
+INFO: 10/09/2019 05:32:18 PM Dato del boleto : 30306294000226
+INFO: 10/09/2019 05:32:19 PM action :fill, target: payer_address
+INFO: 10/09/2019 05:32:19 PM Obteniedo dato del boleto : address
+INFO: 10/09/2019 05:32:19 PM Dato del boleto : AV BRIGADEIRO FARIA LIMA 3477
+INFO: 10/09/2019 05:32:21 PM action :fill, target: payer_state
+INFO: 10/09/2019 05:32:21 PM Obteniedo dato del boleto : state
+INFO: 10/09/2019 05:32:21 PM Dato del boleto : SP
+INFO: 10/09/2019 05:32:21 PM action :fill, target: payer_city
+INFO: 10/09/2019 05:32:21 PM Obteniedo dato del boleto : city
+INFO: 10/09/2019 05:32:21 PM Dato del boleto : SAO PAULO
+INFO: 10/09/2019 05:32:22 PM action :fill, target: payer_zipcode
+INFO: 10/09/2019 05:32:22 PM Obteniedo dato del boleto : zip_code
+INFO: 10/09/2019 05:32:22 PM Dato del boleto :  04538133
+INFO: 10/09/2019 05:32:23 PM action :click, target: fake_submit
+INFO: 10/09/2019 05:32:23 PM Obteniedo dato del boleto : None
+INFO: 10/09/2019 05:32:40 PM Comprobando correspondencia de imagenes 
+template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
+/ captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 
+INFO: 10/09/2019 05:32:53 PM Comprobando correspondencia de imagenes 
 template: C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\templates\loaded_transactions_and_services.png 
 / captured img C:\Users\mario.diaz.rodriguez\PycharmProjects\CitiBank_Boletos\images\temp\loaded_transactions_and_services.png 

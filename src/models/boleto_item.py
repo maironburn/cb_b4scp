@@ -49,10 +49,17 @@ class Boleto_Item(object):
         self.emision_date = kw.get('emision_date')
         self.due_date = kw.get('due_date')
         self.amount = kw.get('amount')
-
+        self.payer_type = self.get_payer_type()
     # @todo
     def check_is_valid(self):
         return self.boleto_number.strip() != '' and self.enteprise_id.strip() != '' and self.cpnj_beneficiario.strip() != ''
+
+
+    def get_payer_type(self):
+
+        dict_payer_type={11: 'cpg', 14: 'cnpj'}
+
+        return dict_payer_type[len(self.cpf)]
 
     def check_correct_zip_code(self, zip):
 

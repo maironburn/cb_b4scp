@@ -76,7 +76,7 @@ citibank = {
 
             {'target': 'payer_zipcode', 'action': "fill", 'boleto_data': 'zip_code'},
 
-            {'target': 'fake_submit.png', 'action': "click"}
+            {'target': 'fake_submit', 'action': "click"}
         ]
 }
 
