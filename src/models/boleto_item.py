@@ -18,9 +18,11 @@ class Boleto_Item(object):
     _due_date = str()
     _amount = str()
 
-    _type_of_collection_item_code = 0
-    _collection_item_document_type = 7
-    _allow_divergent = 3
+    _type_of_collection_item_code = '0'
+    _collection_item_document_type = '7'
+    _allow_divergent = '3'
+
+    _payer_type = ''
 
     _is_valid = True  # Flag que identidica si la instancia tiene validados todos los campos
     # esta propia sera comprobada por el xls_controller, en caso de no ser valida no se añade a la collecion de items
@@ -111,8 +113,9 @@ class Boleto_Item(object):
                 'zip_code': self._zip_code,
 
                 'type_of_collection_item_code': self._type_of_collection_item_code,
-                'collection_item_document_type' : self._collection_item_document_type,
-                'allow_divergent' : self._allow_divergent
+                'collection_item_document_type': self._collection_item_document_type,
+                'allow_divergent': self._allow_divergent,
+                'payer_type': self.payer_type
                 }
 
     # @todo
@@ -255,6 +258,15 @@ class Boleto_Item(object):
     def error_description(self, value):
         if value:
             self._error_description = value
+
+    @property
+    def payer_type(self):
+        return self._payer_type
+
+    @payer_type.setter
+    def payer_type(self, value):
+        if value:
+            self._payer_type = value
 
     # </editor-fold>
 

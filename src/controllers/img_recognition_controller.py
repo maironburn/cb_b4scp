@@ -128,6 +128,11 @@ def click(target):
     pyautogui.moveTo(target.x, target.y)
     pyautogui.click()
 
+def double_click(target):
+    pyautogui.moveTo(target.x, target.y)
+    pyautogui.doubleClick()
+
+
 def fill (target, data):
     pyautogui.moveTo(target.x, target.y)
     pyautogui.doubleClick()

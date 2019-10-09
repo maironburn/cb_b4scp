@@ -15,6 +15,8 @@ class Element(object):
 
     # <editor-fold desc="Getter y Setters">
 
+
+
     @property
     def name(self):
         return self._name
@@ -70,9 +72,21 @@ class Combo(Element):
     def __init__(self, kw):
         super().__init__(kw)
 
+    def has_cmboptions(self):
+        return len(self.options.keys())
+
+
     def add_element(self, element):
         if isinstance(element, Element):
             self._cmbotions.update({element.name: element})
+
+    def get_cmboption_by_name(self, name):
+
+        if self.has_cmboptions():
+            if name in self.options.keys():
+                return self.options[name]
+
+        return None
 
 
     @property

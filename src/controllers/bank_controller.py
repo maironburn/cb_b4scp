@@ -37,8 +37,12 @@ class BankController(object):
             print("Num de boletos leidos del excel y pendientes de emitir: {}".format(len(lst_instances_bi)))
 
             self.sc.do_selenium_workflow()
-            self.sc.do_image_automation()
 
+            print("\n\n\tWorkflow no asociado a datos de boletos \n*****************************************************")
+
+            self.sc.do_image_automation()
+            print(
+                "\n\n\tWorkflow Loop \n*****************************************************")
             for bi in lst_instances_bi:
                 self.sc.do_image_automation(json_workflow = 'img_recognition_workflow_intermezzo',boleto_instance = bi ) # new and run_search
                 # ya wf dependiente de las instancias del boleto

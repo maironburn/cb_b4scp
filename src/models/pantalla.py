@@ -7,12 +7,14 @@ class Pantalla(object):
     _elements = {}
     _parent = None
     _mapping_file = None
+    _childrens = {}
 
     def __init__(self, **kw):
         self._name = kw.get('_name')
         self._element_img_folder = kw.get('_img_folder')
         self._elements = kw.get('_dict_elements', {})
         self._parent = kw.get('_parent')
+
 
     def add_element(self, element):
         if element:  # and issubclass(element, Elemento):

@@ -22,6 +22,7 @@ if __name__ == '__main__':
 
     try:
         load_screen_elements(pantalla_instance)
+        print("")
     except Exception as e:
         print ("Exception")
 
