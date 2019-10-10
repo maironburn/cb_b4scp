@@ -214,7 +214,7 @@ class SeleniumController(object):
             sleep(20)
 
         for wf_item in json_workflow:
-            sleep(5)
+
             needle_img = None
             pantalla_name = None
             if not pantalla_name:
@@ -234,14 +234,18 @@ class SeleniumController(object):
                 self._logger.info("select_account_dialog -> account: {}".format(boleto_instance.account_number))
                 account_element = pantalla_instance.get_element_by_name(boleto_instance.account_number)
                 irc.click(account_element)
+                sleep(2)
                 ok_element = pantalla_instance.get_element_by_name('ok')
                 irc.click(ok_element)
-
+                sleep(2)
             else:
 
                 elemento = pantalla_instance.get_element_by_name(workflow[0].get('target'))
                 # realizando accion sobre el elemento target
                 self.dictio_actions[workflow[0].get('action')](elemento)
+                sleep(2)
+
+
 
     def check_screen(self, pantalla_name, haystack, needle_img):
         '''
@@ -257,7 +261,7 @@ class SeleniumController(object):
         self._logger.info(
             "Comprobando correspondencia de imagenes \ntemplate: {} \n/ captured img {} ".format(needle_img, haystack))
         while not irc.image_finded(haystack, needle_img):
-            sleep(10)
+            sleep(5)
             haystack = irc.capture_screen(pantalla_name)
 
         print("Screen Matched !!")
@@ -267,7 +271,7 @@ class SeleniumController(object):
 
     def boleto_wf_loop(self, boleto):
 
-        sleep(5)
+
         boleto_json = boleto.get_json()
         pantalla_name = None
 
@@ -285,6 +289,7 @@ class SeleniumController(object):
 
         print ("************ Boleto_wf_loop ************ \n")
         for wfi in workflow:
+
             action = wfi.get('action')
             target = wfi.get('target')
             print ("action :{}, target: {}".format(action, target))
@@ -313,9 +318,13 @@ class SeleniumController(object):
 
                 if action == 'fill':
                     self.dictio_actions['fill'](element, data)
+                    sleep(1)
 
-                if action == 'click':
-                    self.dictio_actions['click'](element)
+            if action == 'click':
+                element = pantalla_instance.get_element_by_name(target)
+                self.dictio_actions['click'](element)
+
+            sleep(2)
 
                 # for wf_item in range(workflow):
             #     if wf_item.get('action') == 'click':

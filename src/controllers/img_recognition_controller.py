@@ -29,8 +29,8 @@ def image_finded(haystack, needle):
     result = cv2.matchTemplate(img, templ, cv2.TM_CCORR_NORMED)
     # cv2.normalize(result, result, 0, 1, cv2.NORM_MINMAX, -1)
     _minVal, _maxVal, minLoc, maxLoc = cv2.minMaxLoc(result, None)
-
-    return _maxVal > 0.95
+    print ("image_finded: {}".format(_maxVal))
+    return _maxVal > 0.98
 
 
 def getElementCoords(haystack, needle):

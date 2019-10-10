@@ -72,7 +72,8 @@ collection_item_detail = {
                        'payer_address': '', 'payer_state': '',
                        'payer_city': '',
                        'payer_zipcode': '',
-                       'submit': ''
+                       'submit': '',
+                       'fake_submit': ''
                        ## add submit o return to summary
                        }
 }
