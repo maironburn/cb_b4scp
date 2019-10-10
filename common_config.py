@@ -62,8 +62,8 @@ DICT_REGEX_BOLETO_ITEM = {
     'boleto_number': '^\d{5,9}$',
     'enteprise_id': '\w+',
     'cpf': '^\d{11,14}$',
-    'pid': '^\d+$',
     'zip_code': '^\d{8}$',
+    'emision_date' :  '(\d{1,2}\/)*\d{4}$', 
     'due_date': '(\d{1,2}\/)*\d{4}$'
 }
 

@@ -78,7 +78,8 @@ citibank = {
     ,
     'collection_item_detail_window_error': [
         # @todo, asociar a cada item una variable para setear un sleep ???
-        {'target': 'product', 'action': "select", 'boleto_data': 'product'}
+        {'target': 'ok', 'action': "click"},
+        {'target': 'home', 'action': "click"}
         ]
 
 }

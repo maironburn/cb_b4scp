@@ -174,7 +174,7 @@ class SeleniumController(object):
                 needle_img = element.image
                 element.x, element.y = irc.getElementCoords(haystack,needle_img)
                 # irc.double_click(needle_cmboption_element)
-                irc.click(element)
+                #irc.click(element)
                 self.check_for_boleto_error(boleto)
 
 
@@ -184,15 +184,21 @@ class SeleniumController(object):
         workflow = self.img_recon_workflow.get('collection_item_detail_window_error')
         pantalla_name = 'collection_item_detail_window_error'
         needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
-        haystack = irc.capture_screen(pantalla_name)
+        haystack = irc.capture_screen('collection_item_detail_window_error')
         pantalla_instance = irc.load_json_skel(pantalla_name)
 
         if irc.image_finded(haystack, needle_img):
             print ("Ha ocurrido un error generando el boleto: {}".format(boleto.boleto_number))
+
+            irc.load_screen_elements(pantalla_instance)
             element = pantalla_instance.get_element_by_name('ok')
-            element.x, element.y = irc.getElementCoords(haystack, needle_img)
+            element.x, element.y = irc.getElementCoords(haystack, element.image)
             irc.capture_screen(boleto.boleto_number, dest=ERROR_IMGS)
             irc.click(element)
+            element = pantalla_instance.get_element_by_name('home')
+            element.x, element.y = irc.getElementCoords(haystack, element.image)
+            irc.click(element)
+
 
         else:
             print ("Boleto {} generado correctamente ".format(boleto.boleto_number))
