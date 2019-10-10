@@ -23,17 +23,25 @@ class XlsController(object):
 
     def get_boletos_items(self):
 
-        if os.path.exists(XLS_FOLDER) and os.path.isdir(XLS_FOLDER):
-            if self.read_document_folder():
-                if self.read_xls_docs():
-                    return self.valid_instances_collection
-                else:
-                    self.error_info()
+        try:
+            if os.path.exists(XLS_FOLDER) and os.path.isdir(XLS_FOLDER):
+                if self.read_document_folder():
+                    try:
+                        if self.read_xls_docs():
+                            return self.valid_instances_collection
+                        else:
+                            self.error_info()
+                    except PermissionError as perror:
+                        print("Exception -> get_boletos_items, el documento Excel esta en uso, debe cerrarlo {}".format(perror))
+                        self._logger.error(("Exception -> get_boletos_items, el documento Excel esta en uso, debe cerrarlo {}".format(perror)))
+                        raise
+            else:
+                self.error_info()
+                self._logger.error(
+                    "{} ->  No se halla la carpeta que contiene los XLS: ->  {}".format(__class__.__name__, XLS_FOLDER))
 
-        else:
-            self.error_info()
-            self._logger.error(
-                "{} ->  No se halla la carpeta que contiene los XLS: ->  {}".format(__class__.__name__, XLS_FOLDER))
+        except Exception as e:
+            self._logger.error("get_boletos_items -> Ocurrio un Error al leer el documento -> {}".format(e))
 
         return False
 

@@ -44,7 +44,7 @@ class Boleto_Item(object):
         self.address = kw.get('address')
         self.state = kw.get('state')
         self.city = kw.get('city')
-        self.zip_code = kw.get('zip_code')  # need 8 caracteres
+        self.zip_code = self.check_correct_zip_code(kw.get('zip_code'))  # need 8 caracteres
         # self.emision_date = datetime.now().strftime("%d/%m/%Y")
         self.emision_date = kw.get('emision_date')
         self.due_date = kw.get('due_date')
@@ -57,7 +57,7 @@ class Boleto_Item(object):
 
     def get_payer_type(self):
 
-        dict_payer_type={11: 'cpg', 14: 'cnpj'}
+        dict_payer_type={11: 'cpf', 14: 'cnpj'}
 
         return dict_payer_type[len(self.cpf)]
 

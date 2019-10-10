@@ -2,22 +2,6 @@ import os.path
 
 from common_config import IMGS_DATASET, TEMPLATES_IMGS
 
-warning_msg = {
-    "_name": "warning_msg",
-    "_parent": None,
-    "_template": os.path.join(TEMPLATES_IMGS, 'warning_msg.png'),
-    "_img_folder": os.path.join(IMGS_DATASET, 'warning_msg'),
-    "_dict_elements": {'yes': ''}
-}
-
-russian_msg = {
-    "_name": "russian_msg",
-    "_parent": None,
-    "_template": os.path.join(TEMPLATES_IMGS, 'russian_msg.png'),
-    "_img_folder": os.path.join(IMGS_DATASET, 'russian_msg'),
-    "_dict_elements": {'ok': ''}
-}
-
 main_transactions_and_services = {
     "_name": "main_transactions_and_services",
     "_parent": None,
@@ -55,7 +39,7 @@ select_account_dialog = {
     "_parent": None,
     "_template": os.path.join(TEMPLATES_IMGS, 'select_account_dialog.png'),
     "_img_folder": os.path.join(IMGS_DATASET, 'select_account_dialog'),
-    "_dict_elements": {'ok': ''} # aqui tb irian las cuentas de los boletos (pero se simplifica updateando el dict
+    "_dict_elements": {'ok': ''}  # aqui tb irian las cuentas de los boletos (pero se simplifica updateando el dict
 }
 
 collection_item_detail = {
@@ -73,7 +57,17 @@ collection_item_detail = {
                        'payer_city': '',
                        'payer_zipcode': '',
                        'submit': '',
-                       'fake_submit': ''
+                       'fake_submit': '',
+                       'no': ''
                        ## add submit o return to summary
                        }
 }
+
+collection_item_detail_window_error = {
+    "_name": "collection_item_detail_window_error",
+    "_parent": None,
+    "_template": os.path.join(TEMPLATES_IMGS, 'collection_item_detail_window_error.png'),
+    "_img_folder": os.path.join(IMGS_DATASET, 'collection_item_detail_window_error'),
+    "_dict_elements": {'ok': ''}  # aqui tb irian las cuentas de los boletos (pero se simplifica updateando el dict
+}
+

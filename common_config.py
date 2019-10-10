@@ -12,7 +12,7 @@ IMGS_FOLDER=  os.path.join(ROOT_DIR, 'images')
 TEMPLATES_IMGS=  os.path.join(IMGS_FOLDER, 'templates')
 TEMP_IMGS=  os.path.join(IMGS_FOLDER, 'temp')
 IMGS_DATASET=  os.path.join(IMGS_FOLDER, 'dataset')
-
+ERROR_IMGS=  os.path.join(IMGS_FOLDER, 'errores')
 # json bancos
 JSON_BANK = os.path.join(ROOT_DIR, 'json_bank')
 IMG_RECON_WF = os.path.join(JSON_BANK, 'img_recognition_workflow')

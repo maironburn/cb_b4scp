@@ -1,7 +1,7 @@
 import os
 import time
 from os.path import sep
-
+import numpy as np
 import cv2
 import pyautogui
 
@@ -11,8 +11,8 @@ from src.models import elemento
 from src.models.pantalla import Pantalla
 
 
-def capture_screen(name="screenshot"):
-    captured = os.path.join(TEMP_IMGS, "{}.png".format(name))
+def capture_screen(name="screenshot", dest=TEMP_IMGS):
+    captured = os.path.join(dest, "{}.png".format(name))
     pyautogui.screenshot(captured)
     time.sleep(2)
     print("captured windows: {}".format(name))
@@ -23,14 +23,19 @@ def capture_screen(name="screenshot"):
 def image_finded(haystack, needle):
 
     img = cv2.imread(haystack, cv2.IMREAD_COLOR)
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img_display = img.copy()
-    templ = cv2.imread(needle, cv2.IMREAD_COLOR)
+    templ = cv2.imread(needle, 0)
 
-    result = cv2.matchTemplate(img, templ, cv2.TM_CCORR_NORMED)
+    result = cv2.matchTemplate(img_gray, templ, cv2.TM_CCOEFF_NORMED)
     # cv2.normalize(result, result, 0, 1, cv2.NORM_MINMAX, -1)
     _minVal, _maxVal, minLoc, maxLoc = cv2.minMaxLoc(result, None)
+    threshold = 0.8
+    loc = np.where(result >= threshold)
     print ("image_finded: {}".format(_maxVal))
-    return _maxVal > 0.98
+
+    return _maxVal > 0.75
+    #return _maxVal > 0.98
 
 
 def getElementCoords(haystack, needle):
@@ -76,6 +81,7 @@ def load_json_skel(pantalla_name):
     try:
         window = getattr(windows_screen_skels, pantalla_name)
         if windows_screen_skels:
+            print("load_json_skel -> {} ".format(pantalla_name))
             return Pantalla(**window)
     except Exception as e:
         pass
@@ -114,6 +120,8 @@ def load_screen_elements(elemento_contenedor):
                      os.path.isfile(os.path.join(elemento_contenedor.image_folder, x))]:
         kw = {'filename': filename, 'contenedor': elemento_contenedor, 'haystack': haystack}
         element_instance = create_element_instance(kw, get_coords=True)
+        print("Elemento {} instanciado , coord x: {} , y: {}".format(element_instance.name, element_instance.x, element_instance.y))
+
         elemento_contenedor.add_element(element_instance)
         if isinstance(element_instance, elemento.Combo) and os.path.exists(
                 os.path.join(elemento_contenedor.image_folder, filename.split('.')[0])) and os.path.isdir(
@@ -129,12 +137,16 @@ def click(target):
 
 
 def double_click(target):
+
     pyautogui.moveTo(target.x, target.y)
+    time.sleep(1)
     pyautogui.doubleClick()
 
 
 def fill(target, data):
+
     pyautogui.moveTo(target.x, target.y)
+    time.sleep(0.2)
     pyautogui.doubleClick()
     pyautogui.typewrite(str(data), 0.05)
 
@@ -152,7 +164,7 @@ def create_element_instance(kw, get_coords=False, contenedor_path=None):
     x, y = None, None
     element_type = get_type_from_filename(filename)
     element_name = get_element_name_from_filename(filename)
-
+    print("creando instancia del elemento: {}".format(element_name))
     contenedor_path = contenedor_path if contenedor_path else contenedor.image_folder
 
     needle = os.path.join(contenedor_path, filename)
@@ -161,6 +173,7 @@ def create_element_instance(kw, get_coords=False, contenedor_path=None):
     if get_coords:
         try:
             x, y = getElementCoords(haystack, needle)
+            print("get_coords del elemento: {} -> ({},{}) ".format(element_name, x, y))
         except Exception as e:
             pass
     kw = {'_name': element_name, '_image': needle, '_x': x, '_y': y,

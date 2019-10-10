@@ -32,7 +32,7 @@ if __name__ == '__main__':
     if xls_controller.get_boletos_items():
         bc.start_party(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
     else:
-        print("No se encontraron documentos xlsx")
+        print("Ocurrio un error en la lectura o no se encontraron documentos xlsx")
         input()
     import sys
     sys.exit()

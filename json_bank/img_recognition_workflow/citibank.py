@@ -3,13 +3,8 @@ citibank = {
 # @todo ,  to think about (key adicional para invocar un callback o metodo ?... )
 
 'img_recognition_workflow_main': [
-        {'warning_msg': [
-            {'target': 'yes', 'action': "click"}]
-        },
+        # desde la carga del applet de Java y cierre de las ventanas malditas (warning y Russian msgs)
 
-        {'russian_msg': [
-            {'target': 'ok', 'action': "click"}]
-        },
         {'main_transactions_and_services': [
             {'target': 'transactions_and_services', 'action': "click"}]
         },
@@ -76,7 +71,15 @@ citibank = {
 
             {'target': 'payer_zipcode', 'action': "fill", 'boleto_data': 'zip_code'},
 
-            {'target': 'fake_submit', 'action': "click"}
+            {'target': 'fake_submit', 'action': "click"},
+
+            {'target': 'no', 'action': "submit"}
         ]
+    ,
+    'collection_item_detail_window_error': [
+        # @todo, asociar a cada item una variable para setear un sleep ???
+        {'target': 'product', 'action': "select", 'boleto_data': 'product'}
+        ]
+
 }
 
