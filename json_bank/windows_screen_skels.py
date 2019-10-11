@@ -2,6 +2,22 @@ import os.path
 
 from common_config import IMGS_DATASET, TEMPLATES_IMGS
 
+warning_msg = {
+    "_name": "warning_msg",
+    "_parent": None,
+    "_template": os.path.join(TEMPLATES_IMGS, 'warning_msg.png'),
+    "_img_folder": os.path.join(IMGS_DATASET, 'warning_msg'),
+    "_dict_elements": {'yes': ''}
+}
+
+russian_msg = {
+    "_name": "russian_msg",
+    "_parent": None,
+    "_template": os.path.join(TEMPLATES_IMGS, 'russian_msg.png'),
+    "_img_folder": os.path.join(IMGS_DATASET, 'russian_msg'),
+    "_dict_elements": {'ok': ''}
+}
+
 main_transactions_and_services = {
     "_name": "main_transactions_and_services",
     "_parent": None,

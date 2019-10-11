@@ -13,6 +13,8 @@ TEMPLATES_IMGS=  os.path.join(IMGS_FOLDER, 'templates')
 TEMP_IMGS=  os.path.join(IMGS_FOLDER, 'temp')
 IMGS_DATASET=  os.path.join(IMGS_FOLDER, 'dataset')
 ERROR_IMGS=  os.path.join(IMGS_FOLDER, 'errores')
+BOLETOS_PROCESADOS_IMGS=  os.path.join(IMGS_FOLDER, 'boletos procesados')
+
 # json bancos
 JSON_BANK = os.path.join(ROOT_DIR, 'json_bank')
 IMG_RECON_WF = os.path.join(JSON_BANK, 'img_recognition_workflow')
@@ -63,7 +65,7 @@ DICT_REGEX_BOLETO_ITEM = {
     'enteprise_id': '\w+',
     'cpf': '^\d{11,14}$',
     'zip_code': '^\d{8}$',
-    'emision_date' :  '(\d{1,2}\/)*\d{4}$', 
+    'emision_date' :  '(\d{1,2}\/)*\d{4}$',
     'due_date': '(\d{1,2}\/)*\d{4}$'
 }
 

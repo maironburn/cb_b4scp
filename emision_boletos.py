@@ -29,11 +29,15 @@ if __name__ == '__main__':
     bc = BankController({'banknames': bancos})
     xls_controller= XlsController (**{'logger': bc.logger})
     # @todo, definir q hacer con los boletos q no pasen la validacion
-    if xls_controller.get_boletos_items():
-        bc.start_party(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
-    else:
-        print("Ocurrio un error en la lectura o no se encontraron documentos xlsx")
-        input()
+    try:
+        if xls_controller.get_boletos_items():
+            bc.start_party(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
+        else:
+            print("Ocurrio un error en la lectura o no se encontraron documentos xlsx")
+            input()
+
+    except Exception as e:
+        print("Excepcion en el modulo principal: {}".format(e))
     import sys
     sys.exit()
     quit()

@@ -3,8 +3,13 @@ citibank = {
 # @todo ,  to think about (key adicional para invocar un callback o metodo ?... )
 
 'img_recognition_workflow_main': [
-        # desde la carga del applet de Java y cierre de las ventanas malditas (warning y Russian msgs)
+        {'warning_msg': [
+            {'target': 'yes', 'action': "click"}]
+        },
 
+        {'russian_msg': [
+            {'target': 'ok', 'action': "click"}]
+        },
         {'main_transactions_and_services': [
             {'target': 'transactions_and_services', 'action': "click"}]
         },

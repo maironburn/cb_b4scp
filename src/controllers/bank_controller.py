@@ -36,7 +36,7 @@ class BankController(object):
             print("\n\n\tFASE Automatismo Selenium \n*****************************************************")
             print("Num de boletos leidos del excel y pendientes de emitir: {}".format(len(lst_instances_bi)))
 
-            #self.sc.do_selenium_workflow()
+            self.sc.do_selenium_workflow()
 
             print("\n\n\tWorkflow no asociado a datos de boletos \n*****************************************************")
 

@@ -132,21 +132,33 @@ def load_screen_elements(elemento_contenedor):
 
 
 def click(target):
-    pyautogui.moveTo(target.x, target.y)
+
+    #pyautogui.position()
+    #
+
+    while (target.x, target.y) != pyautogui.position():
+        pyautogui.moveTo(target.x, target.y)
+        time.sleep(0.1)
+        print("Meth Click ->elemto: {} posicionando raton en x: {}, y: {}".format(target.name, target.x, target.y))
+
     pyautogui.click()
 
 
 def double_click(target):
 
-    pyautogui.moveTo(target.x, target.y)
-    time.sleep(1)
+    while (target.x, target.y) != pyautogui.position():
+        pyautogui.moveTo(target.x, target.y)
+        time.sleep(0.1)
+        print("Meth double_click ->elemto: {} posicionando raton en x: {}, y: {}".format(target.name, target.x, target.y))
     pyautogui.doubleClick()
 
 
 def fill(target, data):
 
-    pyautogui.moveTo(target.x, target.y)
-    time.sleep(0.2)
+    while (target.x, target.y) != pyautogui.position():
+        pyautogui.moveTo(target.x, target.y)
+        time.sleep(0.1)
+        print("Meth fill ->elemto: {} posicionando raton en x: {}, y: {}".format(target.name, target.x, target.y))
     pyautogui.doubleClick()
     pyautogui.typewrite(str(data), 0.05)
 
