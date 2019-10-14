@@ -84,6 +84,10 @@ collection_item_detail_window_error = {
     "_parent": None,
     "_template": os.path.join(TEMPLATES_IMGS, 'collection_item_detail_window_error.png'),
     "_img_folder": os.path.join(IMGS_DATASET, 'collection_item_detail_window_error'),
-    "_dict_elements": {'ok': '', 'home': ''}  # aqui tb irian las cuentas de los boletos (pero se simplifica updateando el dict
+    "_dict_elements": {'ok': '',
+                       'home': '',
+                       'transactions_and_services' : '',
+                       'collection_item_initiation' : ''
+                       }  # aqui tb irian las cuentas de los boletos (pero se simplifica updateando el dict
 }
 

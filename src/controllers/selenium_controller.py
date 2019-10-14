@@ -41,7 +41,7 @@ class SeleniumController(object):
             self.img_recon_workflow = kw.get('img_recon_workflow', None)
 
             try:
-                self.start()
+                #self.start()
                 self.load_references()
             except Exception as e:
                 self._logger.debug("Error al iniciar Selenium -> {}".format(e))
@@ -212,16 +212,16 @@ class SeleniumController(object):
 
         json_workflow = self.img_recon_workflow.get(
             'img_recognition_workflow_main') if json_workflow is None else self.img_recon_workflow.get(json_workflow)
-        if not boleto_instance:
-            self.driver.get(self.bank.get('applet_url'))
-            print ("Esperando la carga del Applet de Java")
-            self._logger.info ("Esperando la carga del Applet de Java")
-            self.driver.maximize_window()
-            pantalla_name ="warning_msg"
-            haystack = irc.capture_screen(pantalla_name)
-            needle_img = os.path.join(TEMPLATES_IMGS, 'warning_msg_passby.png') #
-            self.check_screen(pantalla_name, haystack, needle_img)
-            #sleep(20)
+        # if not boleto_instance:
+        #     self.driver.get(self.bank.get('applet_url'))
+        #     print ("Esperando la carga del Applet de Java")
+        #     self._logger.info ("Esperando la carga del Applet de Java")
+        #     self.driver.maximize_window()
+        #     pantalla_name ="warning_msg"
+        #     haystack = irc.capture_screen(pantalla_name)
+        #     needle_img = os.path.join(TEMPLATES_IMGS, 'warning_msg_passby.png') #
+        #     self.check_screen(pantalla_name, haystack, needle_img)
+        #     #sleep(20)
 
         for wf_item in json_workflow:
 
@@ -247,13 +247,14 @@ class SeleniumController(object):
                 #sleep(2)
                 ok_element = pantalla_instance.get_element_by_name('ok')
                 irc.click(ok_element)
+
                 #sleep(2)
             else:
 
                 elemento = pantalla_instance.get_element_by_name(workflow[0].get('target'))
                 # realizando accion sobre el elemento target
                 self.dictio_actions[workflow[0].get('action')](elemento)
-                #sleep(2)
+
 
     def check_screen(self, pantalla_name, haystack, needle_img):
         '''
@@ -353,16 +354,18 @@ class SeleniumController(object):
                 # irc.double_click(needle_cmboption_element)
                 irc.capture_screen(boleto.boleto_number, dest=BOLETOS_PROCESADOS_IMGS)
                 irc.click(element)
+
                 self.got_error(boleto) #@todo  debe estar antes del submit !!!!
 
 
     def got_error(self, boleto):
 
 
-        sleep(2)
+
         workflow = self.img_recon_workflow.get('collection_item_detail_window_error')
         pantalla_name = 'collection_item_detail_window_error'
         needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
+        sleep(5)
         haystack = irc.capture_screen('collection_item_detail_window_error')
         pantalla_instance = irc.load_json_skel(pantalla_name)
 
@@ -378,12 +381,18 @@ class SeleniumController(object):
             element.x, element.y = irc.getElementCoords(haystack, element.image)
             irc.capture_screen(boleto.boleto_number, dest=ERROR_IMGS)
             irc.click(element)
-            element = pantalla_instance.get_element_by_name('home')
-            element.x, element.y = irc.getElementCoords(haystack, element.image)
-            irc.click(element)
 
-            return True
-
+            #self.do_image_automation()
+            for error_wf in workflow:
+                action = error_wf.get('action')
+                target = error_wf.get('target')
+                haystack = irc.capture_screen(target)
+                #irc.click(element)
+                element = pantalla_instance.get_element_by_name(target)
+                element.x, element.y = irc.getElementCoords(haystack, element.image)
+                print ("target: {}, action: {}".format(target,action ))
+                self.dictio_actions[action](element)
+            #irc.click(element)
         else:
             print ("Boleto {} generado correctamente ".format(boleto.boleto_number))
 

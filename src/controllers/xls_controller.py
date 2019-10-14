@@ -233,7 +233,7 @@ class XlsController(object):
 
     # </editor-fold>
 
-
-if __name__ == '__main__':
-    doc = XlsController()
-    doc.read_document_folder()
+#
+# if __name__ == '__main__':
+#     doc = XlsController()
+#     doc.read_document_folder()

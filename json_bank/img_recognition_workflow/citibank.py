@@ -3,13 +3,13 @@ citibank = {
 # @todo ,  to think about (key adicional para invocar un callback o metodo ?... )
 
 'img_recognition_workflow_main': [
-        {'warning_msg': [
-            {'target': 'yes', 'action': "click"}]
-        },
-
-        {'russian_msg': [
-            {'target': 'ok', 'action': "click"}]
-        },
+        # {'warning_msg': [
+        #     {'target': 'yes', 'action': "click"}]
+        # },
+        #
+        # {'russian_msg': [
+        #     {'target': 'ok', 'action': "click"}]
+        # },
         {'main_transactions_and_services': [
             {'target': 'transactions_and_services', 'action': "click"}]
         },
@@ -85,8 +85,9 @@ citibank = {
     ,
     'collection_item_detail_window_error': [
         # @todo, asociar a cada item una variable para setear un sleep ???
-        {'target': 'ok', 'action': "click"},
-        {'target': 'home', 'action': "click"}
+       # {'target': 'ok', 'action': "click"},
+        {'target': 'transactions_and_services', 'action': "click"},
+        {'target': 'collection_item_initiation', 'action': "click"}
         ]
 
 }

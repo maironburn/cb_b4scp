@@ -36,7 +36,7 @@ class BankController(object):
             print("\n\n\tFASE Automatismo Selenium \n*****************************************************")
             print("Num de boletos leidos del excel y pendientes de emitir: {}".format(len(lst_instances_bi)))
 
-            self.sc.do_selenium_workflow()
+            #self.sc.do_selenium_workflow()
 
             print("\n\n\tWorkflow no asociado a datos de boletos \n*****************************************************")
 
@@ -105,11 +105,11 @@ class BankController(object):
     # </editor-fold>
 
 
-if __name__ == '__main__':
-
-    bancos = ['citibank']
-    bc = BankController({'banknames': bancos})
-    xls_controller = XlsController(**{'logger': bc.logger})
-    # @todo, definir q hacer con los boletos q no pasen la validacion
-    if xls_controller.get_boletos_items():
-        bc.emit_boleto(bankname='citibank', lst_instances_bi=xls_controller.valid_instances_collection)
+# if __name__ == '__main__':
+#
+#     bancos = ['citibank']
+#     bc = BankController({'banknames': bancos})
+#     xls_controller = XlsController(**{'logger': bc.logger})
+#     # @todo, definir q hacer con los boletos q no pasen la validacion
+#     if xls_controller.get_boletos_items():
+#         bc.emit_boleto(bankname='citibank', lst_instances_bi=xls_controller.valid_instances_collection)

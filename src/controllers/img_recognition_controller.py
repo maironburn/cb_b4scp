@@ -147,6 +147,7 @@ def fill(target, data):
 
     pyautogui.moveTo(target.x, target.y)
     pyautogui.doubleClick()
+
     print ("meth: fill , data : {}".format(data))
     pyautogui.typewrite(str(data), 0.1)
 
@@ -188,8 +189,8 @@ def create_element_instance(kw, get_coords=False, contenedor_path=None):
 
 
 
-if __name__ == "__main__":
-    needle='C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\warning_msg\\boton_yes.png'
-    haystack = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\temp\\warning_msg.png'
-
-    image_finded (haystack,needle)
+# if __name__ == "__main__":
+#     needle='C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\warning_msg\\boton_yes.png'
+#     haystack = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\temp\\warning_msg.png'
+#
+#     image_finded (haystack,needle)
