@@ -76,9 +76,11 @@ citibank = {
 
             {'target': 'payer_zipcode', 'action': "fill", 'boleto_data': 'zip_code'},
 
-            {'target': 'fake_submit', 'action': "click"},
+            #{'target': 'fake_submit', 'action': "click"}, testing purposes
 
-            {'target': 'no', 'action': "submit"}
+            {'target': 'submit', 'action': "submit"},
+
+            #{'target': 'no', 'action': "submit"}
         ]
     ,
     'collection_item_detail_window_error': [

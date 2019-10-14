@@ -133,34 +133,23 @@ def load_screen_elements(elemento_contenedor):
 
 def click(target):
 
-    #pyautogui.position()
-    #
-
-    while (target.x, target.y) != pyautogui.position():
-        pyautogui.moveTo(target.x, target.y)
-        time.sleep(0.1)
-        print("Meth Click ->elemto: {} posicionando raton en x: {}, y: {}".format(target.name, target.x, target.y))
-
+    pyautogui.moveTo(target.x, target.y)
     pyautogui.click()
 
 
 def double_click(target):
 
-    while (target.x, target.y) != pyautogui.position():
-        pyautogui.moveTo(target.x, target.y)
-        time.sleep(0.1)
-        print("Meth double_click ->elemto: {} posicionando raton en x: {}, y: {}".format(target.name, target.x, target.y))
+    pyautogui.moveTo(target.x, target.y)
     pyautogui.doubleClick()
 
 
 def fill(target, data):
 
-    while (target.x, target.y) != pyautogui.position():
-        pyautogui.moveTo(target.x, target.y)
-        time.sleep(0.1)
-        print("Meth fill ->elemto: {} posicionando raton en x: {}, y: {}".format(target.name, target.x, target.y))
+    pyautogui.moveTo(target.x, target.y)
     pyautogui.doubleClick()
-    pyautogui.typewrite(str(data), 0.05)
+    print ("meth: fill , data : {}".format(data))
+    pyautogui.typewrite(str(data), 0.1)
+
 
 
 def create_element_instance(kw, get_coords=False, contenedor_path=None):
@@ -197,3 +186,10 @@ def create_element_instance(kw, get_coords=False, contenedor_path=None):
 
     return elm_instance
 
+
+
+if __name__ == "__main__":
+    needle='C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\warning_msg\\boton_yes.png'
+    haystack = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\temp\\warning_msg.png'
+
+    image_finded (haystack,needle)

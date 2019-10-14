@@ -1,5 +1,5 @@
 from time import sleep
-
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait as wait
 import src.controllers.img_recognition_controller as irc
 from common_config import IE_DRIVER, ROOT_DIR
 from src.helpers.common_helper import load_skel
-from common_config import ERROR_IMGS, BOLETOS_PROCESADOS_IMGS
+from common_config import ERROR_IMGS, BOLETOS_PROCESADOS_IMGS, TEMPLATES_IMGS
 
 # pickle.dump(driver.get_cookies() , open("QuoraCookies.pkl","wb"))
 
@@ -123,6 +123,11 @@ class SeleniumController(object):
         print ("Pendiente del Logado del usuario para continuar el automatismo")
         self._logger.info("Pendiente del Logado del usuario para continuar el automatismo")
         try:
+            # sleep(5)
+            # if ec.alert_is_present():
+            #     alert = self.driver.switch_to.alert
+            #     alert.accept()
+
             exp_type = self.ec_ref[tipo]
             success = wait(self.driver, time_wait).until(exp_type((By.XPATH, target)))
 
@@ -130,11 +135,8 @@ class SeleniumController(object):
             self._logger.info("Web cargada con exito")
 
             try:
-                if wait(self.driver, 10).until(ec.alert_is_present()):
-                    print ("Eliminado mensaje de Alert")
-                    self._logger.info("Eliminado mensaje de Alert")
-                    alert = self.driver.switch_to.alert
-                    alert.accept()
+                while self.close_alert_msg():
+                    print ("Checking alert messages !")
 
             except Exception:
                 pass # solo para que no escupa en el log
@@ -145,6 +147,23 @@ class SeleniumController(object):
 
 
         return success
+
+    def close_alert_msg(self):
+
+        try:
+            if wait(self.driver, 10).until(ec.alert_is_present()):
+                print("Eliminado mensaje de Alert")
+                self._logger.info("Eliminado mensaje de Alert")
+                alert = self.driver.switch_to.alert
+                alert.accept()
+                sleep(3)
+                return True
+
+        except Exception:
+            pass  # solo para que no escupa en el log
+
+        return False
+
 
     def do_workflow(self, stage=""):
         '''
@@ -200,7 +219,7 @@ class SeleniumController(object):
             self.driver.maximize_window()
             pantalla_name ="warning_msg"
             haystack = irc.capture_screen(pantalla_name)
-            needle_img = load_skel(pantalla_name).get('_template')
+            needle_img = os.path.join(TEMPLATES_IMGS, 'warning_msg_passby.png') #
             self.check_screen(pantalla_name, haystack, needle_img)
             #sleep(20)
 
@@ -267,6 +286,7 @@ class SeleniumController(object):
         workflow = self.img_recon_workflow.get('collection_item_detail')
         pantalla_name = 'collection_item_detail'
         needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
+        sleep(2)
         haystack = irc.capture_screen(pantalla_name)
         pantalla_instance = irc.load_json_skel(pantalla_name)
         # check capture vs template to ensure the right screen
@@ -274,6 +294,7 @@ class SeleniumController(object):
 
 
         # carga y mapea las coordenadas de los elementos de la pantalla
+
         irc.load_screen_elements(pantalla_instance)  # carga inmediata, no elementos diferidos
 
         print("************ Boleto_wf_loop ************ \n")
@@ -286,7 +307,7 @@ class SeleniumController(object):
 
             boleto_searched_data = wfi.get('boleto_data', None)
             print("Obteniedo dato del boleto : {}".format(boleto_searched_data))
-            self._logger.info("Obteniedo dato del boleto : {}".format(boleto_searched_data))
+            self._logger.info("Obtenido dato del boleto : {}".format(boleto_searched_data))
             if boleto_searched_data:
                 data = boleto.get_json()[boleto_searched_data]
                 element = pantalla_instance.get_element_by_name(target)
@@ -330,9 +351,43 @@ class SeleniumController(object):
                 needle_img = element.image
                 element.x, element.y = irc.getElementCoords(haystack,needle_img)
                 # irc.double_click(needle_cmboption_element)
-                #irc.click(element)
-                if not self.got_error(boleto): #@todo  debe estar antes del submit !!!!
-                    irc.capture_screen(boleto.boleto_number, dest=BOLETOS_PROCESADOS_IMGS)
+                irc.capture_screen(boleto.boleto_number, dest=BOLETOS_PROCESADOS_IMGS)
+                irc.click(element)
+                self.got_error(boleto) #@todo  debe estar antes del submit !!!!
+
+
+    def got_error(self, boleto):
+
+
+        sleep(2)
+        workflow = self.img_recon_workflow.get('collection_item_detail_window_error')
+        pantalla_name = 'collection_item_detail_window_error'
+        needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
+        haystack = irc.capture_screen('collection_item_detail_window_error')
+        pantalla_instance = irc.load_json_skel(pantalla_name)
+
+        if irc.image_finded(haystack, needle_img):
+            print ("Ha ocurrido un error generando el boleto: {}".format(boleto.boleto_number))
+
+            boleto_tmp = os.path.join(BOLETOS_PROCESADOS_IMGS, "{}.png".format(boleto.boleto_number))
+            if os.path.exists(boleto_tmp):
+                os.remove(boleto_tmp)
+
+            irc.load_screen_elements(pantalla_instance)
+            element = pantalla_instance.get_element_by_name('ok')
+            element.x, element.y = irc.getElementCoords(haystack, element.image)
+            irc.capture_screen(boleto.boleto_number, dest=ERROR_IMGS)
+            irc.click(element)
+            element = pantalla_instance.get_element_by_name('home')
+            element.x, element.y = irc.getElementCoords(haystack, element.image)
+            irc.click(element)
+
+            return True
+
+        else:
+            print ("Boleto {} generado correctamente ".format(boleto.boleto_number))
+
+        return False
 
     def start(self):
 
@@ -361,34 +416,6 @@ class SeleniumController(object):
         return None
 
 
-
-    def got_error(self, boleto):
-
-        sleep(2)
-        workflow = self.img_recon_workflow.get('collection_item_detail_window_error')
-        pantalla_name = 'collection_item_detail_window_error'
-        needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
-        haystack = irc.capture_screen('collection_item_detail_window_error')
-        pantalla_instance = irc.load_json_skel(pantalla_name)
-
-        if irc.image_finded(haystack, needle_img):
-            print ("Ha ocurrido un error generando el boleto: {}".format(boleto.boleto_number))
-
-            irc.load_screen_elements(pantalla_instance)
-            element = pantalla_instance.get_element_by_name('ok')
-            element.x, element.y = irc.getElementCoords(haystack, element.image)
-            irc.capture_screen(boleto.boleto_number, dest=ERROR_IMGS)
-            irc.click(element)
-            element = pantalla_instance.get_element_by_name('home')
-            element.x, element.y = irc.getElementCoords(haystack, element.image)
-            irc.click(element)
-
-            return True
-
-        else:
-            print ("Boleto {} generado correctamente ".format(boleto.boleto_number))
-
-        return False
 
     def driver_close(self):
         if self.driver:
