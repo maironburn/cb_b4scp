@@ -15,7 +15,6 @@ def capture_screen(name="screenshot", dest=TEMP_IMGS):
     captured = os.path.join(dest, "{}.png".format(name))
     pyautogui.screenshot(captured)
     time.sleep(2)
-    print("captured windows: {}".format(name))
 
     return captured
 
@@ -28,11 +27,10 @@ def image_finded(haystack, needle):
     templ = cv2.imread(needle, 0)
 
     result = cv2.matchTemplate(img_gray, templ, cv2.TM_CCOEFF_NORMED)
-    # cv2.normalize(result, result, 0, 1, cv2.NORM_MINMAX, -1)
     _minVal, _maxVal, minLoc, maxLoc = cv2.minMaxLoc(result, None)
     threshold = 0.8
     loc = np.where(result >= threshold)
-    print ("image_finded: {}".format(_maxVal))
+    print ("image_finded: -> {} ({})".format(_maxVal > 0.75, round(_maxVal*100,2)))
 
     return _maxVal > 0.75
     #return _maxVal > 0.98
@@ -41,7 +39,6 @@ def image_finded(haystack, needle):
 def getElementCoords(haystack, needle):
     img = cv2.imread(haystack, cv2.IMREAD_COLOR)
     img_display = img.copy()
-    # needle = 'C:\\Users\\mario.diaz.rodriguez\\PycharmProjects\\CitiBank_Boletos\\images\\dataset\\collection_item_detail\\combo_product\\cmboption_100.png'
     templ = cv2.imread(needle, cv2.IMREAD_COLOR)
 
     result = cv2.matchTemplate(img, templ, cv2.TM_CCORR_NORMED)
@@ -55,16 +52,7 @@ def getElementCoords(haystack, needle):
     center = (int((matchLoc[0] + w / 2)), int((matchLoc[1] + templ.shape[0]) - h / 2))
     x_center = int(matchLoc[0] + w / 2)
     y_center = int((matchLoc[1] + templ.shape[0]) - h / 2)
-    # top_left = maxLoc
-    # bottom_right = (top_left[0] + w, top_left[1] + h)
-    # print("x_center: {}".format(x_center))
-    # print("y_center: {}".format(y_center))
-    # rect_img = cv2.rectangle(img_display, maxLoc, bottom_right, (255, 0, 0), 2)
-    #
-    # print("needle: {}".format(needle.split('\\')[-1]))
-    #
-    # cv2.imshow("whatever", rect_img)
-    # cv2.waitKey(0)
+
     return x_center, y_center
 
 
@@ -81,7 +69,7 @@ def load_json_skel(pantalla_name):
     try:
         window = getattr(windows_screen_skels, pantalla_name)
         if windows_screen_skels:
-            print("load_json_skel -> {} ".format(pantalla_name))
+            #print("load_json_skel -> {} ".format(pantalla_name))
             return Pantalla(**window)
     except Exception as e:
         pass
@@ -120,7 +108,7 @@ def load_screen_elements(elemento_contenedor):
                      os.path.isfile(os.path.join(elemento_contenedor.image_folder, x))]:
         kw = {'filename': filename, 'contenedor': elemento_contenedor, 'haystack': haystack}
         element_instance = create_element_instance(kw, get_coords=True)
-        print("Elemento {} instanciado , coord x: {} , y: {}".format(element_instance.name, element_instance.x, element_instance.y))
+        #print("Elemento {} instanciado , coord x: {} , y: {}".format(element_instance.name, element_instance.x, element_instance.y))
 
         elemento_contenedor.add_element(element_instance)
         if isinstance(element_instance, elemento.Combo) and os.path.exists(
@@ -147,9 +135,8 @@ def fill(target, data):
 
     pyautogui.moveTo(target.x, target.y)
     pyautogui.doubleClick()
-
-    print ("meth: fill , data : {}".format(data))
-    pyautogui.typewrite(str(data), 0.1)
+    pyautogui.typewrite(str(data))
+    #pyautogui.typewrite(str(data), 0.1)
 
 
 
@@ -166,7 +153,7 @@ def create_element_instance(kw, get_coords=False, contenedor_path=None):
     x, y = None, None
     element_type = get_type_from_filename(filename)
     element_name = get_element_name_from_filename(filename)
-    print("creando instancia del elemento: {}".format(element_name))
+    #print("creando instancia del elemento: {}".format(element_name))
     contenedor_path = contenedor_path if contenedor_path else contenedor.image_folder
 
     needle = os.path.join(contenedor_path, filename)
@@ -175,7 +162,7 @@ def create_element_instance(kw, get_coords=False, contenedor_path=None):
     if get_coords:
         try:
             x, y = getElementCoords(haystack, needle)
-            print("get_coords del elemento: {} -> ({},{}) ".format(element_name, x, y))
+            #print("get_coords del elemento: {} -> ({},{}) ".format(element_name, x, y))
         except Exception as e:
             pass
     kw = {'_name': element_name, '_image': needle, '_x': x, '_y': y,
