@@ -32,7 +32,7 @@ def image_finded(haystack, needle):
     loc = np.where(result >= threshold)
     print ("image_finded: -> {} ({})".format(_maxVal > 0.75, round(_maxVal*100,2)))
 
-    return _maxVal > 0.75
+    return _maxVal > 0.75 # buena aproximacion
     #return _maxVal > 0.98
 
 
@@ -121,8 +121,11 @@ def load_screen_elements(elemento_contenedor):
 
 def click(target):
 
+
     pyautogui.moveTo(target.x, target.y)
+    #print("Evento click,move to x: {}, y: {}".format(target.x, target.y))
     pyautogui.click()
+
 
 
 def double_click(target):
@@ -135,7 +138,7 @@ def fill(target, data):
 
     pyautogui.moveTo(target.x, target.y)
     pyautogui.doubleClick()
-    pyautogui.typewrite(str(data))
+    pyautogui.typewrite(str(data), 0.05)
     #pyautogui.typewrite(str(data), 0.1)
 
 
@@ -144,7 +147,7 @@ def create_element_instance(kw, get_coords=False, contenedor_path=None):
     ''' Instancia a los elementos componentes de la pantalla
         a partir de la imagen del dataset se obtiene el tipo de elemento
         y su nombre...
-        p_ej: boton_declarantes --> tipo: boton, nombre: declarante
+        p_ej: boton_declarantes --> tipo: boton, nombr2.0e: declarante
     '''
     filename = kw.get('filename')
     haystack = kw.get('haystack')

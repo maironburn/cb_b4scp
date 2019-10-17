@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait as wait
 
 import src.controllers.img_recognition_controller as irc
-from common_config import ERROR_IMGS, BOLETOS_PROCESADOS_IMGS
+from common_config import ERROR_IMGS, BOLETOS_PROCESADOS_IMGS, TEMPLATES_IMGS
 from common_config import IE_DRIVER
 from src.helpers.common_helper import load_skel
 
@@ -43,7 +43,7 @@ class SeleniumController(object):
             self.img_recon_workflow = kw.get('img_recon_workflow', None)
 
             try:
-                # self.start()
+                #self.start()
                 self.load_references()
             except Exception as e:
                 self._logger.debug("Error al iniciar Selenium -> {}".format(e))
@@ -60,7 +60,7 @@ class SeleniumController(object):
 
             if self.driver:
                 self.driver.get(self.bank.get('url_base'))
-                self._logger.debug("create_boleto, creacion del boleto")
+                #self._logger.debug("create_boleto, creacion del boleto")
                 # # @todo, eliminar los sleeps...sustituir por ec
                 # if not self.check_cookies() and self.load_hold_on():
                 #     self.save_cookies()
@@ -133,8 +133,8 @@ class SeleniumController(object):
             exp_type = self.ec_ref[tipo]
             success = wait(self.driver, time_wait).until(exp_type((By.XPATH, target)))
 
-            print("Web cargada con exito")
-            self._logger.info("Web cargada con exito")
+            print("Acceso post-login, Web cargada con exito")
+            self._logger.info("Acceso post-login, Web cargada con exito")
 
             try:
                 while self.close_alert_msg():
@@ -147,13 +147,14 @@ class SeleniumController(object):
             self._logger.error(
                 "Exception waiting for expected conditions -> target {}, desc: {}".format(target, e_description))
 
-        return success
+        return True
 
     def close_alert_msg(self):
 
         try:
+            print ("En espera de Alert msg")
             if wait(self.driver, 10).until(ec.alert_is_present()):
-                # print("Eliminado mensaje de Alert")
+                print("Eliminado mensaje de Alert")
                 self._logger.info("Eliminado mensaje de Alert")
                 alert = self.driver.switch_to.alert
                 alert.accept()
@@ -161,7 +162,7 @@ class SeleniumController(object):
                 return True
 
         except Exception:
-            pass  # solo para que no escupa en el log
+            print ("Mensajes Alert no capturados") # solo para que no escupa en el log
 
         return False
 
@@ -213,14 +214,15 @@ class SeleniumController(object):
             'img_recognition_workflow_main') if json_workflow is None else self.img_recon_workflow.get(json_workflow)
         # if not boleto_instance:
         #     self.driver.get(self.bank.get('applet_url'))
-        #     print ("Esperando la carga del Applet de Java")
-        #     self._logger.info ("Esperando la carga del Applet de Java")
+        #     print("Esperando la carga del Applet de Java")
+        #     self._logger.info("Esperando la carga del Applet de Java")
         #     self.driver.maximize_window()
-        #     pantalla_name ="warning_msg"
+        #
+        #     pantalla_name = "warning_msg"
         #     haystack = irc.capture_screen(pantalla_name)
-        #     needle_img = os.path.join(TEMPLATES_IMGS, 'warning_msg_passby.png') #
+        #     needle_img = os.path.join(TEMPLATES_IMGS, 'warning_msg_passby.png')  #
         #     self.check_screen(pantalla_name, haystack, needle_img)
-        #     #sleep(20)
+            # sleep(20)
 
         for wf_item in json_workflow:
 
@@ -234,7 +236,7 @@ class SeleniumController(object):
             self.check_screen(pantalla_name, haystack, needle_img)
             # carga y mapea los elementos de la pantalla
             irc.load_screen_elements(pantalla_instance)
-            # print("Obtenida posicion del elemento: {}".format(workflow[0].get('target')))
+            print("Obtenida posicion del elemento: {}".format(workflow[0].get('target')))
             self._logger.info("Obtenida posicion del elemento: {}".format(workflow[0].get('target')))
 
             if pantalla_name == 'select_account_dialog' and boleto_instance:
@@ -316,7 +318,7 @@ class SeleniumController(object):
                     # element es de tipo combo
                     # print("Haciendo click sobre: {}".format(element.name))
                     irc.click(element)
-                    #sleep(1)
+                    # sleep(1)
                     haystack = irc.capture_screen(pantalla_name)
                     print("")
                     needle_cmboption_element = element.get_cmboption_by_name(data)
@@ -341,7 +343,7 @@ class SeleniumController(object):
             # sleep(2)
 
             if action == 'submit':
-                #sleep(2)
+                # sleep(2)
                 # aqui ya se esta mostrando el dialog de guardado
                 haystack = irc.capture_screen(pantalla_name)
                 element = pantalla_instance.get_element_by_name(target)
@@ -351,7 +353,20 @@ class SeleniumController(object):
                 irc.capture_screen(boleto.boleto_number, dest=BOLETOS_PROCESADOS_IMGS)
                 irc.click(element)
 
-                self.got_error(boleto)  # @todo  debe estar antes del submit !!!!
+                if not self.got_error(boleto): # @todo  debe estar antes del submit !!!!
+                    workflow = self.img_recon_workflow.get('collection_item_detail_window_success')
+                    pantalla_name = 'collection_item_detail_window_success'
+                    needle_img = load_skel(pantalla_name).get('_template')  # template de la pantalla
+
+                    haystack = irc.capture_screen('collection_item_detail_window_success')
+                    pantalla_instance = irc.load_json_skel(pantalla_name)
+                    if irc.image_finded(haystack, needle_img):
+                        irc.load_screen_elements(pantalla_instance)
+                        element = pantalla_instance.get_element_by_name('ok')
+                        element.x, element.y = irc.getElementCoords(haystack, element.image)
+                        irc.capture_screen(boleto.boleto_number, dest=BOLETOS_PROCESADOS_IMGS)
+                        irc.click(element)
+
 
     def got_error(self, boleto):
 

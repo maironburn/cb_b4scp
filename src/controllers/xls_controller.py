@@ -3,7 +3,7 @@ import os
 import sys
 
 import pandas as pd
-
+import numpy as np
 from common_config import XLS_FOLDER, COLS_NAMES, COLS_DICT_TO_ENTITY
 from logger.app_logger import AppLogger
 from src.models.boleto_item import Boleto_Item
@@ -32,8 +32,11 @@ class XlsController(object):
                         else:
                             self.error_info()
                     except PermissionError as perror:
-                        print("Exception -> get_boletos_items, el documento Excel esta en uso, debe cerrarlo {}".format(perror))
-                        self._logger.error(("Exception -> get_boletos_items, el documento Excel esta en uso, debe cerrarlo {}".format(perror)))
+                        print("Exception -> get_boletos_items, el documento Excel esta en uso, debe cerrarlo {}".format(
+                            perror))
+                        self._logger.error((
+                                               "Exception -> get_boletos_items, el documento Excel esta en uso, debe cerrarlo {}".format(
+                                                   perror)))
                         raise
             else:
                 self.error_info()
@@ -74,8 +77,8 @@ class XlsController(object):
         for doc in self.doc_list:
             xls_df = pd.read_excel(doc, encoding=sys.getfilesystemencoding(),
                                    converters={'Account Number': str, 'Payer Zip Code': str,
-                                               'Data de emision del boleto (según la configuracion del idioma) Number': str,
-                                               'Data de Vencimento (según la configuracion del idioma)': str,
+                                               #'Data de emision del boleto (según la configuracion del idioma) Number': str,
+                                               #'Data de Vencimento (según la configuracion del idioma)': str,
                                                'CPF(necesita 11 caracteres)/CNPJ(necesita 14 caracteres)': str,
                                                'Boleto (para algunos casos nueve digitos)': str,
                                                'CNPJ Beneficiario': str,
@@ -99,11 +102,12 @@ class XlsController(object):
                 if len(item_dict.keys()) == row.shape[0]:
                     item_dict.update({'logger': self._logger})
                     instance = Boleto_Item(**item_dict)
-                    #print ("{}".format(instance.get_json()))
+                    # print ("{}".format(instance.get_json()))
                     if instance.is_valid:
                         self._logger.info("Boleto correcto\n{}".format(instance))
                         self.valid_instances_collection.append(instance)
                     else:
+                        print("Boleto no valido")
                         self.instance_collection_errors.append(instance)
 
             if len(self.instance_collection_errors):
@@ -232,8 +236,3 @@ class XlsController(object):
             self._instance_collection_errors = value
 
     # </editor-fold>
-
-#
-# if __name__ == '__main__':
-#     doc = XlsController()
-#     doc.read_document_folder()

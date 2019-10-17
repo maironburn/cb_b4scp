@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import re, os
+from common_config import DICT_REGEX_BOLETO_ITEM, IMGS_DATASET
+from src.controllers.img_recognition_controller import get_element_name_from_filename
 
 class Boleto_Item(object):
     _logger = None
@@ -27,10 +30,12 @@ class Boleto_Item(object):
     _is_valid = True  # Flag que identidica si la instancia tiene validados todos los campos
     # esta propia sera comprobada por el xls_controller, en caso de no ser valida no se añade a la collecion de items
 
+    _registered_accounts= []
     _error_description = None
 
     def __init__(self, **kw):
         self._logger = kw.get('logger')
+        self.load_registered_accounts()
         self.load_entity_data(kw)
 
     def load_entity_data(self, kw):
@@ -45,22 +50,60 @@ class Boleto_Item(object):
         self.city = kw.get('city')
         self.zip_code = self.check_correct_zip_code(kw.get('zip_code'))  # need 8 caracteres
         # self.emision_date = datetime.now().strftime("%d/%m/%Y")
-        self.emision_date = kw.get('emision_date')
-        self.due_date = kw.get('due_date')
+        self.emision_date = self.transform_date(kw.get('emision_date'))
+        self.due_date = self.transform_date(kw.get('due_date'))
         self.amount = kw.get('amount')
         self.payer_type = self.get_payer_type()
 
-    def check_is_valid(self):
-        return True
+        #self.check_is_valid()
 
-    # # @todo
+    def load_registered_accounts(self):
+        accounts_folder= os.path.join(IMGS_DATASET, 'select_account_dialog')
+
+        try:
+            for filename in [x for x in os.listdir(accounts_folder) if
+                             not x.startswith('_')]:
+                account= get_element_name_from_filename(filename)
+                self._registered_accounts.append(account)
+
+            self.registered_accounts.remove('ok')
+
+        except Exception as e:
+            self._logger.error("error al registrar las cuentas")
+
+    def check_account_number(self, account):
+        return account in self.registered_accounts
+
+
+    def transform_date(self, date):
+        fecha=date.split('-')
+        return ("{}/{}/{}".format(fecha[2], fecha[1], fecha[0]))
+
+    # def check_is_valid(self):
+    #
+    #     self.is_valid = re.match(DICT_REGEX_BOLETO_ITEM['boleto_number'],self.boleto_number) is not None \
+    #                     and self.enteprise_id != '' \
+    #                     '''
+    #                     #and re.match(DICT_REGEX_BOLETO_ITEM['cpf'], self.cpf ) is not None
+    #                     #and re.match(DICT_REGEX_BOLETO_ITEM['cpf'], self.cpnj_beneficiario) is not None
+    #                     '''
+    #                     and self.product != 'nan' \
+    #                     and re.match(DICT_REGEX_BOLETO_ITEM['account_number'], self.account_number) is not None \
+    #                     and self.state != 'nan' \
+    #                     and self.city != 'nan' \
+    #                     and self.zip_code != '' \
+    #                     and re.match(DICT_REGEX_BOLETO_ITEM['due_date'], self.due_date) is not None \
+    #                     and re.match(DICT_REGEX_BOLETO_ITEM['emision_date'], self.emision_date) is not None \
+    #                     and self.amount != ''
+
+        # # @todo
+
     # def check_is_valid(self):
     #     return self.boleto_number.strip() != '' and \
     #            self.enteprise_id.strip() != '' \
     #            and self.cpnj_beneficiario.strip() != '' \
     #            and self.cpf != '' \
     #            and self.account_number != ''
-
 
     def get_payer_type(self):
         dict_payer_type = {11: 'cpf', 14: 'cnpj'}
@@ -276,6 +319,16 @@ class Boleto_Item(object):
     def payer_type(self, value):
         if value:
             self._payer_type = value
+
+
+    @property
+    def registered_accounts(self):
+        return self._registered_accounts
+
+    @registered_accounts.setter
+    def registered_accounts(self, value):
+        if value:
+            self._registered_accounts = value
 
     # </editor-fold>
 

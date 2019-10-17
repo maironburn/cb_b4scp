@@ -61,6 +61,7 @@ COLS_DICT_TO_ENTITY = {
 
 DICT_REGEX_BOLETO_ITEM = {
 
+    'account_number': '^\d+$',
     'boleto_number': '^\d{5,9}$',
     'enteprise_id': '\w+',
     'cpf': '^\d{11,14}$',
@@ -70,6 +71,6 @@ DICT_REGEX_BOLETO_ITEM = {
 }
 
 # keep_foregorund
-APP_NAME = ""
+APP_NAME = "CitiDirect® Online Banking - Internet Explorer"
 TIME_SLEEP = 10
 

@@ -11,10 +11,10 @@ citibank = {
         #     {'target': 'ok', 'action': "click"}]
         # },
         {'main_transactions_and_services': [
-            {'target': 'transactions_and_services', 'action': "click"}]
+            {'target': 'transactions_and_services', 'action': "click", "desc": "Opcion del Menu -- My Transaction & Services --" }]
         },
         {'menu_transactions_and_services': [
-            {'target': 'collection_item_initiation', 'action': "click"}
+            {'target': 'collection_item_initiation', 'action': "click",  "desc": "Opcion  -- Collection Item Initiation --"}
             ]
         }
     ]
@@ -22,17 +22,17 @@ citibank = {
     #
     'img_recognition_workflow_intermezzo': [
         {'loaded_transactions_and_services': [
-            {'target': 'new', 'action': "click"}
+            {'target': 'new', 'action': "click", "desc" : "Sumario previo de Cuentas"}
                 ]
         }
         ,
         {'search_definition_dialog': [
-            {'target': 'run_search', 'action': "click"}
+            {'target': 'run_search', 'action': "click", "desc" : "Search Definition Dialog"}
                 ]
         }
         ,
         {'select_account_dialog': [
-                    {'target': 'ok', 'action': "click"}
+                    {'target': 'ok', 'action': "click", "desc" : "Select Account Dialog"}
                 ]
             }
 
@@ -76,6 +76,7 @@ citibank = {
 
             {'target': 'payer_zipcode', 'action': "fill", 'boleto_data': 'zip_code'},
 
+            {'target': 'payer_name', 'action': "click"},
             #{'target': 'fake_submit', 'action': "click"}, testing purposes
 
             {'target': 'submit', 'action': "submit"},
@@ -89,6 +90,13 @@ citibank = {
         {'target': 'transactions_and_services', 'action': "click", 'delay': 1},
         {'target': 'collection_item_initiation', 'action': "click"}
         ]
+    ,
+    'collection_item_detail_window_success': [
+
+        {'target': 'ok', 'action': "click"}
+
+        ]
+
 
 }
 
