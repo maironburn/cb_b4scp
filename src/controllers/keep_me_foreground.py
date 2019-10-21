@@ -29,7 +29,7 @@ class KeepMeForeGround(object):
         rect = win32gui.GetWindowRect(hwnd)
 
         if win32gui.IsWindowVisible(hwnd) and win32gui.GetWindowText(hwnd) != '':
-            print("app: {}".format(win32gui.GetWindowText(hwnd)))
+            #print("app: {}".format(win32gui.GetWindowText(hwnd)))
             if APP_NAME in win32gui.GetWindowText(hwnd):
                 self.set_values(rect)
                 self._hwnd = hwnd

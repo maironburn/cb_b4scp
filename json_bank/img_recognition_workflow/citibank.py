@@ -3,13 +3,7 @@ citibank = {
 # @todo ,  to think about (key adicional para invocar un callback o metodo ?... )
 
 'img_recognition_workflow_main': [
-        # {'warning_msg': [
-        #     {'target': 'yes', 'action': "click"}]
-        # },
-        #
-        # {'russian_msg': [
-        #     {'target': 'ok', 'action': "click"}]
-        # },
+
         {'main_transactions_and_services': [
             {'target': 'transactions_and_services', 'action': "click", "desc": "Opcion del Menu -- My Transaction & Services --" }]
         },
@@ -44,6 +38,8 @@ citibank = {
             # @todo, asociar a cada item una variable para setear un sleep ???
             {'target': 'product', 'action': "select", 'boleto_data': 'product'},
 
+            {'target': 'original_amount', 'action': "click"},
+
             {'target': 'original_amount', 'action': "fill", 'boleto_data': 'amount'},
 
             {'target': 'type_of_collection_item_code', 'action': "select", 'boleto_data': 'type_of_collection_item_code'},
@@ -75,7 +71,7 @@ citibank = {
             {'target': 'payer_city', 'action': "fill", 'boleto_data': 'city'},
 
             {'target': 'payer_zipcode', 'action': "fill", 'boleto_data': 'zip_code'},
-
+            # esta accion se realiza porq de lo contrario la web no detecta que se ha cumplimentado el zip_code (ultimo campo rellenado)...
             {'target': 'payer_name', 'action': "click"},
             #{'target': 'fake_submit', 'action': "click"}, testing purposes
 

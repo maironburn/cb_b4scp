@@ -1,6 +1,6 @@
 from logger.app_logger import AppLogger
+from src.controllers.reboot_process import Reboot_Process
 from src.controllers.selenium_controller import SeleniumController
-from src.controllers.xls_controller import XlsController
 from src.models.bank_basis import Bank
 
 
@@ -14,19 +14,21 @@ class BankController(object):
     _errores_al_crear = 0
     _lst_correctos = []
     _lst_erroneos = []
+    _reboot = None
 
     def __init__(self, kw):
 
         self._banknames = kw.get('banknames', None)
         self._logger = AppLogger.create_rotating_log()
+        self._reboot = Reboot_Process({'logger': self._logger})
+
         if self._banknames:
             self.load_banks()
 
     def start_party(self, bankname=None, lst_instances_bi=None):
 
         kw = {'logger': self._logger, 'bank': self._dict_bank.get(bankname).json_data,
-              'workflow': self._dict_bank.get(bankname)._json_selenium_wf,
-              'img_recon_workflow' : self._dict_bank.get(bankname)._json_img_recognition,
+              'img_recon_workflow': self._dict_bank.get(bankname)._json_img_recognition
               }
 
         self.sc = SeleniumController(kw)
@@ -35,30 +37,21 @@ class BankController(object):
             self.total_a_crear = len(lst_instances_bi)
             print("\n\n\tFASE Automatismo Selenium \n*****************************************************")
             print("Num de boletos leidos del excel y pendientes de emitir: {}".format(len(lst_instances_bi)))
+            print(
+                "\n\n\tWorkflow no asociado a datos de boletos \n*****************************************************")
 
-            #self.sc.do_selenium_workflow()
+            while not self.sc.do_image_automation():
+                self._reboot.restart_workflow()
 
-            print("\n\n\tWorkflow no asociado a datos de boletos \n*****************************************************")
-
-            self.sc.do_image_automation()
             print(
                 "\n\n\tWorkflow Loop \n*****************************************************")
             for bi in lst_instances_bi:
-                self.sc.do_image_automation(json_workflow = 'img_recognition_workflow_intermezzo',boleto_instance = bi ) # new and run_search
+                while not self.sc.do_image_automation(json_workflow='img_recognition_workflow_intermezzo', boleto_instance=bi):
+                    self._reboot.restart_workflow()
+                    self.sc.do_image_automation()
+
                 # ya wf dependiente de las instancias del boleto
                 self.sc.boleto_wf_loop(bi)
-            #self.sc.do_image_automation(boletos=lst_instances_bi)
-
-            # for bi in lst_instances_bi:
-            #     if self.sc.do_selenium_workflow(bi):
-            #         # self.sc.do_image_automation()
-            #         self.lst_correctos.append(bi)
-            #         self.creados_ok += 1
-            #     else:
-            #         self.errores_al_crear += 1
-            #         self.lst_erroneos.append(bi)
-
-
 
     def load_banks(self):
         for bank in self.banknames:
@@ -102,4 +95,3 @@ class BankController(object):
     def logger(self):
         return self._logger
     # </editor-fold>
-

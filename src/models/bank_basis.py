@@ -22,10 +22,8 @@ class Bank(object):
 
         try:
             self._json_data = load_json(self.name, JSON_BANK)
-            self._json_selenium_wf  =load_json(self.name, SELENIUM_WF)
             self._json_img_recognition = load_json(self.name, IMG_RECON_WF)
             self._logger.info('{} -> Loaded skel from : {}'.format(self.__class__.name, self.name))
-
 
         except Exception as lse:
             self._logger.error("{}-> exception loading skel {} -> {}".format(self.__class__.name, self.name, lse))

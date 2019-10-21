@@ -19,7 +19,7 @@ def capture_screen(name="screenshot", dest=TEMP_IMGS):
     return captured
 
 
-def image_finded(haystack, needle):
+def image_finded(haystack, needle, threshold=0.75):
 
     img = cv2.imread(haystack, cv2.IMREAD_COLOR)
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -28,11 +28,11 @@ def image_finded(haystack, needle):
 
     result = cv2.matchTemplate(img_gray, templ, cv2.TM_CCOEFF_NORMED)
     _minVal, _maxVal, minLoc, maxLoc = cv2.minMaxLoc(result, None)
-    threshold = 0.8
+    #threshold = 0.75
     loc = np.where(result >= threshold)
-    print ("image_finded: -> {} ({})".format(_maxVal > 0.75, round(_maxVal*100,2)))
+    print ("image_finded: -> {} ({})".format(_maxVal > threshold, round(_maxVal*100,2)))
 
-    return _maxVal > 0.75 # buena aproximacion
+    return _maxVal > threshold # buena aproximacion
     #return _maxVal > 0.98
 
 

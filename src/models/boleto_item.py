@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
-import re, os
+import os
+import re
+
 from common_config import DICT_REGEX_BOLETO_ITEM, IMGS_DATASET
 from src.controllers.img_recognition_controller import get_element_name_from_filename
+
 
 class Boleto_Item(object):
     _logger = None
@@ -30,8 +33,9 @@ class Boleto_Item(object):
     _is_valid = True  # Flag que identidica si la instancia tiene validados todos los campos
     # esta propia sera comprobada por el xls_controller, en caso de no ser valida no se añade a la collecion de items
 
-    _registered_accounts= []
-    _error_description = None
+    _registered_accounts = []
+
+    _error_description = []
 
     def __init__(self, **kw):
         self._logger = kw.get('logger')
@@ -55,15 +59,15 @@ class Boleto_Item(object):
         self.amount = kw.get('amount')
         self.payer_type = self.get_payer_type()
 
-        #self.check_is_valid()
+        self.check_is_valid()
 
     def load_registered_accounts(self):
-        accounts_folder= os.path.join(IMGS_DATASET, 'select_account_dialog')
+        accounts_folder = os.path.join(IMGS_DATASET, 'select_account_dialog')
 
         try:
             for filename in [x for x in os.listdir(accounts_folder) if
                              not x.startswith('_')]:
-                account= get_element_name_from_filename(filename)
+                account = get_element_name_from_filename(filename)
                 self._registered_accounts.append(account)
 
             self.registered_accounts.remove('ok')
@@ -74,36 +78,100 @@ class Boleto_Item(object):
     def check_account_number(self, account):
         return account in self.registered_accounts
 
-
     def transform_date(self, date):
-        fecha=date.split('-')
+        fecha = date.split('-')
         return ("{}/{}/{}".format(fecha[2], fecha[1], fecha[0]))
 
-    # def check_is_valid(self):
-    #
-    #     self.is_valid = re.match(DICT_REGEX_BOLETO_ITEM['boleto_number'],self.boleto_number) is not None \
-    #                     and self.enteprise_id != '' \
-    #                     '''
-    #                     #and re.match(DICT_REGEX_BOLETO_ITEM['cpf'], self.cpf ) is not None
-    #                     #and re.match(DICT_REGEX_BOLETO_ITEM['cpf'], self.cpnj_beneficiario) is not None
-    #                     '''
-    #                     and self.product != 'nan' \
-    #                     and re.match(DICT_REGEX_BOLETO_ITEM['account_number'], self.account_number) is not None \
-    #                     and self.state != 'nan' \
-    #                     and self.city != 'nan' \
-    #                     and self.zip_code != '' \
-    #                     and re.match(DICT_REGEX_BOLETO_ITEM['due_date'], self.due_date) is not None \
-    #                     and re.match(DICT_REGEX_BOLETO_ITEM['emision_date'], self.emision_date) is not None \
-    #                     and self.amount != ''
+    def check_is_valid(self):
 
-        # # @todo
+        self.is_valid = True
+        self.error_description=[]
+        if re.match(DICT_REGEX_BOLETO_ITEM['boleto_number'], self.boleto_number) is not None:
 
-    # def check_is_valid(self):
-    #     return self.boleto_number.strip() != '' and \
-    #            self.enteprise_id.strip() != '' \
-    #            and self.cpnj_beneficiario.strip() != '' \
-    #            and self.cpf != '' \
-    #            and self.account_number != ''
+            if (self.enteprise_id == 'nan' or self.enteprise_id.strip() == ''):
+                self.error_description.append('El enterprise ID:  del boleto: {} no es valido'.format(self.enteprise_id.strip(), self.boleto_number))
+                print ('El enterprise ID:  del boleto: {} no es valido'.format(self.enteprise_id.strip(), self.boleto_number))
+                self.is_valid = False
+
+            if not  self.check_account_number(self.account_number.strip()):
+                self.error_description.append('EL numero de cuenta {} del boleto: {} no es valido o se trata de una cuenta no conocida'.format(self.account_number, self.boleto_number))
+                print ('EL numero de cuenta {} del boleto: {} no es valido o se trata de una cuenta no conocida'.format(self.account_number, self.boleto_number))
+                self.is_valid = False
+                '''
+                #and re.match(DICT_REGEX_BOLETO_ITEM['cpf'], self.cpf ) is not None
+                #and re.match(DICT_REGEX_BOLETO_ITEM['cpf'], self.cpnj_beneficiario) is not None
+                '''
+
+            if self.product == 'nan' or self.product.strip() == '' or (self.product != '100' and self.product != '180'):
+                self.error_description.append(
+                    'El numero de producto: {} del boleto: {} no es valido, debe ser 100 o 180'.format(self.product, self.boleto_number))
+                print('El numero de producto: {} del boleto: {} no es valido, debe ser 100 o 180'.format(self.product, self.boleto_number))
+                self.is_valid = False
+
+
+            if self.state.strip() == 'nan' or self.state.strip() == '':
+                self.error_description.append(
+                    'El estado (state city) del boleto: {} no es valido '.format(
+                        self.state, self.boleto_number))
+                print(
+                    'El estado (state city) del boleto: {} no es valido '.format(
+                        self.state, self.boleto_number))
+                self.is_valid = False
+
+            if self.city.strip() == 'nan' or self.city.strip() == '':
+                self.error_description.append(
+                    'La Ciudad {} del boleto: {} no es valida'.format(
+                        self.city.strip(), self.boleto_number))
+                print(
+                    'La Ciudad {} del boleto: {} no es valida'.format(
+                        self.city.strip(), self.boleto_number))
+                self.is_valid = False
+
+            if self.zip_code.strip() == 'nan' or self.zip_code.strip() == '':
+                self.error_description.append(
+                    'El zip code: {} del boleto: {} no es valido'.format(
+                        self.zip_code.strip(), self.boleto_number))
+                print(
+                    'El zip code: {} del boleto: {} no es valido'.format(
+                        self.zip_code.strip(), self.boleto_number))
+                self.is_valid = False
+
+            if re.match(DICT_REGEX_BOLETO_ITEM['due_date'], self.due_date) is None:
+                self.error_description.append(
+                    'El due_date: {} del boleto: {} no es valido'.format(
+                        self.due_date, self.boleto_number))
+                print(
+                    'El due_date: {} del boleto: {} no es valido'.format(
+                        self.due_date, self.boleto_number))
+                self.is_valid = False
+
+            if re.match(DICT_REGEX_BOLETO_ITEM['emision_date'], self.emision_date) is None:
+                self.error_description.append(
+                    'La fecha de emision: {} del boleto: {} no es valido'.format(
+                        self.emision_date, self.boleto_number))
+                print(
+                    'La fecha de emision: {} del boleto: {} no es valido'.format(
+                        self.emision_date, self.boleto_number))
+                self.is_valid = False
+
+            if self.amount.strip() == '' or self.amount.strip() == 'nan':
+                self.error_description.append(
+                    'El monto: {} del boleto: {} no es valido'.format(
+                        self.amount.strip(), self.boleto_number))
+                print(
+                    'El monto: {} del boleto: {} no es valido'.format(
+                        self.amount.strip(), self.boleto_number))
+
+                self.is_valid = False
+
+        else:
+            self.error_description.append('El numero de boleto no es valido')
+            print("El numero del boleto no es valido")
+            self.is_valid = False
+
+        return self.is_valid
+
+        # @todo
 
     def get_payer_type(self):
         dict_payer_type = {11: 'cpf', 14: 'cnpj'}
@@ -171,8 +239,10 @@ class Boleto_Item(object):
                 }
 
     # @todo
-    def validate(self):
-        pass
+    def get_errors(self):
+        if len(self.error_description):
+            for e in self.error_description:
+                print("->{}".format(e))
 
     # <editor-fold desc="Getter / setters">
 
@@ -320,7 +390,6 @@ class Boleto_Item(object):
         if value:
             self._payer_type = value
 
-
     @property
     def registered_accounts(self):
         return self._registered_accounts
@@ -331,20 +400,6 @@ class Boleto_Item(object):
             self._registered_accounts = value
 
     # </editor-fold>
-
-    def __repr__(self):
-        if not self.error_description:
-            tipo_dato = 'CNPJ' if len(self.cpf) == 14 else 'CPF'
-            return "Num boleto: %s\n\tenterprise_id: %s\n\tcpnj_beneficiario: %s\n\t%s pagador: %s" % (
-
-                self.boleto_number,
-                self.enteprise_id,
-                self.cpnj_beneficiario,
-                tipo_dato,
-                self.cpf
-            )
-
-        return "boleto: %s\n\t error:  %s" % (self.boleto_number, self.error_description)
 
 
 if __name__ == '__main__':

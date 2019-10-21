@@ -28,9 +28,10 @@ class XlsController(object):
                 if self.read_document_folder():
                     try:
                         if self.read_xls_docs():
+                            print ("datos de Boletos correctos: {}".format(len(self.valid_instances_collection)))
                             return self.valid_instances_collection
-                        else:
-                            self.error_info()
+                        # else:
+                        #     self.error_info()
                     except PermissionError as perror:
                         print("Exception -> get_boletos_items, el documento Excel esta en uso, debe cerrarlo {}".format(
                             perror))
@@ -39,7 +40,7 @@ class XlsController(object):
                                                    perror)))
                         raise
             else:
-                self.error_info()
+                #self.error_info()
                 self._logger.error(
                     "{} ->  No se halla la carpeta que contiene los XLS: ->  {}".format(__class__.__name__, XLS_FOLDER))
 
@@ -107,14 +108,15 @@ class XlsController(object):
                         self._logger.info("Boleto correcto\n{}".format(instance))
                         self.valid_instances_collection.append(instance)
                     else:
-                        print("Boleto no valido")
+                        #print("el Boleto contiene datos no validos \n{} ".format(instance))
+                        #self._logger.info("el Boleto contiene datos no validos \n{} ".format(instance))
                         self.instance_collection_errors.append(instance)
 
-            if len(self.instance_collection_errors):
-                self._logger.error(
-                    "Hay errores en el documento: {}, los datos de algunos boletos contienen errores y hemos detenido el proceso por seguridad")
 
-                return False
+            if len(self.instance_collection_errors):
+                print("Hay {} boletos con datos incorrectos que no iniciaran el proceso de creacion".format(len(self.instance_collection_errors)))
+                self._logger.error(
+                    "Hay errores en el documento: {}, los datos de algunos boletos contienen errores")
 
         return True
         # Boleto_Item

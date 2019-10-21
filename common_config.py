@@ -70,7 +70,16 @@ DICT_REGEX_BOLETO_ITEM = {
     'due_date': '(\d{1,2}\/)*\d{4}$'
 }
 
+
+
 # keep_foregorund
 APP_NAME = "CitiDirect® Online Banking - Internet Explorer"
-TIME_SLEEP = 10
+FOREGROUND_THREAD = False
+TIME_SLEEP = 1
 
+# DICTIO_PAPAFRITA= {'main_transactions_and_services' : 'img_recognition_workflow_main',
+#                     'menu_transactions_and_services': 'img_recognition_workflow_main',
+#                     'loaded_transactions_and_services': 'img_recognition_workflow_intermezzo',
+#                     'search_definition_dialog': 'img_recognition_workflow_intermezzo',
+#                     'select_account_dialog' :'img_recognition_workflow_intermezzo'
+#                    }

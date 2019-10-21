@@ -1,5 +1,6 @@
 from common_config import *
 import os
+import threading
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -21,7 +22,8 @@ XLS_FOLDER = os.path.join(ROOT_DIR, 'xls_folder')
 bancos = ['citibank']
 from  src.controllers.bank_controller import BankController
 from  src.controllers.xls_controller import XlsController
-
+from src.controllers.keep_me_foreground import KeepMeForeGround
+from common_config import FOREGROUND_THREAD
 
 if __name__ == '__main__':
 
@@ -31,6 +33,10 @@ if __name__ == '__main__':
     # @todo, definir q hacer con los boletos q no pasen la validacion
     try:
         if xls_controller.get_boletos_items():
+            if FOREGROUND_THREAD:
+                keep_me_foreground = KeepMeForeGround(logger=bc.logger)
+                daemon = threading.Thread(target=keep_me_foreground.daemon_dont_disturb_please).start()
+
             bc.start_party(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
         else:
             print("Ocurrio un error en la lectura , no se encontraron documentos xlsx o los boletos no son validos")

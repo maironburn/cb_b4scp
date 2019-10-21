@@ -1,6 +1,6 @@
 import os
 from time import sleep
-
+from importlib import import_module
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -28,6 +28,7 @@ class SeleniumController(object):
     finds_method = None
     ec_ref = None
     login_dict_methods = None
+    _is_done = False
 
     def __init__(self, kw):
 
@@ -36,166 +37,12 @@ class SeleniumController(object):
                                }
 
         self._logger = kw.get('logger')
-        if kw.get('bank', None) and kw.get('workflow', None):
+        if kw.get('bank', None):
             self.bank = kw.get('bank')
-            self.workflow = kw.get('workflow', None).get('selenium_workflow')
             # contiene la linea ppal y loop
             self.img_recon_workflow = kw.get('img_recon_workflow', None)
 
-            try:
-                #self.start()
-                self.load_references()
-            except Exception as e:
-                self._logger.debug("Error al iniciar Selenium -> {}".format(e))
 
-    def load_references(self):
-
-        self.find_method = self.load_find_method_references()
-        self.finds_method = self.load_finds_method_references()
-        self.ec_ref = self.ec_references()
-
-    def do_selenium_workflow(self):
-
-        try:
-
-            if self.driver:
-                self.driver.get(self.bank.get('url_base'))
-                #self._logger.debug("create_boleto, creacion del boleto")
-                # # @todo, eliminar los sleeps...sustituir por ec
-                # if not self.check_cookies() and self.load_hold_on():
-                #     self.save_cookies()
-                # else:
-                #     pass
-                #     #https://portal.citidirect.com/portal/welcome/index
-                #     #self.load_cookies()
-
-                return self.do_workflow(stage="Automatismo Selenium")
-            # self.driver_close()
-
-        except Exception as ex:
-            self._logger.error("Excepcion en do_the_process -> {}".format(ex))
-
-        return False
-
-    # <editor-fold desc="Selenium methods references">
-    def load_find_method_references(self):
-
-        return {
-            'id': self.driver.find_element_by_id,
-            'name': self.driver.find_element_by_name,
-            'xpath': self.driver.find_element_by_xpath,
-            'class': self.driver.find_element_by_class_name,
-            'tag_name': self.driver.find_element_by_tag_name,
-            'link_text': self.driver.find_element_by_link_text,
-            'partial_link_text': self.driver.find_element_by_partial_link_text,
-            'css_selector': self.driver.find_element_by_css_selector
-        }
-
-    def load_finds_method_references(self):
-
-        return {
-            'id': self.driver.find_elements_by_id,
-            'name': self.driver.find_elements_by_name,
-            'xpath': self.driver.find_elements_by_xpath,
-            'class': self.driver.find_elements_by_class_name,
-            'tag_name': self.driver.find_elements_by_tag_name,
-            'link_text': self.driver.find_elements_by_link_text,
-            'partial_link_text': self.driver.find_elements_by_partial_link_text,
-            'css_selector': self.driver.find_elements_by_css_selector
-        }
-
-    def ec_references(self):
-        return {
-            'element_located': ec.presence_of_element_located,
-            'frame_switch': ec.frame_to_be_available_and_switch_to_it,
-            'clickable': ec.element_to_be_clickable,
-            'alert': ec.alert_is_present
-        }
-
-    # </editor-fold>
-
-    def wait_for_expected_conditions(self, actions):
-
-        tipo = actions.get('tipo')  # tipo de ec
-        target = actions.get('target')
-        time_wait = float(actions.get('time_wait'))
-        e_description = actions.get('e_description')
-        success = False
-
-        print("Pendiente del Logado del usuario para continuar el automatismo")
-        self._logger.info("Pendiente del Logado del usuario para continuar el automatismo")
-        try:
-            # sleep(5)
-            # if ec.alert_is_present():
-            #     alert = self.driver.switch_to.alert
-            #     alert.accept()
-
-            exp_type = self.ec_ref[tipo]
-            success = wait(self.driver, time_wait).until(exp_type((By.XPATH, target)))
-
-            print("Acceso post-login, Web cargada con exito")
-            self._logger.info("Acceso post-login, Web cargada con exito")
-
-            try:
-                while self.close_alert_msg():
-                    self._logger.info("Checking alert messages !")
-
-            except Exception:
-                pass  # solo para que no escupa en el log
-
-        except Exception as e:
-            self._logger.error(
-                "Exception waiting for expected conditions -> target {}, desc: {}".format(target, e_description))
-
-        return True
-
-    def close_alert_msg(self):
-
-        try:
-            print ("En espera de Alert msg")
-            if wait(self.driver, 10).until(ec.alert_is_present()):
-                print("Eliminado mensaje de Alert")
-                self._logger.info("Eliminado mensaje de Alert")
-                alert = self.driver.switch_to.alert
-                alert.accept()
-                sleep(3)
-                return True
-
-        except Exception:
-            print ("Mensajes Alert no capturados") # solo para que no escupa en el log
-
-        return False
-
-    def do_workflow(self, stage=""):
-        '''
-            acciones post login o post login, la mecanica es igual
-            @:param, lista de acciones (pre o post acciones)
-        '''
-        if self.driver:
-
-            for actions in self.workflow:
-
-                tipo = actions.get('tipo')
-                target = actions.get('target')
-                desc = actions.get('description')
-                mode = actions.get('mode')
-                ec = actions.get('expected_conditions', None)
-                id = actions.get('id', None)
-
-                try:
-
-                    if self.wait_for_expected_conditions(ec):
-                        # un poco de tiempo para la carga de la web
-                        sleep(5)
-                        self._logger.info(
-                            "{} -> tipo busqueda: {} , expresion: {} , mode: {}".format(desc, tipo, target, mode))
-
-                        return True
-
-                except Exception as e:
-                    pass
-
-        return False
 
     def get_wf_details(self, wf_item):
 
@@ -210,19 +57,10 @@ class SeleniumController(object):
 
     def do_image_automation(self, json_workflow=None, boleto_instance=None):
 
+        self.is_done = False
         json_workflow = self.img_recon_workflow.get(
             'img_recognition_workflow_main') if json_workflow is None else self.img_recon_workflow.get(json_workflow)
-        # if not boleto_instance:
-        #     self.driver.get(self.bank.get('applet_url'))
-        #     print("Esperando la carga del Applet de Java")
-        #     self._logger.info("Esperando la carga del Applet de Java")
-        #     self.driver.maximize_window()
-        #
-        #     pantalla_name = "warning_msg"
-        #     haystack = irc.capture_screen(pantalla_name)
-        #     needle_img = os.path.join(TEMPLATES_IMGS, 'warning_msg_passby.png')  #
-        #     self.check_screen(pantalla_name, haystack, needle_img)
-            # sleep(20)
+
 
         for wf_item in json_workflow:
 
@@ -233,28 +71,61 @@ class SeleniumController(object):
 
             haystack = irc.capture_screen(pantalla_name)
             pantalla_instance = irc.load_json_skel(pantalla_name)
-            self.check_screen(pantalla_name, haystack, needle_img)
-            # carga y mapea los elementos de la pantalla
-            irc.load_screen_elements(pantalla_instance)
-            print("Obtenida posicion del elemento: {}".format(workflow[0].get('target')))
-            self._logger.info("Obtenida posicion del elemento: {}".format(workflow[0].get('target')))
+            if self.check_screen(pantalla_name, haystack, needle_img):
 
-            if pantalla_name == 'select_account_dialog' and boleto_instance:
+                # carga y mapea los elementos de la pantalla
+                irc.load_screen_elements(pantalla_instance)
+                print("Obtenida posicion del elemento: {}".format(workflow[0].get('target')))
+                self._logger.info("Obtenida posicion del elemento: {}".format(workflow[0].get('target')))
 
-                # print("select_account_dialog -> account: {}".format(boleto_instance.account_number))
-                self._logger.info("select_account_dialog -> account: {}".format(boleto_instance.account_number))
-                account_element = pantalla_instance.get_element_by_name(boleto_instance.account_number)
-                irc.click(account_element)
-                # sleep(2)
-                ok_element = pantalla_instance.get_element_by_name('ok')
-                irc.click(ok_element)
+                if pantalla_name == 'select_account_dialog' and boleto_instance:
 
-                # sleep(2)
+                    self._logger.info("select_account_dialog -> account: {}".format(boleto_instance.account_number))
+                    account_element = pantalla_instance.get_element_by_name(boleto_instance.account_number)
+                    irc.click(account_element)
+                    # sleep(2)
+                    ok_element = pantalla_instance.get_element_by_name('ok')
+                    irc.click(ok_element)
+
+                else:
+
+                    elemento = pantalla_instance.get_element_by_name(workflow[0].get('target'))
+                    # realizando accion sobre el elemento target
+                    self.dictio_actions[workflow[0].get('action')](elemento)
             else:
+                return False
 
-                elemento = pantalla_instance.get_element_by_name(workflow[0].get('target'))
-                # realizando accion sobre el elemento target
-                self.dictio_actions[workflow[0].get('action')](elemento)
+        return True
+
+
+
+
+
+        #
+        # else:
+        #     pantalla =self.where_am_i()
+        #
+        #     if pantalla=='home':
+        #         json_workflow = self.img_recon_workflow.get(
+        #             'img_recognition_workflow_main')
+        #         self.do_image_automation(json_workflow=None)
+        #     else:
+        #         module_name = "json_bank.windows_screen_skels"
+        #         module = import_module(module_name)
+        #         pantalla_skel= getattr(module, pantalla)
+        #
+        #         workflow_trace_file="json_bank.img_recognition_workflow.citibank"
+        #         module = import_module(workflow_trace_file)
+        #         workflow= getattr(module, 'citibank')
+        #
+        #         from common_config import DICTIO_PAPAFRITA
+        #         for item in  workflow[DICTIO_PAPAFRITA[pantalla]]:
+        #             for k,v in item.items():
+        #                 if item == pantalla:
+        #                     wf=''
+        #
+
+
 
     def check_screen(self, pantalla_name, haystack, needle_img):
         '''
@@ -266,19 +137,32 @@ class SeleniumController(object):
 
         '''
         print(
-            "Comprobando Matching entre template(needle): {} y la screen_captured (haystack) {} ".format(
-                needle_img.split('\\')[-1], haystack.split('\\')[-1]))
+            "Comprobando Matching entre : {} y la captura de pantalla ".format(
+                needle_img.split('\\')[-1]))
         self._logger.info(
-            "Comprobando Matching entre template(needle): {} y la screen_captured(haystack) {} ".format(
-                needle_img.split('\\')[-1], haystack.split('\\')[-1]))
-        while not irc.image_finded(haystack, needle_img):
-            sleep(1)
-            haystack = irc.capture_screen(pantalla_name)
+             "Comprobando Matching entre : {} y la captura de  pantalla ".format(
+                needle_img.split('\\')[-1]))
+        temp=10
+        found= False
 
+        while not found and temp>0:
+            if irc.image_finded(haystack, needle_img):
+                self._logger.info("Screen Matched !!")
+                print("Screen Matched !!")
+                found=True
+            else:
+                sleep(1)
+                haystack = irc.capture_screen(pantalla_name)
+                temp-=1
         # print("Screen Matched !!")
-        self._logger.info("Screen Matched !!")
 
-        return True
+        if not found:
+            print ("Definitivamente estoy perdido")
+
+        return found
+
+
+
 
     def boleto_wf_loop(self, boleto):
 
@@ -293,7 +177,6 @@ class SeleniumController(object):
         pantalla_instance = irc.load_json_skel(pantalla_name)
         # check capture vs template to ensure the right screen
         self.check_screen(pantalla_name, haystack, needle_img)
-
         # carga y mapea las coordenadas de los elementos de la pantalla
 
         irc.load_screen_elements(pantalla_instance)  # carga inmediata, no elementos diferidos
@@ -409,45 +292,9 @@ class SeleniumController(object):
 
         return False
 
-    def start(self):
-
-        try:
-            browser_driver = self.bank.get('browser_driver')
-            cap = DesiredCapabilities().INTERNETEXPLORER
-            cap['browserName'] = "internet explorer"
-            cap['ignoreProtectedModeSettings'] = True
-            cap['IntroduceInstabilityByIgnoringProtectedModeSettings'] = True
-            cap['nativeEvents'] = True
-            cap['ignoreZoomSetting'] = True
-            cap['requireWindowFocus'] = True
-            cap['INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS'] = True
-            self._driver = webdriver.Ie(capabilities=cap,
-                                        executable_path=IE_DRIVER)
-
-            self.driver.delete_all_cookies()
-            self._driver.maximize_window()
-
-            return self._driver
-
-        except Exception as e:
-            self._logger.error(
-                "Exception iniciando el drive de IExplorer:->  {}".format(e))
-
-        return None
-
-    def driver_close(self):
-        if self.driver:
-            self.driver.close()
 
     # <editor-fold desc="getters /setters">
-    @property
-    def driver(self):
-        return self._driver
 
-    @driver.setter
-    def driver(self, value):
-        if value:
-            return self._driver
 
     @property
     def skels(self):
@@ -466,6 +313,15 @@ class SeleniumController(object):
     def bank(self, value):
         if isinstance(value, dict):
             self._bank = value
+    @property
+    def is_done(self):
+        return self._is_done
+
+    @is_done.setter
+    def is_done(self, value):
+        if isinstance(value, dict):
+            self._is_done = value
+
 
     @property
     def workflow(self):
