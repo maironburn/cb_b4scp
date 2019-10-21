@@ -251,6 +251,8 @@ class SeleniumController(object):
                         irc.click(element)
 
 
+
+
     def got_error(self, boleto):
 
         workflow = self.img_recon_workflow.get('collection_item_detail_window_error')

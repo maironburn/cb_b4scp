@@ -16,21 +16,27 @@ class Reboot_Process(object):
 
     def restart_workflow(self):
         print ("Intentando reiniciar el flujo")
-        haystack = irc.capture_screen('restart')
+
         needle_lst=[ os.path.join(TEMPLATES_IMGS,'boton_cancel_dialog.png'),
                      os.path.join(TEMPLATES_IMGS, 'home_selected.png'),
                      os.path.join(TEMPLATES_IMGS, 'home.png')
                      ]
 
+        expired_session= os.path.join(TEMPLATES_IMGS,'boton_relogin.png' )
+
         #  os.path.join(TEMPLATES_IMGS, 'home.png'),
         for needle in needle_lst:
-            if irc.image_finded(haystack, needle, threshold=0.7):
-                x, y = irc.getElementCoords(haystack, needle)
-                import pyautogui
-                pyautogui.moveTo(x, y)
-                # print("Evento click,move to x: {}, y: {}".format(target.x, target.y))
-                pyautogui.click()
-                sleep(2)
+            haystack = irc.capture_screen('restart')
+            if not irc.image_finded(haystack, expired_session, threshold=0.7):
+                if irc.image_finded(haystack, needle, threshold=0.7):
+                    x, y = irc.getElementCoords(haystack, needle)
+                    import pyautogui
+                    pyautogui.moveTo(x, y)
+                    # print("Evento click,move to x: {}, y: {}".format(target.x, target.y))
+                    pyautogui.click()
+                    sleep(2)
+            else:
+                raise Exception("La sesion ha caducado por inactividad")
 
         return True
 

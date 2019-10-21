@@ -71,6 +71,22 @@ DICT_REGEX_BOLETO_ITEM = {
 }
 
 
+IMAGES_DESCRIPT_DICT= {
+'boton_cancel_dialog.png' : 'Boton de cancelar',
+'collection_item_detail.png': 'Formulario Collection Item Detail',
+'collection_item_detail_window_error.png': 'Mensaje de error en la generacion del boleto',
+'collection_item_detail_window_success.png': 'Mensaje de boleto generado correctamente',
+'home.png': 'Opcion Home del menu',
+'home_selected.png': 'Opcion Home (marked) del menu',
+'loaded_transactions_and_services.png': 'Formulario Transactions and services cargado ',
+'main_transactions_and_services.png': 'OpBoton de cancelar',
+'menu_transactions_and_services.png': 'Boton de cancelar',
+'search_definition_dialog.png': 'Boton de cancelar',
+'select_account_dialog.png': 'Boton de cancelar',
+
+
+}
+
 
 # keep_foregorund
 APP_NAME = "CitiDirect® Online Banking - Internet Explorer"

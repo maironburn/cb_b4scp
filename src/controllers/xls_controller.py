@@ -86,7 +86,7 @@ class XlsController(object):
                                                'CNPJ Payer Zip Code': str
                                                })
             xls_df = xls_df[COLS_NAMES].astype('str')
-
+            print("Leyendo datos del fichero {} y comprobando la validez de los datos\n".format(doc))
             for _, row in xls_df.iterrows():
                 item_dict = {}
                 for col_name in row.keys():
@@ -114,7 +114,8 @@ class XlsController(object):
 
 
             if len(self.instance_collection_errors):
-                print("Hay {} boletos con datos incorrectos que no iniciaran el proceso de creacion".format(len(self.instance_collection_errors)))
+                print("\n***************************************\n")
+                print("\n\nHay {} boletos con datos incorrectos que no iniciaran el proceso de creacion".format(len(self.instance_collection_errors)))
                 self._logger.error(
                     "Hay errores en el documento: {}, los datos de algunos boletos contienen errores")
 
