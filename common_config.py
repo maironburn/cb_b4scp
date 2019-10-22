@@ -12,8 +12,8 @@ IMGS_FOLDER=  os.path.join(ROOT_DIR, 'images')
 TEMPLATES_IMGS=  os.path.join(IMGS_FOLDER, 'templates')
 TEMP_IMGS=  os.path.join(IMGS_FOLDER, 'temp')
 IMGS_DATASET=  os.path.join(IMGS_FOLDER, 'dataset')
-ERROR_IMGS=  os.path.join(IMGS_FOLDER, 'errores')
-BOLETOS_PROCESADOS_IMGS=  os.path.join(IMGS_FOLDER, 'boletos procesados')
+ERROR_IMGS=  os.path.join(IMGS_FOLDER, 'boletos erroneos')
+BOLETOS_PROCESADOS_IMGS=  os.path.join(IMGS_FOLDER, 'boletos procesados correctamente')
 
 # json bancos
 JSON_BANK = os.path.join(ROOT_DIR, 'json_bank')
