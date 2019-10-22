@@ -43,20 +43,20 @@ class Boleto_Item(object):
         self.load_entity_data(kw)
 
     def load_entity_data(self, kw):
-        self.boleto_number = kw.get('boleto_number')
-        self.enteprise_id = kw.get('enteprise_id')
-        self.cpf = self.check_correct_length(kw.get('cpf'))
-        self.cpnj_beneficiario = self.check_correct_length(kw.get('cpnj_beneficiario'))
-        self.product = kw.get('product')
-        self.account_number = kw.get('account_number')
-        self.address = kw.get('address')
-        self.state = kw.get('state')
-        self.city = kw.get('city')
-        self.zip_code = self.check_correct_zip_code(kw.get('zip_code'))  # need 8 caracteres
+        self.boleto_number = kw.get('boleto_number').strip()
+        self.enteprise_id = kw.get('enteprise_id').strip()
+        self.cpf = self.check_correct_length(kw.get('cpf').strip())
+        self.cpnj_beneficiario = self.check_correct_length(kw.get('cpnj_beneficiario').strip())
+        self.product = kw.get('product').strip()
+        self.account_number = kw.get('account_number').strip()
+        self.address = kw.get('address').strip()
+        self.state = kw.get('state').strip()
+        self.city = kw.get('city').strip()
+        self.zip_code = self.check_correct_zip_code(kw.get('zip_code').strip())  # need 8 caracteres
         # self.emision_date = datetime.now().strftime("%d/%m/%Y")
-        self.emision_date = self.transform_date(kw.get('emision_date'))
-        self.due_date = self.transform_date(kw.get('due_date'))
-        self.amount = kw.get('amount')
+        self.emision_date = self.transform_date(kw.get('emision_date').strip())
+        self.due_date = self.transform_date(kw.get('due_date').strip())
+        self.amount = kw.get('amount').strip()
         self.payer_type = self.get_payer_type()
 
         self.check_is_valid()

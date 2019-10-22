@@ -138,7 +138,7 @@ def fill(target, data):
 
     pyautogui.moveTo(target.x, target.y)
     pyautogui.doubleClick()
-    pyautogui.typewrite(str(data),0.1)
+    pyautogui.typewrite(str(data),0.3)
     #pyautogui.typewrite(str(data), 0.1)
 
 

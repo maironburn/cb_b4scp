@@ -37,15 +37,15 @@ citibank = {
     'collection_item_detail': [
             # @todo, asociar a cada item una variable para setear un sleep ???
             {'target': 'product', 'action': "select", 'boleto_data': 'product'},
-
+            {'target': 'original_amount', 'action': "click"},
             {'target': 'original_amount', 'action': "fill", 'boleto_data': 'amount'},
-            {'target': 'type_of_collection_item_code', 'action': "select", 'boleto_data': 'type_of_collection_item_code'},
 
+            {'target': 'type_of_collection_item_code', 'action': "select", 'boleto_data': 'type_of_collection_item_code'},
             {'target': 'collection_item_document_type', 'action': "select", 'boleto_data': 'collection_item_document_type' },
             {'target': 'allow_divergent', 'action': "select", 'boleto_data': 'allow_divergent'},
 
             {'target': 'customer_reference', 'action': "fill", 'boleto_data': 'boleto_number'},
-            {'target': 'original_amount', 'action': "click"},
+
             {'target': 'emission_date', 'action': "double_click"},
             {'target': 'emission_date', 'action': "fill", 'boleto_data': 'emision_date'},
             {'target': 'due_date', 'action': "double_click"},
