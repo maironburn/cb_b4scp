@@ -45,6 +45,7 @@ class XlsController(object):
                     "{} ->  No se halla la carpeta que contiene los XLS: ->  {}".format(__class__.__name__, XLS_FOLDER))
 
         except Exception as e:
+            print ("get_boletos_items -> Ocurrio un Error al leer el documento -> {}".format(e))
             self._logger.error("get_boletos_items -> Ocurrio un Error al leer el documento -> {}".format(e))
 
         return False

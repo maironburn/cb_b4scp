@@ -79,8 +79,13 @@ class Boleto_Item(object):
         return account in self.registered_accounts
 
     def transform_date(self, date):
-        fecha = date.split('-')
-        return ("{}/{}/{}".format(fecha[2], fecha[1], fecha[0]))
+
+        #if re.match(DICT_REGEX_BOLETO_ITEM['due_date'], date):
+        if date:
+            fecha = date.split('-')
+            return ("{}/{}/{}".format(fecha[2], fecha[1], fecha[0]))
+
+        return None
 
     def check_is_valid(self):
 
@@ -89,13 +94,13 @@ class Boleto_Item(object):
         if re.match(DICT_REGEX_BOLETO_ITEM['boleto_number'], self.boleto_number) is not None:
 
             if (self.enteprise_id == 'nan' or self.enteprise_id.strip() == ''):
-                self.error_description.append('El enterprise ID:  del boleto: {} no es valido'.format(self.enteprise_id.strip(), self.boleto_number))
+                self.error_description.append('El enterprise ID {}  del boleto {} no es valido'.format(self.enteprise_id.strip(), self.boleto_number))
                 print ('El enterprise ID:  del boleto: {} no es valido'.format(self.enteprise_id.strip(), self.boleto_number))
                 self.is_valid = False
 
             if not  self.check_account_number(self.account_number.strip()):
-                self.error_description.append('EL numero de cuenta {} del boleto: {} no es valido o se trata de una cuenta no conocida'.format(self.account_number, self.boleto_number))
-                print ('EL numero de cuenta {} del boleto: {} no es valido o se trata de una cuenta no conocida'.format(self.account_number, self.boleto_number))
+                self.error_description.append('EL numero de cuenta {} del boleto {} no es valido o se trata de una cuenta no conocida'.format(self.account_number, self.boleto_number))
+                print ('EL numero de cuenta {} del boleto {} no es valido o se trata de una cuenta no conocida'.format(self.account_number, self.boleto_number))
                 self.is_valid = False
                 '''
                 #and re.match(DICT_REGEX_BOLETO_ITEM['cpf'], self.cpf ) is not None
@@ -104,62 +109,62 @@ class Boleto_Item(object):
 
             if self.product == 'nan' or self.product.strip() == '' or (self.product != '100' and self.product != '180'):
                 self.error_description.append(
-                    'El numero de producto: {} del boleto: {} no es valido, debe ser 100 o 180'.format(self.product, self.boleto_number))
-                print('El numero de producto: {} del boleto: {} no es valido, debe ser 100 o 180'.format(self.product, self.boleto_number))
+                    'El numero de producto: {} del boleto {} no es valido, debe ser 100 o 180'.format(self.product, self.boleto_number))
+                print('El numero de producto: {} del boleto {} no es valido, debe ser 100 o 180'.format(self.product, self.boleto_number))
                 self.is_valid = False
 
 
             if self.state.strip() == 'nan' or self.state.strip() == '':
                 self.error_description.append(
-                    'El estado (state city) del boleto: {} no es valido '.format(
+                    'El estado (state city) del boleto {} no es valido '.format(
                         self.state, self.boleto_number))
                 print(
-                    'El estado (state city) del boleto: {} no es valido '.format(
+                    'El estado (state city) del boleto {} no es valido '.format(
                         self.state, self.boleto_number))
                 self.is_valid = False
 
             if self.city.strip() == 'nan' or self.city.strip() == '':
                 self.error_description.append(
-                    'La Ciudad {} del boleto: {} no es valida'.format(
+                    'La Ciudad {} del boleto {} no es valida'.format(
                         self.city.strip(), self.boleto_number))
                 print(
-                    'La Ciudad {} del boleto: {} no es valida'.format(
+                    'La Ciudad {} del boleto {} no es valida'.format(
                         self.city.strip(), self.boleto_number))
                 self.is_valid = False
 
             if self.zip_code.strip() == 'nan' or self.zip_code.strip() == '':
                 self.error_description.append(
-                    'El zip code: {} del boleto: {} no es valido'.format(
+                    'El zip code {} del boleto: {} no es valido'.format(
                         self.zip_code.strip(), self.boleto_number))
                 print(
-                    'El zip code: {} del boleto: {} no es valido'.format(
+                    'El zip code {} del boleto: {} no es valido'.format(
                         self.zip_code.strip(), self.boleto_number))
                 self.is_valid = False
 
             if re.match(DICT_REGEX_BOLETO_ITEM['due_date'], self.due_date) is None:
                 self.error_description.append(
-                    'El due_date: {} del boleto: {} no es valido'.format(
+                    'El due_date {} del boleto: {} no es valido'.format(
                         self.due_date, self.boleto_number))
                 print(
-                    'El due_date: {} del boleto: {} no es valido'.format(
+                    'El due_date {} del boleto: {} no es valido'.format(
                         self.due_date, self.boleto_number))
                 self.is_valid = False
 
             if re.match(DICT_REGEX_BOLETO_ITEM['emision_date'], self.emision_date) is None:
                 self.error_description.append(
-                    'La fecha de emision: {} del boleto: {} no es valido'.format(
+                    'La fecha de emision {} del boleto: {} no es valido, formato correcto : dd/mm/yyyy'.format(
                         self.emision_date, self.boleto_number))
                 print(
-                    'La fecha de emision: {} del boleto: {} no es valido'.format(
+                    'La fecha de emision {} del boleto: {} no es valido, formato correcto : dd/mm/yyyy'.format(
                         self.emision_date, self.boleto_number))
                 self.is_valid = False
 
             if self.amount.strip() == '' or self.amount.strip() == 'nan':
                 self.error_description.append(
-                    'El monto: {} del boleto: {} no es valido'.format(
+                    'El monto {} del boleto: {} no es valido'.format(
                         self.amount.strip(), self.boleto_number))
                 print(
-                    'El monto: {} del boleto: {} no es valido'.format(
+                    'El monto {} del boleto: {} no es valido'.format(
                         self.amount.strip(), self.boleto_number))
 
                 self.is_valid = False
@@ -176,24 +181,28 @@ class Boleto_Item(object):
     def get_payer_type(self):
         dict_payer_type = {11: 'cpf', 14: 'cnpj'}
 
-        return dict_payer_type[len(self.cpf)]
+        if len(self.cpf) in dict_payer_type.keys():
+            return dict_payer_type[len(self.cpf)]
 
     def check_correct_zip_code(self, zip):
         need_add = False
         n_iter = 0
         to_append = ''
 
-        if len(zip) < 8:
-            self._logger.info("check_correct_length, ZIP Code con {}, need add".format(len(zip)))
-            n_iter = 8 - len(zip)
+        if zip != 'nan':
+            if len(zip) < 8:
+                self._logger.info("check_correct_length, ZIP Code con {}, need add".format(len(zip)))
+                n_iter = 8 - len(zip)
 
-        if n_iter:
-            for i in range(n_iter):
-                to_append += '0'
+            if n_iter:
+                for i in range(n_iter):
+                    to_append += '0'
 
-            return to_append + zip
+                return to_append + zip
+
 
         return zip
+
 
     def check_correct_length(self, cpf):
         # pueden venir 2 tipos de datos

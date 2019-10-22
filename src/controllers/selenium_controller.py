@@ -33,7 +33,8 @@ class SeleniumController(object):
     def __init__(self, kw):
 
         self.dictio_actions = {'click': irc.click,
-                               'fill': irc.fill
+                               'fill': irc.fill,
+                               'double_click': irc.double_click
                                }
 
         self._logger = kw.get('logger')
@@ -142,7 +143,7 @@ class SeleniumController(object):
         self._logger.info(
              "Comprobando Matching entre : {} y la captura de  pantalla ".format(
                 needle_img.split('\\')[-1]))
-        temp=10
+        temp=5
         found= False
 
         while not found and temp>0:
@@ -223,6 +224,9 @@ class SeleniumController(object):
                 element = pantalla_instance.get_element_by_name(target)
                 self.dictio_actions['click'](element)
 
+            if action == 'double_click':
+                element = pantalla_instance.get_element_by_name(target)
+                self.dictio_actions['double_click'](element)
             # sleep(2)
 
             if action == 'submit':
@@ -250,6 +254,9 @@ class SeleniumController(object):
                         irc.capture_screen(boleto.boleto_number, dest=BOLETOS_PROCESADOS_IMGS)
                         irc.click(element)
 
+                return True
+
+        return False
 
 
 

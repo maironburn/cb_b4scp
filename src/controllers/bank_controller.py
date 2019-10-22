@@ -49,9 +49,9 @@ class BankController(object):
                 while not self.sc.do_image_automation(json_workflow='img_recognition_workflow_intermezzo', boleto_instance=bi):
                     self._reboot.restart_workflow()
                     self.sc.do_image_automation()
-
                 # ya wf dependiente de las instancias del boleto
                 self.sc.boleto_wf_loop(bi)
+
 
     def load_banks(self):
         for bank in self.banknames:
