@@ -34,8 +34,9 @@ if __name__ == '__main__':
     try:
         if xls_controller.get_boletos_items():
             if FOREGROUND_THREAD:
-                keep_me_foreground = KeepMeForeGround(logger=bc.logger)
-                daemon = threading.Thread(target=keep_me_foreground.daemon_dont_disturb_please).start()
+                pass
+                #keep_me_foreground = KeepMeForeGround(logger=bc.logger)
+                #daemon = threading.Thread(target=keep_me_foreground.daemon_dont_disturb_please).start()
 
             bc.start_party(bankname= 'citibank', lst_instances_bi=xls_controller.valid_instances_collection)
         else:

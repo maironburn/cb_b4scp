@@ -90,7 +90,7 @@ IMAGES_DESCRIPT_DICT= {
 
 # keep_foregorund
 APP_NAME = "CitiDirect® Online Banking - Internet Explorer"
-FOREGROUND_THREAD = True
+FOREGROUND_THREAD = False
 TIME_SLEEP = 1
 
 # DICTIO_PAPAFRITA= {'main_transactions_and_services' : 'img_recognition_workflow_main',
